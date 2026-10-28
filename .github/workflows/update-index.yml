@@ -1,0 +1,139 @@
+name: 更新封面目錄並發布 Pages
+
+on:
+  push:
+    branches: [main]
+    # bot 的目錄提交（只改 index.html）不會再觸發本 workflow：
+    # GITHUB_TOKEN 推送的事件不會建立新的 workflow run，commit 訊息也帶 [skip ci]；
+    # 即使被觸發，腳本是冪等的，第二輪不會再產生提交。
+    paths:
+      - 'docs/**'
+      - 'index.html'
+      - 'scripts/update_index.py'
+      - '.github/workflows/update-index.yml'
+  workflow_dispatch:
+
+# 各 job 另行宣告最小權限；整體只用到 contents: write、pages: write、id-token: write。
+permissions: {}
+
+# 所有 run 依序排隊、不中途取消；每個 run 都以「當下最新的 main」產生與發布，
+# 所以最後一個 run 發布的一定是最新內容。
+concurrency:
+  group: update-index-and-pages
+  cancel-in-progress: false
+
+jobs:
+  update-catalog:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: 重新產生目錄並推送
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            # 每次都以最新的 main 重新產生，避免與 Codex 同時推送時衝突。
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/update_index.py
+            if git diff --quiet -- index.html; then
+              echo "index.html 無變更，不需提交。"
+              exit 0
+            fi
+            git add index.html
+            git commit -m 'chore: 更新封面目錄 [skip ci]'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "推送失敗（main 可能已更新），第 ${attempt} 次重試…"
+            sleep $((attempt * 5))
+          done
+          echo "多次重試仍無法推送。" >&2
+          exit 1
+
+  pages-source:
+    needs: update-catalog
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+    outputs:
+      build_type: ${{ steps.source.outputs.build_type }}
+    steps:
+      - name: 確認 Pages 發布來源
+        id: source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! build_type=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .build_type); then
+            echo "::error title=無法讀取 GitHub Pages 設定::請確認 Settings → Pages 已啟用。"
+            exit 1
+          fi
+          echo "build_type=${build_type}" >> "$GITHUB_OUTPUT"
+          case "$build_type" in
+            workflow)
+              echo "Pages 來源為 GitHub Actions，接著由 deploy job 發布。"
+              ;;
+            legacy)
+              echo "::warning title=Pages 仍為「Deploy from a branch」::目錄已更新，但尚未由本 workflow 發布。請到 Settings → Pages → Build and deployment → Source 改選「GitHub Actions」。過渡期間改為請求一次分支重建。"
+              if gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq .status; then
+                echo "已請求從 main 重新建置 Pages。"
+              else
+                echo "::warning::請求 Pages 重建失敗；網站會在下一次觸發分支建置的推送時更新。"
+              fi
+              ;;
+            *)
+              echo "::error::未知的 Pages build_type：${build_type}"
+              exit 1
+              ;;
+          esac
+
+  deploy:
+    needs: [update-catalog, pages-source]
+    if: needs.pages-source.outputs.build_type == 'workflow'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: 準備發布內容（只含 index.html 與 docs/）
+        id: stage
+        run: |
+          # 重新產生一次（不提交），確保即使上一個 job 之後又有新推送，發布的目錄也與 docs/ 一致。
+          python3 scripts/update_index.py
+          rm -rf _pages_src _site
+          mkdir _pages_src
+          cp index.html _pages_src/
+          cp -R docs _pages_src/
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # 與目前「Deploy from a branch」相同的 Jekyll 建置，保留 docs/**/INDEX.md 轉出的 INDEX.html 等網址。
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./_pages_src
+          destination: ./_site
+          build_revision: ${{ steps.stage.outputs.sha }}
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./_site
+
+      - name: 發布到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
