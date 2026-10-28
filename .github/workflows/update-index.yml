@@ -1,0 +1,48 @@
+name: 更新封面目錄
+
+on:
+  push:
+    branches: [main]
+    # 只看 docs/**：本 workflow 只提交 index.html，不會再觸發自己。
+    paths: ['docs/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-index
+  cancel-in-progress: false
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 重新產生目錄並推送
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3 4 5; do
+            # 每次都以最新的 main 重新產生，避免與 Codex 同時推送時衝突。
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/update_index.py
+            if git diff --quiet -- index.html; then
+              echo "index.html 無變更，不需提交。"
+              exit 0
+            fi
+            git add index.html
+            git commit -m 'chore: 更新封面目錄 [skip ci]'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "推送失敗（main 可能已更新），第 ${attempt} 次重試…"
+            sleep $((attempt * 5))
+          done
+          echo "多次重試仍無法推送。" >&2
+          exit 1
