@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="2026 年 10 月 7 日 AI 新進展日報：模型研究、企業 Agent、商業模式與工業場域應用。">
+  <title>你的AI觀察雷達｜2026.10.07</title>
+  <style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><div class="brand">你的AI觀察雷達</div><small>2026 年 10 月 7 日 · 一個月試行</small></div></div>
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">每天五分鐘，掌握 AI 關鍵變化</div>
+    <h1>你的AI觀察雷達</h1>
+    <div class="edition-title">模型走向專業流程，工廠 AI 開始補上治理環節</div>
+    <p>Mistral Large 4 開放 API 預覽，OpenAI 分享數學研究和企業 Agent 評測，Tulip 則把 AI 接到產線資料與稽核紀錄。值得看的，是能力如何接上工作流程，以及驗證責任落在哪裡。</p>
+    <div class="hero-meta"><span>2026.10.07</span><span>約 5 分鐘閱讀</span><span>消息查核至台灣時間 09:45</span></div>
+  </div></header>
+  <div class="wrap layout">
+    <aside aria-label="頁面目錄"><strong>本期導覽</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a></aside>
+    <main>
+      <section id="focus"><h2><span class="num">01</span>今天焦點</h2>
+        <p class="section-lead">今天的焦點是 Mistral Large 4（ML4）：一款尚未公開權重、但已開放 API 預覽的重量級模型。現在要看的不只是效能宣稱，也包括部署條件、比較方式和未公開的技術細節。</p>
+        <article class="story"><div class="story-head"><div class="story-index">1</div><h3>Mistral Large 4：重量級開放權重模型進入公開預覽</h3></div><div class="body">
+          <p>Mistral 於 10 月 6 日推出 Mistral Large 4（ML4）公開預覽，API 已可試用；模型權重預計本月底發布，現在還不能下載自行部署。公司公布模型有 1 兆總參數、每次推論啟用 490 億參數，並採原生多模態設計。混合專家模型（MoE）會依輸入挑選部分專家運算，因此「啟用參數」不等於完整模型大小；部署所需記憶體、吞吐量與成本仍須看實際權重、精度和硬體設定。</p>
+          <p>Mistral 把模型定位在程式、Agent、多模態、金融、法律與資安等任務。公司稱 ML4 在部分安全基準和專業任務上表現突出，並公開了部分比較；但大多是廠商或其委託評測，不能直接當成跨模型的獨立排名。它也表示模型仍在訓練，架構細節、更多基準與後訓練方法將隨權重發布補充。現階段適合關注 API 表現與更新，不宜只憑參數或單一基準決定採用。</p>
+          <p class="source"><a href="https://mistral.ai/news/mistral-large-4/" target="_blank" rel="noopener noreferrer">來源：Mistral 官方發布｜10 月 6 日</a></p>
+        </div></article>
+      </section>
+      <section id="must-read"><h2><span class="num">02</span>不能錯過</h2><div class="application-grid">
+        <article class="application"><h3>OpenAI 公布數學研究成果與形式化證明</h3><p>OpenAI 分享一批由內部前沿模型產生的數學結果，並將論文、修訂與引用規範放到 GitHub；部分證明以 Lean 形式化。Lean 是能讓電腦檢查推理步驟的證明語言，能提高特定證明的可驗證性，但不代表所有結果已由數學社群完成審查。OpenAI 還公布 10 份推理摘要、嘗試題數統計，以及平均每項成果約相當於三小時 ChatGPT Pro 思考用量的估算。模型本身仍未公開，公告也提到正在評估如何負責任地釋出。</p><p class="source"><a href="https://openai.com/index/sharing-ai-progress-in-mathematics/" target="_blank" rel="noopener noreferrer">OpenAI：Sharing AI progress in mathematics｜10 月 6 日</a></p></article>
+        <article class="application"><h3>Agent 評測開始走進專業軟體的完整工作流程</h3><p>OpenAI 與合約管理軟體 Ironclad，把設定 NDA、採購審批流程、更新法律條款等工作轉成 11 項訓練與研究評測任務。GPT-6 Astra 在這批任務的平均評分為 55.0%，GPT-5.6 Sol 為 41.6%；估算單次作業時間分別為 19.2 分鐘和 37 分鐘。比較設定分別採 Astra Max 推理和 Sol High 推理，且時間是依假設的模型速度推估，不是客戶實際省下的工時。看點是檢查 AI 能否守住流程規則、完成整套工作並驗證結果。</p><p class="source"><a href="https://openai.com/index/advancing-computer-use-with-ironclad/" target="_blank" rel="noopener noreferrer">OpenAI：Advancing computer use with Ironclad｜10 月 6 日</a></p></article>
+        <article class="application"><h3>Tulip 把工廠資料、AI 與稽核紀錄放在同一流程</h3><p>工業軟體公司 Tulip 公布前線作業平台更新：資料層可把機台訊號連到工單、站點與操作員；AI 助手可在產線專案脈絡下草擬應用；影像系統則強調留下可回放的現場紀錄。狀態要分開看：Projects 和 Authoring Agent 進入客戶測試，程式化應用和部分連接器仍在預覽；部分顧問與驗證服務則已提供。這是產品發布，不代表每項功能已廣泛上線或在所有工廠證明成效。</p><p class="source"><a href="https://tulip.co/press/tulip-brings-ai-to-the-factory-floor-at-operations-calling-2026/" target="_blank" rel="noopener noreferrer">Tulip 官方公告｜10 月 6 日</a></p></article>
+      </div></section>
+      <section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><p class="section-lead">工廠可先從一種常見麻煩試起：異常發生後，相關資訊散落在機台、工單、作業指引與影像紀錄中。以下應用為依今日產品方向提出的試點構想，尚非經驗證的客戶案例。</p>
+        <div class="application-grid">
+          <article class="application"><h3>產線異常：讓 AI 先把線索排好，工程師決定怎麼修</h3><p>假設某站連續出現裝配錯誤。現場通常要回頭找是哪張工單、哪台設備、哪位操作員、哪個版本的作業指引，再翻相機片段和交班紀錄。若這些資料能以同一筆作業紀錄串起來，AI 可先摘要「異常集中在哪一站、相同批次發生過什麼、SOP 對應哪一步」，並附上可回查的依據。這與 Tulip 宣布的機台資料、操作員脈絡和影像回放方向相符，但整合效果仍待現場驗證。</p><p>前提是設備時間、工單編號、站點與產品版本能正確對齊，影像權限也符合廠內規範。先讓 AI 查詢與整理，不直接改機台參數或放行產品。試點可追蹤找根因時間、引用正確率、誤報率，以及工程師推翻建議的比例；品質與安全責任仍由現場主管承擔。</p><p class="check">驗證指標：找根因時間、引用正確率、誤報率、人工覆核比例。</p></article>
+          <article class="application"><h3>合約與採購：AI 設定流程，規則邊界要能測</h3><p>採購軟體時，金額超過門檻要財務審批，涉及客戶資料要資安審查，偏離標準條款再交法務。Agent 可先把規則轉成表單、範本與審批路徑，再用高低金額、例外條款等測試案例逐一驗證。Ironclad 合作測的是這類多步驟操作；11 項任務結果不能代表所有公司或合約環境。</p><p>試點要由法務、採購與資安共同定義成功條件。除了完成率，也要測錯誤路徑是否繞過審批、權限不足時會否停止，以及修改是否留下紀錄。先由 AI 建議與設定，人員覆核後再發布流程。</p><p class="check">驗證指標：流程完成率、越權或漏審次數、可追溯紀錄、人工介入時間。</p></article>
+        </div>
+      </section>
+      <section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><p class="section-lead">今天幾則消息共同指向一個採購問題：模型要能接上公司規則、資料與核准流程，才會成為可用的工作系統。以下商業延伸為本報分析。</p>
+        <article class="business-item"><h3>企業付費重心，可能從「模型能力」延伸到「流程可控」</h3><p>Ironclad 把專業任務轉成評測環境；Tulip 把機器、操作員、作業紀錄和治理工具放在一起。商業價值可能落在流程整合、資料整理、權限治理、驗證服務與後續維運，而不只在模型 API 或軟體席次。供應商可從平台訂閱、導入顧問、驗證服務與推論用量收費；企業則要計入資料清理、系統串接、培訓和持續稽核成本。</p><p>製造商真正願意付款的理由，應是縮短停線排查、減少品質異常，或讓跨廠複製更可靠。先以一條產線或一項流程記錄導入前基準，再核算節省工時、錯誤和維護成本；模型評測分數不能直接換算投資報酬。</p></article>
+        <article class="business-item"><h3>開放權重給控制權，也把維運責任帶進企業</h3><p>ML4 若月底如期釋出權重，企業可以測試資料控制與在地部署，但同時要衡量硬體、更新、安全修補和支援成本。權重開放提供更多控制權，並不自動等於更便宜或更容易維運。模型供應商之外，整合商與企業 IT 團隊也可能承接部署和持續服務。</p><p class="source"><a href="https://mistral.ai/news/mistral-large-4/" target="_blank" rel="noopener noreferrer">推演依據：Mistral Large 4 發布規劃</a></p></article>
+      </section>
+      <details class="source-details"><summary>查核範圍與完整來源</summary><p class="reading-note">本期以 2026 年 10 月 6 日官方公告為主，查核至 10 月 7 日台灣時間 09:45。模型能力與比較結果按發布方歸屬，未做獨立模型實測。Tulip 部分功能仍在客戶測試或預覽；場域和商業預期均屬分析。</p><ol class="sources"><li><a href="https://mistral.ai/news/mistral-large-4/">Mistral Large 4</a></li><li><a href="https://openai.com/index/sharing-ai-progress-in-mathematics/">OpenAI 數學研究成果</a></li><li><a href="https://openai.com/index/advancing-computer-use-with-ironclad/">OpenAI 與 Ironclad 的 Agent 評測</a></li><li><a href="https://tulip.co/press/tulip-brings-ai-to-the-factory-floor-at-operations-calling-2026/">Tulip 工廠平台更新</a></li></ol></details>
+    </main>
+  </div>
+  <footer><div class="wrap">你的AI觀察雷達｜2026 年 10 月 7 日｜台灣時間 · 每天五分鐘</div></footer>
+</body>
+</html>

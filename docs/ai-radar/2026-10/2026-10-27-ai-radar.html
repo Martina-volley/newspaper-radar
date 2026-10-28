@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="GPT-6.1 Terra 上線；OpenAI 公開重大研究主張及工作資料，Anthropic 遞交上市申請。"><title>你的AI觀察雷達｜2026.10.27</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 10 / 27 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">視覺模型開始接手流程，研究突破仍待驗證</p><p>GPT-6.1 Terra 上線；OpenAI 公開重大研究主張及工作資料，Anthropic 遞交上市申請。</p><div class="hero-meta"><span>2026 年 10 月 27 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 10 月 27 日台灣時間 09:46。主窗為前 24 小時，聚焦 10 月 26 日的一手公告。模型效能與研究成果按發布方說法記載，尚未由本報獨立重現；場域案例為假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>GPT-6.1 Terra 上線：視覺理解與電腦操作走向大量工作流程</h3><p>每天進來的發票、產品照片和工程圖，內容各不相同，但後續動作往往很固定：讀取欄位、比對資料、在系統中填寫或交人覆核。OpenAI 10 月 26 日推出 GPT-6.1 Terra，定位為處理這類視覺與螢幕操作工作的較快、較低價模型。它已在 ChatGPT Work、Codex 的指定方案及 API 提供，API 模型名稱為 <code>gpt-6.1-terra</code>；不是未來預告。標準 API 價格為每百萬輸入 token 1 美元、輸出 5 美元，快取輸入 0.05 美元。工具呼叫等可能另計費。</p><p>在 OpenAI 公布的 Agents’ Last Exam 專業任務評測中，Terra 於中等推理強度比 GPT-5.6 Terra 高 15 個百分點，單題成本約為後者三分之一；同條件下與 GPT-6 Astra 成績接近，但每 token 標價約十分之一。OSWorld 2.1 測的是跨桌面應用完成多步任務，Terra 中等推理強度也超過舊版 Terra 的最佳成績。這些是廠商選定的測試與價格口徑，沒有證明它在每家公司的畫面、語言與權限流程都同樣可靠。官方亦指出，最複雜的程式任務仍以 Sol、Astra 較合適。</p><p>技術上值得留意的是「看懂畫面後完成下一步」，而非單次辨識圖片。當模型要操作系統，成功率須涵蓋讀對資料、按對位置、維持授權範圍，以及失敗時停下並回報。OpenAI 的內部難題集稱，低推理強度的事實錯誤率由舊版 53.6% 降至 16.7%；這並非零錯誤，也不能代替企業自己的驗證集。模型卡列有 105 萬 token 上下文、圖像輸入與工具支援，但工具呼叫須使用 Responses API；長上下文請求另有價格調整。安全文件則將 Terra 的網路安全能力評為 Critical，並描述相應防護，部署評估須一併閱讀。</p><p><a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank" rel="noopener noreferrer">來源：OpenAI 模型發布｜10 月 26 日</a> · <a href="https://developers.openai.com/api/docs/models/gpt-6.1-terra" target="_blank" rel="noopener noreferrer">API 模型規格與價格</a> · <a href="https://deploymentsafety.openai.com/gpt-6-1-terra" target="_blank" rel="noopener noreferrer">安全補充文件</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>AI 研究宣稱跨越三個難題，學界驗證才剛開始</h3><p>OpenAI 10 月 26 日公布三項由模型產生的數學、計算複雜度與量子場論成果。它宣稱，模型證明了所有維度的局部平滑猜想，進而涉及 Kakeya 與 Stein 限制猜想；另宣稱推翻「指數時間假說」（ETH，認為一類組合問題不存在某種極快演算法）。數學與 ETH 的自然語言稿及 Lean 形式化證明已公開；Lean 是讓電腦檢查形式推理步驟的工具，仍需專家確認形式化命題是否恰好對應原問題、前提與推論是否完整。量子場論材料目前由外部小組整理，尚未公開。OpenAI 自己稱這些稿件宜先視為原始研究資料，外部學者正組織檢驗。本報因此不把三項主張寫成學界已接受的定理，更不能推論相關工程算法已可用。</p><p><a href="https://openai.com/index/building-scientific-understanding-with-academic-communities/" target="_blank" rel="noopener noreferrer">來源：OpenAI 研究公告與公開材料｜10 月 26 日</a></p><h3>ChatGPT 工作資料集公開，不能直接當企業採用率</h3><p>OpenAI 同日發布 Signals 資料，將約百國的個人 ChatGPT 工作相關訊息歸入 165 類活動，涵蓋 2025 年第一季至 2026 年第三季。持續觀察的 74 國中，前十類活動占已分類工作訊息的平均比例由 56.0% 降至 51.1%，顯示用途分布擴散。資料經自動分類、彙整與隱私處理，沒有企業帳號或 Codex 用量，也不直接量到完成任務、節省工時或就業變化；跨國比例仍受各地使用者構成影響。</p><p><a href="https://openai.com/index/chatgpt-expanding-world-of-work/" target="_blank" rel="noopener noreferrer">來源：OpenAI 工作活動資料發布｜10 月 26 日</a></p><h3>Anthropic 公開遞交 S-1，上市仍待後續程序</h3><p>Anthropic 10 月 26 日公告已向美國 SEC 遞交 S-1 登記文件，擬以 ANT 為代號在 Nasdaq 上市。發行股數與價格區間未定，登記文件尚未生效；「申請上市」不能寫成「已上市」或據此推算估值。</p><p><a href="https://www.anthropic.com/news/s1-sec" target="_blank" rel="noopener noreferrer">來源：Anthropic S-1 公告｜10 月 26 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>製造業進料檢驗：照片讀取可以先試，放行仍由品保決定</h3><p>假設一家零組件廠，每批進料都要核對標籤、外觀照片、規格圖與採購單。可讓 Terra 先擷取料號和尺寸標註、比對文件版本，將疑似不符處圈給品保人員；系統只寫入待覆核欄位，不自動放行。前提是照片有拍攝標準、圖面版本可追溯，且料號與容差規則已結構化。試點要測漏報率、誤報率、每批覆核時間，以及碰到模糊影像時是否確實停下。最終進料判定與供應商處置仍由品保主管負責。這是應用構想，非已部署案例。</p><h3>財務應付帳款：螢幕操作要連同權限一起設計</h3><p>假設財務團隊每月處理大量格式不同的發票，可讓模型先讀取發票，對照採購單與收貨紀錄，再在會計系統建立草稿。供應商帳戶變更、重複請款與金額超過門檻時，須由財務人員核准；模型只能使用最小必要權限，留下來源與操作紀錄。比較的不只是辨識正確率，還要看錯帳率、例外案件處理時間及人工重工量。這同樣是試點假設。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>模型降價後，整合與覆核變成採購的真正算式</h3><p>本報分析，Terra 的標準 token 單價降低，使大量看圖、填表的任務更值得試算；客戶付款的理由是每筆有效處理成本與等待時間下降。實際支出仍包含圖片輸入、工具呼叫、系統整合、權限治理和人工覆核。供應商若只賣模型調用，競爭可能落在單價；能接通帳務、品保和簽核流程並留下可稽核紀錄者，才有更完整的服務收入。試點應以「每千筆正確完成的案件」計算成本，並列出錯誤返工。</p><h3>研究可信度與資本市場，都要求可檢驗的證據</h3><p>本報分析，公開 AI 證明原稿與形式化檔案，可能催生專家審查、形式驗證及研究工具服務，但目前不能估其商業收益；若關鍵結論經檢驗需修訂，衍生價值也會改變。Anthropic 的 S-1 則把一家主要模型供應商帶進更公開的財務揭露程序；投資人與企業採購者未來可取得更多可核對資料。現階段公告沒有定價、上市日期或營收細節，不能推論估值與投資回報。Signals 資料也提醒採購者：個人用途變廣，不等於組織已建立可複製的工作流程。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 10 月 27 日台灣時間 09:46，主要消息均於 10 月 26 日公告。Terra 已提供，效能、安全與價格依 OpenAI 公告及模型文件，未獨立重測；研究突破為 OpenAI 主張，形式化檔案已公開但外部解釋與檢驗仍在進行。Signals 僅涵蓋個人方案的工作相關訊息；Anthropic 已申報 S-1，尚未完成上市。兩個場域為假設試點，商業段落為本報分析。</p><ul class="sources"><li><a href="https://openai.com/index/introducing-gpt-6-1-terra/" target="_blank" rel="noopener noreferrer">OpenAI：GPT-6.1 Terra 發布</a></li><li><a href="https://developers.openai.com/api/docs/models/gpt-6.1-terra" target="_blank" rel="noopener noreferrer">OpenAI API：Terra 模型規格與定價</a></li><li><a href="https://deploymentsafety.openai.com/gpt-6-1-terra" target="_blank" rel="noopener noreferrer">OpenAI：Terra 安全文件</a></li><li><a href="https://openai.com/index/building-scientific-understanding-with-academic-communities/" target="_blank" rel="noopener noreferrer">OpenAI：學術研究公告</a></li><li><a href="https://openai.com/index/chatgpt-expanding-world-of-work/" target="_blank" rel="noopener noreferrer">OpenAI：工作活動資料</a></li><li><a href="https://www.anthropic.com/news/s1-sec" target="_blank" rel="noopener noreferrer">Anthropic：S-1 公告</a></li></ul></section></main></div><footer><div class="wrap">你的AI觀察雷達 · 以一手公開資料整理，場域情境與商業推論均已標示。</div></footer></body></html>

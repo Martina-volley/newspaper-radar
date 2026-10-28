@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Reflection 正式釋出 Beam 權重；Anthropic 規劃公益基金，OpenAI 與 GitHub 更新協作及程式安全工具。"><title>你的AI觀察雷達｜2026.10.19</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body>
+<div class="topbar"><div class="wrap"><div class="brand">你的AI觀察雷達</div><small>2026 年 10 月 19 日 · 週一</small></div></div>
+<header class="hero"><div class="wrap"><div class="eyebrow">每天五分鐘，掌握 AI 關鍵變化</div><h1>你的AI觀察雷達</h1><div class="edition-title">Beam 開放權重，代理部署與安全成本走向檯面</div><p>Reflection 正式釋出 Beam 權重；Anthropic 規劃公益基金，OpenAI 與 GitHub 更新協作及程式安全工具。</p><div class="hero-meta"><span>2026.10.19</span><span>約 5 分鐘閱讀</span><span>查核至台灣時間 09:46</span></div></div></header>
+<div class="wrap layout"><aside aria-label="頁面目錄"><strong>本期導覽</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p>查核截止：2026 年 10 月 19 日台灣時間 09:46。週一回看 10 月 16 至 18 日的一手發布；其中 Beam 是本月稍早預告後的實際釋出。以下將廠商測試、已上線功能與本報分析分開說明。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Beam 正式開放權重：模型之外，部署工具也同時到位</h3><p>Reflection 10 月 16 日釋出 Beam 1.0 權重、模型卡與安全報告，採 Apache 2.0 授權。這與 10 月 5 日的預告不同：開發者現在能從 Hugging Face 取得權重，選擇自行部署，或使用 Reflection 及合作平台的託管服務。Beam 是純文字輸入輸出的稀疏專家混合模型，總參數約 5,010 億，每個 token 啟用約 230 億，提供 100 萬 token 上下文；「專家混合」意指每次生成只啟用部分子網路，不能把總參數量直接當成推論成本或品質指標。</p><p>這次真正的交付範圍也包括 BF16、FP8、NVFP4 三種數值格式、推測解碼輔助模型，以及 Transformers、vLLM、SGLang 等推論支援。較低精度可降低記憶體需求，但精度與硬體組合仍須實測。模型卡顯示，在其指定設定下，Terminal Bench v2.1 的 BF16／FP8／NVFP4 成績分別為 80.1%、78.9%、78.4%；DeepSWE v1.1 則是 43.3%、43.0%、42.7%。這些數字是發布方評測，測試集、代理框架及推論預算會影響結果，不能拿不同文章的分數直接排名。</p><p>Reflection 把 Beam 與 Mirror CLI 代理工具一同推出，讓開發者查看步驟、核准工具呼叫及續接工作階段；也支援其他代理框架。這使「可下載模型」更接近可評估的工作系統。但自我蒸餾的教學配方仍被標為未來幾天推出，不能寫成已交付。企業若要採用，應用自己的程式庫測量任務成功率、錯改率、token 用量、GPU 成本與人工審核時間。</p><p>模型卡也標示其主要開發語言為英語，知識截止於 2026 年 6 月底。繁體中文工單或新近更新的設備手冊不能只靠模型記憶；應接入經版本控管的文件，讓回答附上來源。100 萬 token 是可接受的上下文長度，不代表模型能穩定找出每一頁的關鍵條款。長文件測試應刻意放入互相矛盾的修訂版，檢查它引用的是哪一版。</p><p><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener noreferrer">來源：Reflection 正式釋出公告｜10 月 16 日</a> · <a href="https://reflection.ai/beam-model-card" target="_blank" rel="noopener noreferrer">Beam 模型卡與評測</a> · <a href="https://huggingface.co/reflection/Beam-1.0-501B-A23B" target="_blank" rel="noopener noreferrer">Hugging Face 官方權重</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>Anthropic 規劃公益基金，股份承諾仍待股東核准</h3><p>Anthropic 10 月 18 日宣布設立 Public Benefit Fund，規劃在股東核准後，先把公司 5% 股份投入基金；未來估值每跨過指定增幅，董事會可酌情再增加 2%。公司表示基金可支援 AI 對勞動市場的影響等公共議題。現階段可以確定的是基金方案已公布，5% 股份移轉仍有核准條件；治理細節與估值門檻預計未來數月再披露，也不能把潛在股權價值寫成已撥款現金。</p><p><a href="https://www.anthropic.com/news/public-benefit-fund" target="_blank" rel="noopener noreferrer">來源：Anthropic 公益基金公告｜10 月 18 日</a></p><h3>ChatGPT Slides 開始推出，簡報變成可共同編輯的工作物</h3><p>OpenAI 的 10 月 16 日更新紀錄顯示，ChatGPT Slides 可從對話、檔案或大綱建立簡報，編修文字、圖片、形狀與圖表，並在 Space 邀請同事協作；網頁版可匯出 PowerPoint、PDF 或 Google Slides。它正逐步提供給符合資格、具 Space 權限的 Pro、Business 和 Enterprise 使用者，不能視為所有帳號都已可用。同日 GPT-6 Pro 的 ChatGPT 版本也開始推出較快回應、改進工具使用及多代理分工；更新紀錄未提供量化速度或成功率比較。</p><p><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">來源：OpenAI ChatGPT 更新紀錄｜10 月 16 日</a></p><h3>GitHub AI Scan 正式可用，發現問題仍需人工判斷</h3><p>GitHub 10 月 15 日宣布，AI Scan for pull requests 正式推出，可補足 CodeQL 尚未涵蓋的語言與設定檔，在 PR 中提示安全問題及建議修法。它是建議性警示，不會使掃描檢查失敗，也不能透過規則直接阻擋合併；來自 fork 或 Dependabot 的 PR 不會執行。公開 repo 可用，企業私有或內部 repo 需符合 Code Security 授權。用量消耗 Code Security AI Credits，這是採用時要一併試算的新成本。</p><p><a href="https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/" target="_blank" rel="noopener noreferrer">來源：GitHub AI Scan 上線紀錄｜10 月 15 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>工廠內部軟體：用可自架模型協助修程式，但驗收要看產線</h3><p>假設製造廠維護一套連接 MES、設備資料與品檢系統的內部程式，工程師常須跨多個檔案追查錯誤。Beam 可在隔離的測試環境閱讀已授權程式碼、提出修補並跑自動測試；若資料不得離廠，可先評估自架的硬體、權限與維護負擔。這是試點構想，並無 Beam 已在該工廠部署的證據。驗收不只看單元測試綠燈，還要測資料映射、班別交接與停機邏輯，記錄錯改率、回退次數及工程師覆核時間；部署到產線仍由負責人核准。</p><h3>安全修補流程：掃描提示與修正結果分兩次查核</h3><p>假設設備監控軟體使用 Terraform、Dockerfile 與 Shell 腳本，團隊可讓 GitHub AI Scan 提醒新 PR 的潛在風險，再由安全工程師判定真偽與嚴重度。若使用 GitHub 的 agentic autofix，它能提出修補並重跑 CodeQL，最後開草稿 PR 供人審閱；該功能需企業管理員啟用，並另耗 AI Credits 與 Actions 時數。測試指標應包含誤報率、有效漏洞修補率、人工審查工時和部署後回歸錯誤。安全警示與通過掃描，都不等於已完成現場驗證。</p><p><a href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/" target="_blank" rel="noopener noreferrer">來源：GitHub agentic autofix 上線紀錄｜10 月 15 日</a></p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>開放權重把採購問題從授權費推向總持有成本</h3><p>企業想保留資料控制與模型調整權，Beam 的 Apache 2.0 權重提供一條路；Reflection 同時透過 API 與多家雲端、硬體夥伴提供託管與部署選項。本報分析，競爭重點將落在推論吞吐、硬體占用、維運與安全查核，而非只看權重可否下載。小規模團隊可能先用託管 API 試驗，再比較自架在相同工作量下的成本；若真要離線部署，還須算電力、備援與模型更新的責任。</p><h3>安全工具改以使用量計費，採購須量測「有效修補」</h3><p>AI Scan 與 agentic autofix 把掃描提示、修補草稿放進開發流程，但 GitHub 分別計入 AI Credits，後者還耗 Actions 時數。本報分析，付款理由在於縮短發現與修補的等待時間；若誤報多或人工複核變長，帳面自動化未必省錢。採購前可固定一組歷史漏洞與正常 PR，比較每個真正修復且通過回歸測試的問題需花多少費用與工時，再決定額度上限。</p><p>簡報工具則把價值推向共同編修與跨格式交付。企業若已使用固定版型與法遵審核，可先用一份舊案測試：圖表數字是否可追溯、匯出後字型和圖層是否跑版、多人修改能否留下責任紀錄。這些品質條件若仍需大量人工整理，產出速度提升不會直接變成專案成本下降。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 10 月 19 日台灣時間 09:46。Beam 的權重於 10 月 16 日實際釋出，評測數據依 Reflection 模型卡，未經本報重現；自我蒸餾配方仍屬計畫。Anthropic 的股權安排須股東核准。ChatGPT 功能在逐步推出。工廠案例為假設試點，商業推演為本報分析。GitHub 安全工具於 10 月 15 日發布，作為本期補入的背景資訊。</p><ul class="sources"><li><a href="https://reflection.ai/blog/beam-is-available" target="_blank" rel="noopener noreferrer">Reflection：Beam 正式釋出</a></li><li><a href="https://reflection.ai/beam-model-card" target="_blank" rel="noopener noreferrer">Reflection：Beam 模型卡</a></li><li><a href="https://huggingface.co/reflection/Beam-1.0-501B-A23B" target="_blank" rel="noopener noreferrer">Hugging Face：Beam 權重</a></li><li><a href="https://www.anthropic.com/news/public-benefit-fund" target="_blank" rel="noopener noreferrer">Anthropic：Public Benefit Fund</a></li><li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">OpenAI：ChatGPT 更新紀錄</a></li><li><a href="https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/" target="_blank" rel="noopener noreferrer">GitHub：AI Scan 更新</a></li><li><a href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/" target="_blank" rel="noopener noreferrer">GitHub：Agentic autofix 更新</a></li></ul></section></main></div>
+<footer><div class="wrap">你的AI觀察雷達 · 一手來源查核 · 工業場景為假設試點</div></footer></body></html>

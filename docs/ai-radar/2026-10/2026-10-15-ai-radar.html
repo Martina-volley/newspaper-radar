@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Ultramarine 1 Flash 強化專業文件任務；Google 開放 Deep Review 與 Earth AI 早期試用，xAI 更新語音 API。">
+  <title>你的AI觀察雷達｜2026.10.15</title>
+  <style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><div class="brand">你的AI觀察雷達</div><small>2026 年 10 月 15 日 · 週四</small></div></div>
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">每天五分鐘，掌握 AI 關鍵變化</div>
+    <h1>你的AI觀察雷達</h1>
+    <div class="edition-title">專業文件代理進場，驗證成本成為關鍵</div>
+    <p>Ultramarine 1 Flash 強化專業文件任務；Google 開放 Deep Review 與 Earth AI 早期試用，xAI 更新語音 API。</p>
+    <div class="hero-meta"><span>2026.10.15</span><span>約 5 分鐘閱讀</span><span>查核至台灣時間 09:46</span></div>
+  </div></header>
+  <div class="wrap layout">
+    <aside aria-label="頁面目錄"><strong>本期導覽</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside>
+    <main><p>查核截止：2026 年 10 月 15 日台灣時間 09:46。以 10 月 14 日發布的一手資料為主；文中評測與效能數據均為發布方提供，未經本報獨立重現。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Ultramarine 1 Flash：讓模型練習沒有標準答案的專業工作</h3><p>Paper Instruments 10 月 14 日發表 Ultramarine 1 Flash，現已有付費 API 文件與模型代號 `ultramarine-1-flash`。它以 GLM-5.3 Flash 為基礎，再用強化學習訓練代理完成財務、法律、顧問與營運任務。關鍵設計是把一份工作拆成環境、指令和評分規準：例如修改董事會文件時，除了數字正確，還要分清哪些事項現在能核准、哪些仍待法務確認。這類工作有多種合理寫法，很難像程式測試一樣只比對唯一答案，因此團隊為每個任務建立可逐條檢查的標準。</p><p>研究報告列出 88 種模擬工作環境，包括 ERP、倉儲管理與製造執行系統介面；模型在 13.1 萬 token 上下文中使用檔案與工具。開發者稱，它在六項知識工作測試平均比基礎模型高 4.1 分，生成 token 少 6.5%。值得同時讀反例：DiligenceBench 得 50.6，低於表中 Gemini 3.8 Flash 的 53.1；APEX-Agents 1.1 得 57.0，也低於 Claude Fable 5 的 63.6。程式任務 DeepSWE 1.1 得 61.5，並非它的優勢。這些是發布方在指定代理框架與推理設定下的比較，尚需跨工具、跨語言與真實資料驗證。</p><p>訓練方法的可取之處，在於評分規準先寫明事實、門檻與尚未解決的問題，容許不同但同樣成立的答案。限制也在這裡：若規準漏掉關鍵風險，模型可能很會滿足規準，卻仍交出不能採用的文件。實際導入應請領域專家建立一組未出現在訓練或展示中的案例，檢查錯誤類型，而不只比較總分。</p><p>公司以自家知識工作測試估算每件任務 0.13 美元，並列 API 定價為每百萬輸入 token 0.15 美元、輸出 token 0.50 美元。前者是特定測試的平均任務費，後者是計費單價；企業不能把 0.13 美元當成所有報告的固定價格。文件已提供 API 快速入門；本報未查得可下載權重的官方連結，因此不把它寫成已可自行部署。</p><p><a href="https://www.paperinstruments.com/blog/ultramarine" target="_blank" rel="noopener noreferrer">來源：Paper Instruments 技術報告｜10 月 14 日</a> · <a href="https://docs.paperinstruments.com/docs/ultramarine" target="_blank" rel="noopener noreferrer">API 入門文件</a> · <a href="https://docs.paperinstruments.com/docs/ultramarine/billing" target="_blank" rel="noopener noreferrer">API 計價文件</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>Deep Review 公開使用，驗證量能開始追上文件產量</h3><p>Google Research 10 月 14 日把 Deep Review 向一般使用者開放，每週提供兩次免費文件審查；大量使用者可接 Gemini API。系統先將長文件分段、分配推理資源，再由多個代理平行檢查，最後整合跨章節矛盾與外部證據。Google 表示，早期工具曾為超過 1.6 萬篇自願參與的會議投稿提供事前意見；這不等於正式同儕審查的通過率。現階段輸入支援 PDF 與純文字，多檔交叉比對仍是未來功能。Google 表示上傳文件不供模型訓練，但會為介面顯示保留一年；機密文件使用前要先核對資料規則。</p><p><a href="https://research.google/blog/analyzing-technical-documents-with-deep-review/" target="_blank" rel="noopener noreferrer">來源：Google Research 發布說明｜10 月 14 日</a></p><h3>Grok Voice 3.0 已進入語音對語音 API</h3><p>xAI 10 月 14 日在開發文件宣布 `grok-voice-3.0` 可用，語音對語音 API 介面未變，標示價格與 Voice 2.0 相同。使用 `grok-voice-latest` 別名的既有工作階段會自動指向新版，Voice 2.0 同日被標為棄用。這對客服和現場語音系統是一次需要回歸測試的版本變更；官方更新紀錄未提供可與前版直接比較的辨識準確率或延遲數據，不能先推定通話品質改善。</p><p><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener noreferrer">來源：xAI API 更新紀錄｜10 月 14 日</a> · <a href="https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech" target="_blank" rel="noopener noreferrer">語音對語音文件</a></p><h3>Earth AI 擴大試用，地理推論仍屬實驗能力</h3><p>Google Research 同日開放更多夥伴申請 Earth AI 早期試用，包含 Google Earth 內的實驗性地理分析、情境風險預測，以及代理呼叫衛星影像與路徑資料的實驗介面。這是試用範圍擴大，並非所有企業都已取得正式服務。Google 也預告與 Synaptics 合作的下一代低功耗邊緣 AI 晶片將在下週進一步揭露；產品規格與可購買時間仍待公告。</p><p><a href="https://www.research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity/" target="_blank" rel="noopener noreferrer">來源：Google Research Research@ 公告｜10 月 14 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>交班報告：把資料矛盾找出來，再由主管判斷</h3><p>假設食品廠每日交班要整合產量、停機紀錄、品檢表和供應商異常。代理可讀取已授權的表單，指出「停機 40 分鐘、產量卻未下降」等需要人查證的矛盾，再產出附來源的草稿。Ultramarine 的模擬營運環境與 Deep Review 的跨段檢查提供試點線索，並無這家工廠的部署證據。前提是班別、設備編號和數據時間一致；先比對漏報率、錯誤引用與主管覆核時間。停線原因和品質放行仍由現場負責人確認。</p><p>若產量來自設備系統、品檢資料仍在紙本，先處理掃描品質和欄位對應，否則模型可能把不同批次拼在一起。試點也要保留原始紀錄與每次修改的軌跡，讓交班主管能追到哪個數字從哪張表而來。</p><h3>語音巡檢：先確認噪音下能否聽對設備代號</h3><p>假設維修員戴手套巡檢，可用語音系統詢問上次保養項目、口述新發現，再由人確認寫入工單。Grok Voice 3.0 已可供開發者串接，但此情境是本報構想。測試要涵蓋機台噪音、口音、斷線與同音料號；量測錯誤寫單率及人工改單時間。涉及停機或安全聯鎖的指令須另設明確授權，不能讓語音辨識結果直接控制設備。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>專業代理可能按「可驗證的交付物」競爭</h3><p>企業真正付費的是一份可交付的分析、報告或審查結果。Ultramarine 用便宜的 API 單價切入，Deep Review 則把長文件驗證做成可用服務；本報分析，兩者共同把競爭推向交付物的品質與查核成本。採購時應以相同文件、相同權限、相同人工標準答案比較：錯誤修正後每份合格成果花多少錢、多少時間。模型呼叫費低，若錯引一條合約或漏掉關鍵異常，仍可能讓覆核成本上升。</p><h3>版本與資料政策是採購條件的一部分</h3><p>語音 API 別名自動升級，省去改碼，卻可能改變既有對話行為；企業可固定版本並建立測試錄音集。Deep Review 的一年儲存政策也提醒法務與研發團隊，檔案能否上傳與審查品質同樣需要評估。Earth AI 若進入企業工作流程，仍要確認來源、使用範圍及地理預測在本地資料上的誤差。這些是本報對整合與治理成本的分析，並非供應商已公布的新收費項目。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 10 月 15 日台灣時間 09:46。Ultramarine 測試成績、成本與 Deep Review 使用量依發布方資料陳述；未做獨立實測。工廠案例是假設試點，商業延伸為分析。Earth AI 為擴大早期試用，邊緣晶片為下週預告。</p><ul class="sources"><li><a href="https://www.paperinstruments.com/blog/ultramarine" target="_blank" rel="noopener noreferrer">Paper Instruments：Ultramarine 1 Flash 技術報告</a></li><li><a href="https://docs.paperinstruments.com/docs/ultramarine" target="_blank" rel="noopener noreferrer">Paper Instruments：API 快速入門</a></li><li><a href="https://docs.paperinstruments.com/docs/ultramarine/billing" target="_blank" rel="noopener noreferrer">Paper Instruments：API 計價</a></li><li><a href="https://research.google/blog/analyzing-technical-documents-with-deep-review/" target="_blank" rel="noopener noreferrer">Google Research：Deep Review 發布</a></li><li><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener noreferrer">xAI：API 更新紀錄</a></li><li><a href="https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech" target="_blank" rel="noopener noreferrer">xAI：語音對語音文件</a></li><li><a href="https://www.research.google/blog/research-2026-10-ways-were-amplifying-human-ingenuity/" target="_blank" rel="noopener noreferrer">Google Research：Research@ 2026 公告</a></li></ul></section></main>
+  </div>
+  <footer><div class="wrap">你的AI觀察雷達 · 一手來源查核 · 工業場景為假設試點</div></footer>
+</body>
+</html>

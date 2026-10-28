@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="OpenAI 推出 Decisions API；NVIDIA 支援八台 DGX Spark 叢集，Uber 開始擴大 ChatGPT Work 至全公司。"><title>你的AI觀察雷達｜2026.10.23</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body>
+<div class="topbar"><div class="wrap"><div class="brand">你的AI觀察雷達</div><small>2026 年 10 月 23 日 · 週五</small></div></div>
+<header class="hero"><div class="wrap"><div class="eyebrow">每天五分鐘，掌握 AI 關鍵變化</div><h1>你的AI觀察雷達</h1><div class="edition-title">小決策 API 正式上線，AI 部署開始精算每一步</div><p>OpenAI 推出 Decisions API；NVIDIA 支援八台 DGX Spark 叢集，Uber 開始擴大 ChatGPT Work 至全公司。</p><div class="hero-meta"><span>2026.10.23</span><span>約 5 分鐘閱讀</span><span>查核至台灣時間 10:20</span></div></div></header>
+<div class="wrap layout"><aside aria-label="頁面目錄"><strong>本期導覽</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 10 月 23 日台灣時間 10:20。主窗為前 24 小時，聚焦 10 月 22 日的一手公告。效能與客戶案例依發布方揭露，未由本報獨立重現；場域案例為假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Decisions API 正式提供：讓模型只回答流程真正需要的問題</h3><p>一個客服代理收到訊息後，往往先要判斷「繼續回答、追問，或轉真人」，再做後續工作。若每一步都呼叫完整的文字生成模型，等待時間和費用會在高流量下累積。OpenAI 10 月 22 日宣布 Decisions API 正式提供，以 GPT-6 Luna 為基礎，專門處理答案範圍已界定的小決策。這是新的 API 服務，並非當天發布全新基礎模型。</p><p>開發者先定義問題、允許的答案及判斷所需資料，可送入文字、圖片或 JSON。API 提供三種輸出：predicate 回傳條件成立的估計機率；choice 從預先列出的選項擇一，附機率與信心資訊；score 依排序尺度評分。它也可一次處理最多 400 個問題，並與 GPT-Live 整合，讓語音應用在對話中決定下一步。有限輸出讓程式較容易接續動作，但答案集合若設錯，模型再快也只會在錯誤選項間選擇。</p><p>OpenAI 稱它處理有界答案的問題，速度最高可達同一 GPT-6 Luna 經 Responses API 的 10 倍；「最高」是特定條件下的比較，不等於所有任務都有十倍效益。Box 公布的 30 份保險證明文件測試，路由速度約五倍、準確率相同；樣本很小，也屬客戶自述。其他案例的延遲與成本數字各有不同基準，不宜混成一個通用成績。本報未重跑任何評測。</p><p>真正的評估要從誤判成本出發：先收集不同語氣、模糊輸入和少見例外，用人工標註建立對照；設定低信心時交人處理的門檻，再測整條流程的正確率、尾端延遲與每筆有效處理成本。若是安全停機、退款或權限核准，單一機率不應直接觸發不可逆動作。公告列出的價格為每百萬輸入 token 0.10 美元、快取輸入 0.01 美元，沒有輸出 token 費；實際總成本還包含標註、人工覆核和錯誤處理。</p><p><a href="https://openai.com/index/decisions-api/" target="_blank" rel="noopener noreferrer">來源：OpenAI Decisions API 正式發布｜10 月 22 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>八台 DGX Spark 可組叢集，擴記憶體也增加網路成本</h3><p>NVIDIA 10 月 22 日宣布正式支援最多八台 DGX Spark 組成叢集，合計 1 TB 統一記憶體，可在本地載入更大的開放模型。它報告，在八台、交換器拓樸、Qwen3.8-27B 的 NVFP4 測試中，生成吞吐量由單台約 11.86 token／秒增至約 52.58 token／秒；測試條件為單一並行請求、固定輸入和輸出長度，擴八倍硬體並未得到八倍速度。自家 RoCEnante 通訊後端在這類低並行條件改善節點同步，但大量資料移動或高並行時未必勝過預設方案。官方的 NVIDIA Sync 八台叢集支援預計年底才加入，不能寫成今日已交付。</p><p><a href="https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/" target="_blank" rel="noopener noreferrer">來源：NVIDIA 八台 DGX Spark 技術文章｜10 月 22 日</a></p><h3>Uber 從千人試點擴大 ChatGPT Work，實際成效仍待公布</h3><p>OpenAI 10 月 22 日表示，Uber 從先前約 1,000 人試點，開始向全球逾 30,000 名員工推行 ChatGPT Work。工具可連接 Google Drive、Gmail、行事曆及 Slack，用於找資料、簡報、分析和跨應用工作；GPT-6.1 Sol 將作為預設能力。Uber 配套包括內部 AI 技能庫、核准過的整合與員工訓練。這是開始推行的公告，不能推論三萬多人已經每日使用。兩家公司也說會在推行期間再分享採用和成效資料，現階段沒有足夠數字可驗證節省多少工時。</p><p><a href="https://openai.com/index/uber-chatgpt-work-rollout/" target="_blank" rel="noopener noreferrer">來源：OpenAI／Uber 企業推行公告｜10 月 22 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>設備報修分流：先讓 AI 決定該交給哪一組</h3><p>假設一家設備商每天收到大量維修訊息，客服先要分辨停機風險、產品型號和是否缺少照片。可把這些限定問題交給 Decisions API，回傳「立即升級、一般派工、先追問」三種選擇，再由既有系統執行；安全風險高或信心不足的案件轉人工。前提是有經核准的工單分類、歷史案例與升級規則。試點應比較誤分率、重大案件漏升級率、每件處理時間及人工覆核量，而不只看 API 回答速度。派工與安全處置責任仍在維修主管。這是本報提出的假設流程，非設備商已部署案例。</p><h3>本地模型研發：先算整套叢集能否養得起</h3><p>假設研發團隊因資料保密，考慮在辦公室運行大型開放模型。八台 DGX Spark 可提供更大記憶體，工程師仍須按目標模型量化格式、網路拓樸、同時使用人數和預期延遲做實測。資料前提是可合法使用的模型權重、內部測試題及設備維護條件。比較指標應包括每位使用者的生成速度、尖峰等待、耗電、網路設備與管理工時。若實際工作只是小模型分類，購置八台機器可能沒有必要；是否投資由資訊與財務部門依試點數據決定。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>小決策成為獨立計價產品，客戶買的是整條流程的反應時間</h3><p>本報分析，Decisions API 把「選下一步」從一般生成服務拆出來，使供應商可用低輸入價格吸引高頻調用。客戶付款理由是客服、風控或文件路由能更快完成；但採購不能只比較每百萬 token 單價。若判錯一次會造成客訴或人工重做，標註資料、覆核及回退流程會吃掉速度收益。實際可比較每千件成功處理案件的總成本與尾端等待時間，再決定哪些節點適合自動化。</p><h3>企業代理的收入要靠普及後的使用率，硬體則靠可用容量</h3><p>本報分析，Uber 的推行顯示企業代理正從少數試點走向全員授權與系統整合；供應商可取得席位與使用量收入，企業則要負擔資料權限、教育訓練和持續治理。簽約席位數不等於有用的工作成果，應追蹤有多少任務真正完成、人工修正多少、哪些部門持續使用。NVIDIA 的本地叢集瞄準另一種付款理由：更大模型可在自有場所執行。收益能否成立取決於負載密度、網路和電力成本，不能把一項單請求測速當成所有公司的投資報酬率。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 10 月 23 日台灣時間 10:20。三項主要消息均於 10 月 22 日公告。Decisions API 已正式提供；十倍速度、Box 小樣本與定價取自 OpenAI 當日文章，未獨立重現。NVIDIA 八台叢集為正式支援，文中吞吐量是指定模型與單請求測試，NVIDIA Sync 的相應功能屬年底計畫。Uber 公司推行自 10 月 22 日開始，尚無全員使用或效益實測。兩個場域是假設試點，商業延伸為本報分析。</p><ul class="sources"><li><a href="https://openai.com/index/decisions-api/" target="_blank" rel="noopener noreferrer">OpenAI：Decisions API 正式提供</a></li><li><a href="https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/" target="_blank" rel="noopener noreferrer">NVIDIA：八台 DGX Spark 叢集與測試</a></li><li><a href="https://openai.com/index/uber-chatgpt-work-rollout/" target="_blank" rel="noopener noreferrer">OpenAI／Uber：ChatGPT Work 擴大推行</a></li></ul></section></main></div>
+<footer><div class="wrap">你的AI觀察雷達 · 一手來源查核 · 工業場景為假設試點</div></footer></body></html>

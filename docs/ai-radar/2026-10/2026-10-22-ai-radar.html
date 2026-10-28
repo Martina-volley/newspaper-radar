@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="OpenAI 揭露 ChatGPT 廣告架構；Google Cloud 啟動 OpenAI 模型私人預覽，NVIDIA 展示 AI 資料中心數位分身流程。"><title>你的AI觀察雷達｜2026.10.22</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body>
+<div class="topbar"><div class="wrap"><div class="brand">你的AI觀察雷達</div><small>2026 年 10 月 22 日 · 週四</small></div></div>
+<header class="hero"><div class="wrap"><div class="eyebrow">每天五分鐘，掌握 AI 關鍵變化</div><h1>你的AI觀察雷達</h1><div class="edition-title">對話廣告另建 AI 決策鏈，OpenAI 模型進入 Google Cloud</div><p>OpenAI 揭露 ChatGPT 廣告架構；Google Cloud 啟動 OpenAI 模型私人預覽，NVIDIA 展示 AI 資料中心數位分身流程。</p><div class="hero-meta"><span>2026.10.22</span><span>約 5 分鐘閱讀</span><span>查核至台灣時間 09:49</span></div></div></header>
+<div class="wrap layout"><aside aria-label="頁面目錄"><strong>本期導覽</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 10 月 22 日台灣時間 09:49。主窗為前 24 小時，聚焦 10 月 21 日的一手公告。廠商揭露的系統設計與數字尚未由本報獨立驗證；場域案例為假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>ChatGPT 廣告另建一條 AI 決策鏈，關鍵是何時選擇「不顯示」</h3><p>OpenAI 10 月 21 日公開 ChatGPT 廣告系統的工程設計。這是現有產品的技術說明，沒有發布新基礎模型。傳統廣告靠一次搜尋詞判斷意圖；對話中的需求卻會隨提問改變，例如先問旅行路線，幾輪後才談登山鞋。OpenAI 因而使用經過後訓練的專用模型作「協調器」，持續理解對話脈絡，呼叫檢索、相關性評分及競價工具。</p><p>流程中，協調器先把多輪對話濃縮成可檢索的語意表示，找出候選廣告，再經預算、地區、政策、品質和競價篩選。競價工具決定最後價格與排序，模型並不直接訂價。入選後仍有最後關卡：若廣告在對話中顯得不合宜，或回傳時間趕不上本輪回覆，就不展示。OpenAI 說廣告服務和回答生成使用分開的模型與程式碼，並行執行；廣告太慢時不延遲正常回答。這是發布方對架構的描述，不能單憑它證明每則回答都不受商業誘因影響。</p><p>技術上值得注意的評估單位，也從「找到幾則廣告」變成整條漏斗：有多少對話適合投放、檢索有沒有找到合適候選、多少廣告因安全或時間條件被擋下、使用者實際看到多少。伺服器選出廣告，不等於畫面已顯示。OpenAI 表示，廣告以贊助內容標示在回答下方；若廣告太晚抵達，本輪就不顯示。若要評估這套系統的品質，除了點擊率，還應看使用者隱藏廣告、錯誤推斷購買意圖及回答中立性的獨立測試；文章沒有提供可供外界重現的完整測試資料。</p><p>OpenAI 稱 ChatGPT Ads 在推出後不到 200 天達到年化營收運行率 10 億美元，且逾 10 萬廣告主曾投放。年化運行率是依當前速度換算的一年數字，並非已實現的全年營收。本報把它視為廠商揭露的商業規模訊號，不能據此推算獲利、留存或廣告效果。</p><p><a href="https://openai.com/index/building-chatgpt-ad-stack/" target="_blank" rel="noopener noreferrer">來源：OpenAI 廣告系統工程文章｜10 月 21 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>OpenAI 模型進入 Google Cloud，現階段是企業私人預覽</h3><p>OpenAI 與 Google Cloud 10 月 21 日共同宣布，GPT-6 Astra、GPT-6.1 Sol 與 GPT-6 Luna 開始在 Google Cloud 模型平台向部分企業提供私人預覽；一般可用性計畫在未來數週推出。企業可在同一雲端平台選用不同供應商模型，並把 OpenAI 用量計入既有 Google Cloud 採購承諾。OpenAI 也預告 Codex 工作流程與其他 Google 產品整合，但那些後續入口尚未全面開放。這項合作改變的是取得、治理和付款路徑，不代表模型能力本身今天升級；OpenAI 並表示 Microsoft 仍是其主要雲端夥伴。</p><p><a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers" target="_blank" rel="noopener noreferrer">來源：Google Cloud 公告｜10 月 21 日</a> · <a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener noreferrer">OpenAI 合作公告</a></p><h3>NVIDIA 展示代理協助建數位分身，模擬結果仍由工程師判讀</h3><p>NVIDIA 10 月 21 日發表 AI 資料中心的代理輔助設計流程：把場地圖、設備資料、工程要求與既有 3D 資產整合成可編輯的 OpenUSD 模型，再交由工程師檢查尺寸、供電和冷卻條件。文章展示的園區模型可供後續容量研究使用；其中「固定 1 MW 下吞吐量 1.35 倍」是示意參數比較，並非該園區模型模擬出來的結果，也不是已部署資料中心的成效。代理能幫忙整理版本與提出變更，真正的電力、散熱計算仍需具備物理參數的模型及工程審核。</p><p><a href="https://developer.nvidia.com/blog/developing-an-ai-factory-digital-twin-with-an-agent-assisted-workflow/" target="_blank" rel="noopener noreferrer">來源：NVIDIA 數位分身技術文章｜10 月 21 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>企業模型採購：同一雲端帳單下，仍要逐項驗收</h3><p>假設一家製造集團已把維修紀錄和採購資料放在 Google Cloud，想加入不同模型處理設備問答與程式維護。資訊部門可在獲得私人預覽資格後，使用相同、已去識別的測試資料，比較 GPT-6 系列與現有模型的答案正確率、延遲、每個通過驗收任務的成本及資料存取紀錄。資料前提是明確的權限、稽核紀錄與可重現的測試集；Google Cloud 所稱治理能力仍要按公司實際設定查驗。正式選型由業務、資安及採購共同決定。這是試點構想，不是已有工廠完成部署。</p><h3>機房擴建：讓代理指出圖面變更牽動了什麼</h3><p>假設企業準備增加一排 AI 伺服器。代理可先對照最新機櫃圖、配電容量、冷卻設備規格與建築限制，標出新增機櫃後可能受影響的電路、風道和維護空間，再產出待審的 3D 修訂版。工程師需核對 CAD 尺寸、設備額定值與模擬邊界條件。試點量測漏查的依賴項、修改圖面所需時間，以及模擬與現場量測的差距；採購與施工仍以工程簽核為準。NVIDIA 的展示沒有證明任意廠房都能自動完成容量規劃。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>雲端模型交易的價值，轉向採購與治理的整合成本</h3><p>本報分析，企業常已預付雲端額度，另簽模型合約會增加付款、權限與稽核工作。OpenAI 模型進入 Google Cloud，讓既有雲端承諾可能成為採購槓桿；Google Cloud 則取得更多模型用量與平台黏著度。客戶願意付費的條件，是模型品質達標且治理流程可沿用。比較供應商時應看完整任務成本、資料邊界、可用區域與故障責任；私人預覽的條件和未來正式服務可能不同，價格優勢也尚無通用結論。</p><h3>對話廣告賣的是「合適時機」，也承擔誤判的代價</h3><p>本報分析，聊天平台能把多輪對話中的需求轉成廣告機會，廣告主可能因此願意為更接近決策時刻的曝光付款。但若把隨口提及當成購買意圖，平台要承擔使用者反感與信任流失。較合理的成效指標，是實際顯示後的有效互動與轉換，同時監看隱藏率、投訴和回答品質。NVIDIA 的數位分身則提示另一種收入來源：設備商與工程軟體商可販售可驗證的資產資料、模擬接頭和專業審核服務，而不僅是漂亮的 3D 畫面。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 10 月 22 日台灣時間 09:49。三項主題均以 10 月 21 日公告為準。OpenAI 廣告架構與營收數字依其工程文章，未獨立稽核；Google Cloud 的 OpenAI 模型目前限部分企業私人預覽，一般可用性與其他產品整合屬未來計畫；NVIDIA 的 1.35 倍為示意比較。企業與機房案例是假設試點，商業延伸為本報分析。DeepStream 9.2 雖有 10 月 21 日論壇貼文，其 GitHub 版本發布於 10 月 16 日，本期沒有把它當作昨日新發布。</p><ul class="sources"><li><a href="https://openai.com/index/building-chatgpt-ad-stack/" target="_blank" rel="noopener noreferrer">OpenAI：ChatGPT 廣告系統工程設計</a></li><li><a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers" target="_blank" rel="noopener noreferrer">Google Cloud：OpenAI 模型進入模型平台</a></li><li><a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener noreferrer">OpenAI：Google Cloud 合作公告</a></li><li><a href="https://developer.nvidia.com/blog/developing-an-ai-factory-digital-twin-with-an-agent-assisted-workflow/" target="_blank" rel="noopener noreferrer">NVIDIA：代理輔助數位分身流程</a></li></ul></section></main></div>
+<footer><div class="wrap">你的AI觀察雷達 · 一手來源查核 · 工業場景為假設試點</div></footer></body></html>
