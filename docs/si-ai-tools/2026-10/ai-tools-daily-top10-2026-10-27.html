@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-27（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-27（Asia/Taipei） <strong>✦</strong> 6 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>2 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://claude.com/resources/articles/expanding-claude-for-nonprofits" target="_blank" rel="noopener noreferrer">Claude for Nonprofits 外掛</a></h3><p>Anthropic 於 10/26 推出面向經驗證非營利組織的 Claude 外掛，內含募款研究與提案、行銷、人事及董事會工作流程，也能依組織政策回答員工可否在特定情境使用 AI。外掛由約 30 個非營利組織共同設計，重點是把組織背景、政策和常用任務帶進日常工作；這是供應商介紹的功能與案例，實際可用技能、資料連接和組織資格仍需在帳戶中確認。若適用，可先用公開募款資料測試來源引用，再檢查內部捐款資料權限與政策回答是否正確。</p></div></article><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot/" target="_blank" rel="noopener noreferrer">GPT-6.1 Terra 登上 GitHub Copilot</a></h3><p>GitHub 於 10/26 將 OpenAI 的 GPT-6.1 Terra 加入 Copilot，供日常代理程式開發與終端工作使用；官方定位是比 GPT-6.1 Sol 成本低，並稱早期測試在終端和 C# 任務中較 GPT-5.6 Terra 解出更多題目。模型按供應商牌價採用量計費，正分批向 Pro、Pro+、Max、Business 與 Enterprise 推出，企業管理員可由模型政策控制。GitHub 未在公告交代比較方法與任務數；可用固定的終端操作及 C# 任務比較完成率、修正次數、延遲和實際費用。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>2 則</span></div><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener noreferrer">Gemini API：新付費專案預設儲存請求</a></h3><p>Google 於 10/26 調整 Gemini API 的 Generate Content：新建的付費專案預設會儲存請求（`store=true`），與 Interactions API 的行為一致；既有專案設定不變。開發者可對個別請求設 `store=false`，或在 AI Studio Logs and Datasets 關閉 Generate Content API 記錄。若系統會送出個資、機密提示或客戶內容，應先確認專案建立日期、請求參數和記錄設定，再測試日誌中實際留下哪些資料。</p></div></article><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq" target="_blank" rel="noopener noreferrer">ChatGPT 自訂 GPT 轉移至外掛的時程</a></h3><p>OpenAI 的更新說明指出，自訂 GPT 將逐步轉移到外掛：受影響的 Enterprise 工作區已自 10/26 停止建立新 GPT（FedRAMP 除外），既有 GPT 標準退役日為 12/11，符合條件並獲核准延後的工作區可至 2027/2/11。遷移後原 GPT 會變成唯讀；指示與知識檔可轉入外掛，但自訂 Actions 不會自動轉移，且新外掛預設為私人。GPT 建立者可先盤點常用工作流程與 Actions，等待帳戶開放遷移後用熟悉提示測試替代外掛及分享權限。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>2 則</span></div><article class="card" id="item-05"><div class="rank">05</div><div class="card-body"><h3><a href="https://openai.com/index/gpt-6-1-sol-coderabbit-code-security/" target="_blank" rel="noopener noreferrer">CodeRabbit Secure 採用 GPT-6.1 Sol</a></h3><p>OpenAI 於 10/26 介紹 CodeRabbit 將 GPT-6.1 Sol 用於安全代理，協助跨檔案、相依套件與相連程式庫分析 PR 風險；CodeRabbit Secure 也能在隔離沙箱嘗試驗證使用者選定的發現，並為支援的問題草擬修補 PR。這是供應商發布的客戶案例，系統還結合其他模型與安全工具，並非只靠單一模型完成掃描；正式修補仍須人工審查。可先在測試倉庫檢查誤報、沙箱隔離、跨倉庫權限和修補後測試結果。</p></div></article><article class="card" id="item-06"><div class="rank">06</div><div class="card-body"><h3><a href="https://openai.com/index/fanatics-streamline-fan-experience/" target="_blank" rel="noopener noreferrer">Fanatics 上線 Shop the Look 商品搭配推薦</a></h3><p>Fanatics 於 10/26 在旗下多個商店網站上線 AI 商品搭配功能：消費者瀏覽球衣時，可看到依球隊、庫存和風格搭配的商品建議，清單會隨目錄每日更新。OpenAI 稱此體驗在約 30,000 項 MLB 商品測試中，互動率比舊版高 10%；這是合作雙方公布的單一案例數據，不代表其他零售目錄也會得到相同提升。可留意推薦是否受庫存與品牌規則約束，並用自家商品分類測量點擊、加購和退貨等完整指標。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>AI 工作流程開始包裝成產業或組織專用能力</h3><div class="trend-tools"><a href="#item-01">Claude for Nonprofits</a>、<a href="#item-04">ChatGPT 自訂 GPT 遷移</a>、<a href="#item-06">Fanatics Shop the Look</a></div><p class="trend-key">非營利外掛與零售推薦把通用模型接上特定資料和任務，而自訂 GPT 遷移則要求既有工作流程重新檢查指示、工具和分享方式。</p><p class="trend-check"><span>驗證重點</span>比對資料權限、來源可追溯性、替代工作流程的行為，以及使用者是否仍能取得原有功能。</p></article><article class="trend"><h3>模型表現之外，部署設定與驗證流程更重要</h3><div class="trend-tools"><a href="#item-02">GPT-6.1 Terra</a>、<a href="#item-03">Gemini API 儲存預設</a>、<a href="#item-05">CodeRabbit Secure</a></div><p class="trend-key">新模型選擇、API 請求記錄和程式碼安全代理各自帶來不同的成本或資料風險，採用時不能只看模型能力。</p><p class="trend-check"><span>驗證重點</span>核實計費與模型政策、專案儲存設定、日誌內容、沙箱隔離和人工核准點。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://claude.com/resources/articles/expanding-claude-for-nonprofits" target="_blank" rel="noopener noreferrer">Anthropic：Expanding Claude for Nonprofits</a></li><li><a href="https://github.blog/changelog/2026-10-26-gpt-6-1-terra-in-github-copilot/" target="_blank" rel="noopener noreferrer">GitHub Changelog：GPT-6.1 Terra in GitHub Copilot</a></li><li><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener noreferrer">Google AI for Developers：Gemini API Release notes</a></li><li><a href="https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq" target="_blank" rel="noopener noreferrer">OpenAI Help Center：Custom GPT retirement and migration FAQ</a></li><li><a href="https://openai.com/index/gpt-6-1-sol-coderabbit-code-security/" target="_blank" rel="noopener noreferrer">OpenAI：GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases</a></li><li><a href="https://openai.com/index/fanatics-streamline-fan-experience/" target="_blank" rel="noopener noreferrer">OpenAI：How Fanatics and OpenAI streamline the fan experience</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>

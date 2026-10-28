@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-19（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-19（Asia/Taipei） <strong>✦</strong> 7 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>3 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener noreferrer">DeepSeek-V4.1-Flash-1017</a></h3><p>DeepSeek 官方 Hugging Face 模型卡在 10/17 更新 1017 版，稱推理、程式、代理與視覺基準均有進步，並採 MIT 授權；卡片列出 1M context，模型規模約 763B 參數。DeepSeek 報告的 DeepSWE v1.1 為 77.0，舊版為 74.2，但測試使用 Claude Code harness，分數不能直接代表實際專案表現。權重可下載，不代表一般工作站能負擔；先核對硬體、推論框架與授權，再用固定程式任務測成功率、記憶體和延遲。</p></div></article><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">GPT-6 Pro 多代理與工具更新</a></h3><p>OpenAI 於 10/16 更新 ChatGPT GPT-6 Pro：回覆更快、工具與外掛使用改善，並開始讓多個代理平行處理任務，使用者可查看進度與已完成子任務。此更新逐步提供給符合資格的 Pro 用戶，受工作區設定影響；公告未提供對照測試或適用任務範圍。可用同一組多步工作比較完成時間、錯誤率、代理分工透明度及用量。</p></div></article><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://junie.jetbrains.com/blog/" target="_blank" rel="noopener noreferrer">Junie Local 擴大硬體支援</a></h3><p>JetBrains 於 10/16 表示 Junie Local 可在 NVIDIA RTX Spark 執行，Windows 支援也轉為穩定版；產品定位是模型與程式碼在本機處理，不按 token 計費。它降低了本機代理的設定門檻，但硬體相容清單與實際速度仍需依設備確認，且離線本機模型未必適合所有高難度任務。可用自己的程式庫測試安裝、編譯、測試和長任務，並確認網路活動只限模型下載。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>2 則</span></div><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">ChatGPT Slides</a></h3><p>ChatGPT 於 10/16 開始推出簡報協作：可從對話、檔案或大綱建立簡報，在 Space 中共同編輯、留言，並匯出 PowerPoint、PDF 或 Google Slides。現正向具 Space 權限的 Pro、Business、Enterprise 用戶分批推出，且 web 與桌面版支援不同；不代表所有帳戶已可用。先用既有範本測試版面一致性、圖表資料核對、多人修改紀錄與匯出後的可編輯性。</p></div></article><article class="card" id="item-05"><div class="rank">05</div><div class="card-body"><h3><a href="https://github.com/google-research/harness2" target="_blank" rel="noopener noreferrer">Google Research Harness²</a></h3><p>Google Research 公開 Harness²，讓代理在模型權重不變的情況下，依任務執行「提出、探測、組合」來調整提示、工具、記憶與子代理等 harness 元件；支援 Codex、OpenCode，並提供 JobBench、LAB、WorkBuddy-Bench 等評測流程。專案標明不屬 Google 官方支援產品，且公布的最高增益來自少數模型與基準組合。可先跑單一任務與基線比較，確認耗用額度、基準資料存取限制及重現性，再評估遞迴改良是否值得成本。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>2 則</span></div><article class="card" id="item-06"><div class="rank">06</div><div class="card-body"><h3><a href="https://www.atscale.com/press/atscale-for-ai/" target="_blank" rel="noopener noreferrer">AtScale for AI</a></h3><p>AtScale 於 10/15 推出由 Ava、CoModel、Canary 組成的企業 AI 套件，主張以共用指標定義、語意層與測試流程，讓代理查詢遵循既有商業邏輯。這是供應商的新產品組合與定位，公告未提供獨立準確率驗證；價值取決於企業是否已治理指標與資料模型。若評估，選一個財務或營運指標，檢查定義、權限、SQL 結果與版本變更是否可追溯。</p></div></article><article class="card" id="item-07"><div class="rank">07</div><div class="card-body"><h3><a href="https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/" target="_blank" rel="noopener noreferrer">Google Earth AI 地理空間代理</a></h3><p>Google Research 於 10/14 表示，正透過 Ask Google Earth 與 Agent-to-Agent 服務擴大地理空間代理的實驗性使用；技術報告描述代理如何串接地球觀測模型、空間工具與規劃，處理跨資料類型的分析。這仍是實驗性存取，不等於一般使用者已全面開放，且示範與合作測試不能取代實地驗證。可確認申請資格、資料覆蓋範圍、空間推論誤差和結果來源，再用已知地區做交叉比對。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>代理的產出開始同時受模型、工具和工作流程影響</h3><div class="trend-tools"><a href="#item-01">DeepSeek-V4.1-Flash-1017</a>、<a href="#item-02">GPT-6 Pro 多代理與工具更新</a>、<a href="#item-05">Google Research Harness²</a></div><p class="trend-key">DeepSeek 更新模型能力、GPT-6 Pro 把工作拆給平行代理、Harness² 則改造代理周邊配置；三者分別作用在代理效能的模型、協作和執行框架。</p><p class="trend-check"><span>驗證重點</span>用同一組任務記錄完成率、總延遲、token／硬體成本與人工返工，避免只比較單一基準分數。</p></article><article class="trend"><h3>本機執行與受治理的企業資料各自建立信任條件</h3><div class="trend-tools"><a href="#item-03">Junie Local 擴大硬體支援</a>、<a href="#item-06">AtScale for AI</a></div><p class="trend-key">Junie 把程式碼留在本機，AtScale 則把企業指標定義帶進代理查詢；一方控制資料外流，一方控制答案採用的商業語意。</p><p class="trend-check"><span>驗證重點</span>檢查本機代理的網路行為、組織權限、指標定義版本與查詢結果是否能稽核。</p></article><article class="trend"><h3>AI 從文字與程式任務延伸到多人協作和地理分析</h3><div class="trend-tools"><a href="#item-04">ChatGPT Slides</a>、<a href="#item-07">Google Earth AI 地理空間代理</a></div><p class="trend-key">Slides 把 AI 產物帶入多人編輯與簡報交付，Earth AI 則以模型和空間工具回答地理問題；兩者都需要讓使用者看懂並驗證生成內容。</p><p class="trend-check"><span>驗證重點</span>以真實簡報與已知地區資料測試內容正確性、來源標示、修改紀錄和匯出結果。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017" target="_blank" rel="noopener noreferrer">DeepSeek 官方 Hugging Face：DeepSeek-V4.1-Flash-1017 模型卡與技術報告</a></li><li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">OpenAI Help Center：ChatGPT release notes（2026-10-16）</a></li><li><a href="https://junie.jetbrains.com/blog/" target="_blank" rel="noopener noreferrer">JetBrains Junie Blog：Junie Local Comes to the NVIDIA RTX Spark（2026-10-16）</a></li><li><a href="https://github.com/google-research/harness2" target="_blank" rel="noopener noreferrer">Google Research：Harness² 官方 GitHub 專案與文件</a></li><li><a href="https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/" target="_blank" rel="noopener noreferrer">Google Research：Putting Earth AI to work（2026-10-14）</a></li><li><a href="https://www.atscale.com/press/atscale-for-ai/" target="_blank" rel="noopener noreferrer">AtScale：AtScale for AI 發布公告（2026-10-15）</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>

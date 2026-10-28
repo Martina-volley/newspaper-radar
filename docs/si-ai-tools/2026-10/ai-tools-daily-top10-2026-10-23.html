@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-23（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-23（Asia/Taipei） <strong>✦</strong> 6 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>2 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://www.minimax.io/blog/minimax-code-mini-app-1792650729" target="_blank" rel="noopener noreferrer">MiniMax Code Mini App</a></h3><p>MiniMax 於 10/22 在 MiniMax Code 桌面版推出 Mini App：讓代理把持續更新的工作頁面、Node.js 後端與資料留在一個應用中，並能和代理雙向呼叫；`/miniapp-creator` 可從一句需求生成頁面與後端，再由內建瀏覽器檢查。這項設計針對代理工作散落在多個對話、生成後的儀表板不會更新等問題，現可在 macOS 與 Windows 本機工作階段使用。官方表示主機代管連接器和憑證，程式則在使用者電腦以該使用者權限執行；安裝前仍應檢查來源、套件權限與資料存取範圍。可用需每日更新的追蹤任務測試狀態保存、回到工作時的脈絡延續及人工核准。</p></div></article><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://openai.com/index/decisions-api/" target="_blank" rel="noopener noreferrer">OpenAI Decisions API 正式推出</a></h3><p>OpenAI 於 10/22 將 Decisions API 轉為正式版，供應用與代理針對分類、路由、選擇下一步或評分等「答案範圍明確」的問題快速決策；輸入可為文字、圖片或 JSON，輸出為機率、選項或分數。官方稱 API 採 GPT-6 Luna，這類決策較透過 Responses API 呼叫同模型快至 10 倍，並已加入 GPT-Live 整合及每次最多 400 個問題等能力；速度是供應商公布的比較，仍須按自己的提示、流量與準確率要求測試。適合先以固定分類和路由樣本對照現行流程，量測 p95 延遲、錯誤決策率及每次呼叫成本。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>2 則</span></div><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://openai.com/index/uber-chatgpt-work-rollout/" target="_blank" rel="noopener noreferrer">Uber 全公司導入 ChatGPT Work</a></h3><p>Uber 與 OpenAI 於 10/22 宣布將 ChatGPT Work 擴展至 Uber 全球逾 30,000 名員工，從 1,000 人試行擴大；此代理位於 ChatGPT Enterprise，可連接 Google Drive、Gmail、Calendar 與 Slack，處理研究、會議簡報、簡報製作和跨應用工作，工程團隊也會繼續使用 Codex。這是規模化企業部署案例，尚非普遍使用成效證據；文章未公布實際生產力、錯誤率或投資報酬。可追蹤其後續公布的採用率和可量化成果，企業評估時則先確認連接器權限、資料保留及跨系統操作的審核流程。</p></div></article><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api/" target="_blank" rel="noopener noreferrer">Copilot 使用度量 API 顯示自訂代理名稱</a></h3><p>GitHub 於 10/22 更新 Copilot 使用度量 API，讓企業與組織報告辨識自訂 skills、agents、MCP servers、斜線命令和外掛名稱；每份 `totals_by_*` 清單上限由 5 項提高至 25 項，方便管理員檢查內部工具的採用情況。資料需啟用使用度量政策，且取決於用戶端版本與遙測，官方提醒可能低估活動；新名稱只會出現在更新發布後處理的報告日。可先確認 CLI、Copilot app 或 ACP 整合版本與權限，再以報告日核對資料是否到齊，不宜當作精確帳務數字。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>2 則</span></div><article class="card" id="item-05"><div class="rank">05</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/" target="_blank" rel="noopener noreferrer">Copilot 影響儀表板加入產業比較</a></h3><p>GitHub 於 10/22 在 Copilot 影響儀表板推出同業比較，企業可依產業與員工規模，對照 agent-first／multi-agent 使用比例及代理使用者的 PR 合併率；參與採自願加入，預設關閉。比較需累積足夠同業樣本才會顯示，樣本不足時會改用較廣的同規模群組或暫不顯示排名；目前僅在儀表板呈現，不含於 API 匯出。若用作內部目標設定，應先查看實際採用的比較群組，並把參與者偏差和樣本量納入判讀。</p></div></article><article class="card" id="item-06"><div class="rank">06</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/" target="_blank" rel="noopener noreferrer">Copilot 企業功能全域預設開始正式套用</a></h3><p>GitHub 於 10/22 開始分批套用 Copilot Business 與 Enterprise 的新功能全域預設政策，預計至 10/26 完成；尚未明確設定的合資格 GA 功能將依管理員選定的「啟用、停用或交由組織決定」設定處理。明確設定會保留，預覽功能仍採選擇加入；這是逐企業與組織分批生效，不一定當天全部套用。管理員可檢查 AI Controls → Copilot 的預設值與未設定項目，確認新功能不會超出組織的核准範圍。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>工作從對話移到可持續的代理介面</h3><div class="trend-tools"><a href="#item-01">MiniMax Code Mini App</a>、<a href="#item-03">ChatGPT Work</a></div><p class="trend-key">MiniMax 把工作上下文放進可持續更新的應用頁面，Uber 則把代理接入員工每天使用的商務工具；兩者都在減少重開任務時重新拼湊脈絡的成本。</p><p class="trend-check"><span>驗證重點</span>檢查狀態是否持續保存、權限是否隨來源系統生效，以及交接時能否追溯代理執行內容。</p></article><article class="trend"><h3>代理工作流開始拆出快決策並量測使用狀況</h3><div class="trend-tools"><a href="#item-02">Decisions API</a>、<a href="#item-04">Copilot 使用度量 API</a>、<a href="#item-05">Copilot 影響儀表板</a></div><p class="trend-key">快速、範圍明確的決策可嵌入即時代理流程，而管理端同步補上自訂代理採用情況和同業脈絡，讓部署從「能執行」走向可觀察。</p><p class="trend-check"><span>驗證重點</span>以自有任務核對決策品質與延遲，並檢查遙測涵蓋率、比較樣本量和儀表板指標定義。</p></article><article class="trend"><h3>企業代理治理由人工逐項設定走向政策預設</h3><div class="trend-tools"><a href="#item-06">Copilot 預設政策</a>、<a href="#item-04">Copilot 使用度量 API</a></div><p class="trend-key">全域政策會影響尚未逐項設定的功能是否可用，使用度量則協助管理員看見團隊實際採用了哪些自訂代理與工具。</p><p class="trend-check"><span>驗證重點</span>確認政策生效日期、未設定項目、明確覆寫及預覽例外，再比對使用報告權限和版本限制。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://www.minimax.io/blog/minimax-code-mini-app-1792650729" target="_blank" rel="noopener noreferrer">MiniMax：Introducing MiniMax Code Mini App</a></li><li><a href="https://openai.com/index/decisions-api/" target="_blank" rel="noopener noreferrer">OpenAI：Build more responsive apps with the Decisions API</a></li><li><a href="https://openai.com/index/uber-chatgpt-work-rollout/" target="_blank" rel="noopener noreferrer">OpenAI：Uber brings ChatGPT Work to all employees with OpenAI</a></li><li><a href="https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Custom skills, agents, and MCP servers in usage metrics API</a></li><li><a href="https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Industry comparisons in the Copilot impact dashboard</a></li><li><a href="https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Global default for Copilot features generally available</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>

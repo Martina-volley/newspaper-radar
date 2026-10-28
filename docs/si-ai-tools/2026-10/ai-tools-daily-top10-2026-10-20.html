@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-20（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-20（Asia/Taipei） <strong>✦</strong> 4 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>2 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://www.minimax.io/blog/minimax-m31f" target="_blank" rel="noopener noreferrer">MiniMax M3.1 Flash</a></h3><p>MiniMax 於 10/19 正式推出 M3.1 Flash，現在可經 MiniMax API、M Plan 與 MiniMax Code 使用，權重則尚未釋出。官方稱代理任務用量成本較前代低 70%、線上推論近三倍快，並公布多項代理、程式與電腦操作基準；這些數字來自 MiniMax 自行測試，不能直接推算自有工作負載。現列價為每百萬輸入／輸出 token 0.15／0.60 美元。可先以相同工具與任務比較完成率、延遲、重試及總成本。</p></div></article><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/" target="_blank" rel="noopener noreferrer">GitHub Copilot 模型政策 REST API</a></h3><p>GitHub 於 10/19 將 Copilot 模型政策的 GET、PATCH REST API 開放正式使用，可在企業、企業團隊、企業應用程式及組織層級查詢或更新模型可用性，並支援把管理權委派到下層。這有助把模型政策納入管理自動化，但錯誤設定也可能影響團隊可選模型。可先以測試組織檢查讀取、更新、權限委派和回復流程，再導入正式政策。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>1 則</span></div><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://workspaceupdates.googleblog.com/2026/10/an-update-on-launch-of-skills-in-gemini-app-and-workspace.html" target="_blank" rel="noopener noreferrer">Gemini Skills：App 與 Workspace 推出時程</a></h3><p>Google Workspace 團隊 10/13 更新指出，Gemini App 的 Skills 正分批推出，預計 11 月中完成；Google Drive 整合與分享技能仍屬後續規劃。Workspace 版本原訂 10/19 開始 rollout，但官方目前列為延後、尚無新時程，因此不能視為已開始供 Workspace 使用。若正在安排內部試用，先確認帳戶實際入口及管理權限，並把 Workspace 上線時間列為待確認。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>1 則</span></div><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/" target="_blank" rel="noopener noreferrer">GitHub Copilot 舊模型於 10/19 退場</a></h3><p>GitHub 已於 10/19 在多數 Copilot 使用介面停用 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini 與 Grok 4.5，並列出建議替代模型；企業管理員可能需要先啟用替代模型政策。公告最初在 9/18 發出，本期追蹤其正式生效狀態。應盤點模型選擇器與自動化設定，確認替代模型可用，並對常用提示和代理流程做回歸測試。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>模型選擇同時考慮能力、成本與服務生命週期</h3><div class="trend-tools"><a href="#item-01">MiniMax M3.1 Flash</a>、<a href="#item-04">GitHub Copilot 舊模型於 10/19 退場</a></div><p class="trend-key">MiniMax 以新模型主打更快、更低成本，Copilot 則在今日實際移除多個舊選項；採用新模型與替換舊模型都需要以真實任務檢查品質及成本。</p><p class="trend-check"><span>驗證重點</span>記錄同一批任務的完成率、延遲、費用、模型可用性與切換後的回歸差異。</p></article><article class="trend"><h3>管理能力正從介面設定延伸到政策自動化</h3><div class="trend-tools"><a href="#item-02">GitHub Copilot 模型政策 REST API</a>、<a href="#item-03">Gemini Skills：App 與 Workspace 推出時程</a></div><p class="trend-key">GitHub 已提供 API 管理模型權限，Google 則顯示技能功能要分別看 App 與 Workspace 的推出節奏；企業需同時掌握可控範圍和實際可用時間。</p><p class="trend-check"><span>驗證重點</span>測試政策 API 的權限與回復，並在正式排程前確認各 Workspace 版本的 rollout 狀態。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://www.minimax.io/blog/minimax-m31f" target="_blank" rel="noopener noreferrer">MiniMax Research：MiniMax M3.1 Flash（2026-10-19）</a></li><li><a href="https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Copilot model policy API（2026-10-19）</a></li><li><a href="https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Copilot models deprecated on October 19, 2026</a></li><li><a href="https://workspaceupdates.googleblog.com/2026/10/an-update-on-launch-of-skills-in-gemini-app-and-workspace.html" target="_blank" rel="noopener noreferrer">Google Workspace Updates：Skills 推出時程更新（2026-10-13）</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>

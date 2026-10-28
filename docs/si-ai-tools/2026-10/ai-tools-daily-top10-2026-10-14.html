@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-14（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-14（Asia/Taipei） <strong>✦</strong> 3 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>1 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/" target="_blank" rel="noopener noreferrer">GitHub 情境式密鑰偵測模型</a></h3><p>GitHub 於 10/13 說明新的情境式密鑰分類器：先用規則找出疑似憑證，再由微調的 ModernBERT 分類器讀取周邊程式碼，區分真實密鑰與文件範例、測試值等相似字串。GitHub 表示，相較舊流程，警示接受率提高 11.5%、掃描中位時間減少 86%，服務成本降低逾 98%；這些是 GitHub 自家評估，不能直接推算其他程式庫的誤報率。通用密鑰的推送前攔截目前仍在 private preview。可先在自己的 repo 比對漏報、誤報與推送前掃描耗時。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>1 則</span></div><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/" target="_blank" rel="noopener noreferrer">Gemini 4 Argon 擴大開放</a></h3><p>Google 於 10/13 開放 Gemini 4 Argon 給全球 Gemini API 開發者與企業，也陸續加入 Google Antigravity、Gemini app、搜尋 AI Mode；同日 GitHub Copilot 宣布此模型 GA，支援多種 IDE 與 Copilot 介面，逐步推出並按供應商牌價計費。Argon 曾在 10/5 日報出現，本期追蹤的是新增的全球使用管道與定價：API 優惠價至 11/30 為每百萬輸入／輸出 token 2／10 美元，之後為 4／20 美元。建議用同一組長程式任務比較完成率、延遲和總成本，並先確認方案資格與管理員模型政策。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>1 則</span></div><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/" target="_blank" rel="noopener noreferrer">GitHub Copilot 企業設定強制更新</a></h3><p>GitHub 於 10/13 新增 `forceRemoteSettingsRefresh`，讓企業管理員要求 Copilot CLI、VS Code 與 Copilot app 啟動時重新確認伺服器政策；無法確認最新設定時會停止執行，不沿用過期快取。GitHub 也開始要求 `sandbox` 管理設定使用者更新至最低支援版本。這讓企業政策能更即時生效，但網路或服務中斷時可能影響啟動；應先在測試群組驗證政策更新、離線啟動與舊版客戶端的行為。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>代理程式可用範圍擴大，控制條件也要跟上</h3><div class="trend-tools"><a href="#item-02">Gemini 4 Argon 擴大開放</a>、<a href="#item-03">GitHub Copilot 企業設定強制更新</a></div><p class="trend-key">Argon 進入更多 API、IDE 與代理介面後，企業需要能即時套用模型、沙箱與客戶端版本政策，避免新能力先於治理設定落地。</p><p class="trend-check"><span>驗證重點</span>確認各入口的模型權限、sandbox 狀態、政策刷新失敗時的處理與使用費用。</p></article><article class="trend"><h3>AI 開發加速，密鑰防護往提交前移</h3><div class="trend-tools"><a href="#item-02">Gemini 4 Argon 擴大開放</a>、<a href="#item-01">GitHub 情境式密鑰偵測模型</a></div><p class="trend-key">更多代理程式碼工作流增加程式變更量，情境式分類器則把密鑰檢查放在提交前，兩者共同提高快速產碼後及時攔截憑證外洩的必要性。</p><p class="trend-check"><span>驗證重點</span>用含範例值、測試憑證與真實密鑰的測試庫，量測漏報、誤報及推送攔截延遲。</p></article><article class="trend"><h3>AI 治理從設定檔走向可驗證的執行結果</h3><div class="trend-tools"><a href="#item-03">GitHub Copilot 企業設定強制更新</a>、<a href="#item-01">GitHub 情境式密鑰偵測模型</a></div><p class="trend-key">一項功能確保代理啟動時採用最新政策，另一項以程式上下文判別敏感資訊；兩者都把治理要求轉成執行時可觀察的結果。</p><p class="trend-check"><span>驗證重點</span>檢查政策版本、拒絕事件與密鑰警示能否回查，並確認錯誤時能安全停止或交由人工處理。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/" target="_blank" rel="noopener noreferrer">GitHub Blog：GitHub’s model for secret detection: Finding more secrets with less noise（2026-10-13）</a></li><li><a href="https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Purpose-built model for leaked secret detection（2026-10-07）</a></li><li><a href="https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/" target="_blank" rel="noopener noreferrer">Google：Gemini 4 Argon: Built to solve your hardest problems（2026-10-13）</a></li><li><a href="https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Gemini 4 Argon in GitHub Copilot（2026-10-13）</a></li><li><a href="https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Enterprise managed settings enforcement updates（2026-10-13）</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>

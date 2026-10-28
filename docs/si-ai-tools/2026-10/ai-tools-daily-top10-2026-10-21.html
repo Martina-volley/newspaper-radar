@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-21（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-21（Asia/Taipei） <strong>✦</strong> 4 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>1 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://news.zoom.com/zoomtopia-2026-news/" target="_blank" rel="noopener noreferrer">Zoom Unified Context Layer 與 Zoomtopia AI 更新</a></h3><p>Zoom 於 10/20 發表 Unified Context Layer，將 Zoom 對話與連結的第三方應用活動串在一起，供員工與 AI 代理取得工作脈絡；同步公布 Search &amp; Ask API、MCP 伺服器與 ZoomMate Agent Teams 等功能。公告列出部分功能已可用，也有功能預計 10 月至 2027 年陸續推出，因此整套能力尚非一次到位。若要評估，先確認租用方案與管理設定是否支援，再用跨會議、文件及 CRM 的任務檢查資料權限、來源引用與後續動作是否正確。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>2 則</span></div><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://newsroom.ibm.com/2026-10-20-llm-d-1-0-advances-open,-cost-efficient-ai-inference-for-production-scale" target="_blank" rel="noopener noreferrer">llm-d 1.0 分散式推論平台</a></h3><p>llm-d 專案於 10/20 發布 1.0，定位為在 Kubernetes 等環境管理大語言模型推論的開源軟體，整合多租戶流量控制、不中斷更新、快取感知路由及分離式預填／解碼等能力，並支援 vLLM、SGLang。這是服務模型的基礎設施，不是新模型或託管 API；效益仍取決於硬體、叢集規模與維運能力。可先以現有模型服務測量吞吐、延遲、GPU 利用率與升級期間可用性，再決定是否值得增加平台複雜度。</p></div></article><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/" target="_blank" rel="noopener noreferrer">Gemini 登上 Android Auto 與車載系統</a></h3><p>Google 於 10/20 表示 Gemini 已開始提供 Android Auto 全球使用者，並正把 Personal Intelligence 帶入車內；經使用者同意後，可連結 Gmail、日曆、相簿、地圖、YouTube 與搜尋資料，以自然語音處理行程與個人脈絡問題。Personal Intelligence 正分批推出，限符合資格的個人 Google 帳戶，排除 Workspace 帳戶及歐洲經濟區、瑞士、英國、奈及利亞等地。測試時應先核對帳戶與所在地資格、逐項檢查連結權限，並確認駕駛情境下的回答不會造成分心。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>1 則</span></div><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://sierra.ai/blog/from-conversation-to-payment-sierra-and-stripe" target="_blank" rel="noopener noreferrer">Sierra 與 Stripe 語音通話付款</a></h3><p>Sierra 於 10/20 公布與 Stripe 的整合：客服代理可在電話中回答問題、切換到安全付款模式，讓顧客以電話鍵盤輸入卡片資料，完成後再接續對話；Sierra 也已上架 Stripe App Marketplace。Cedar 案例稱，開始付款流程的來電有 71.3% 成功付款，這是單一客戶案例數字，不能推論其他產業的轉換率。若評估導入，應實測付款中斷處理、語音與卡號資料隔離、退款／重試流程及人工接手紀錄。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>代理從回答問題走向帶著脈絡完成工作</h3><div class="trend-tools"><a href="#item-01">Zoom Unified Context Layer 與 Zoomtopia AI 更新</a>、<a href="#item-04">Sierra 與 Stripe 語音通話付款</a></div><p class="trend-key">Zoom 把會議和應用資料帶進代理工作流程，Sierra 則讓客服代理把電話中的解答延伸到付款，兩者都在縮短「取得脈絡」到「完成任務」的距離。</p><p class="trend-check"><span>驗證重點</span>檢查授權邊界、來源可追溯性、交易確認與人工接手是否完整。</p></article><article class="trend"><h3>代理體驗仰賴可靠的服務底層與明確的個人資料選擇</h3><div class="trend-tools"><a href="#item-02">llm-d 1.0 分散式推論平台</a>、<a href="#item-03">Gemini 登上 Android Auto 與車載系統</a></div><p class="trend-key">llm-d 著重讓推論服務能承受多租戶和代理流量，Gemini 車載功能則把個人資料連結與駕駛情境帶到前台；規模化與使用者控制需一起設計。</p><p class="trend-check"><span>驗證重點</span>以真實流量檢查延遲和資源用量，並確認各帳戶、地區及應用連結的可用性與撤回方式。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://news.zoom.com/zoomtopia-2026-news/" target="_blank" rel="noopener noreferrer">Zoom Newsroom：Zoom advances its AI strategy with a new Unified Context Layer（2026-10-20）</a></li><li><a href="https://newsroom.ibm.com/2026-10-20-llm-d-1-0-advances-open,-cost-efficient-ai-inference-for-production-scale" target="_blank" rel="noopener noreferrer">IBM Newsroom：llm-d 1.0 Advances Open, Cost-Efficient AI Inference for Production Scale（2026-10-20）</a></li><li><a href="https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/" target="_blank" rel="noopener noreferrer">Google Blog：Get hands-free personalized help on the road with Gemini（2026-10-20）</a></li><li><a href="https://sierra.ai/blog/from-conversation-to-payment-sierra-and-stripe" target="_blank" rel="noopener noreferrer">Sierra：From conversation to payment: Sierra and Stripe（2026-10-20）</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>

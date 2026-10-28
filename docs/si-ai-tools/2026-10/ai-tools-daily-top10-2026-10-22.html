@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-22（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-22（Asia/Taipei） <strong>✦</strong> 5 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>3 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener noreferrer">OpenAI 模型與 Codex 將進入 Google Cloud</a></h3><p>OpenAI 與 Google Cloud 於 10/21 宣布合作，規劃把 OpenAI 模型和 Codex 工作流程放進 Google Cloud Model Garden，並可透過 Google Cloud Marketplace 採購；OpenAI 模型也預計進入 Google Antigravity 與 Gemini Agent。一般供應預計數週後開始，目前仍是合作公告，尚非已開放服務；OpenAI 也表示 Microsoft 仍是其主要雲端夥伴。企業可先確認預計支援的模型、區域、權限治理及承諾消費抵扣方式，再與既有雲端模型服務比較。</p></div></article><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://www.heygen.com/blog/introducing-heygen-video" target="_blank" rel="noopener noreferrer">HeyGen Video：單一提示詞生成影音場景</a></h3><p>HeyGen 於 10/21 推出 HeyGen Video，可由文字、圖片或參考素材生成 5 至 15 秒影片，畫面與音訊在同次生成中完成；官方列出 API 與 Creative Studio 皆可使用，解析度最高 2K。它不同於以虛擬人講稿為主的 Avatar 工具，較適合產生場景素材；API 使用需付費，廠商對連續性與指令遵循的描述仍應自行驗證。可用產品、人物與畫面文字等固定條件測試跨鏡頭一致性、聲畫同步及生成成本。</p></div></article><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/" target="_blank" rel="noopener noreferrer">Gemini 小型商家工具與商業首頁</a></h3><p>Google 於 10/20 宣布 Gemini 將加入商家首頁，可連結 Google Business Profile、Ads、Workspace，以及 Canva、Dropbox、Shopify 等第三方服務；使用者也可上傳品牌素材建立視覺風格，並把表格與收據整理成財務圖表。功能預計數日內向全球 Gemini App 使用者陸續推出，公告未說明各連結服務的完整權限細節。實際使用前應逐項檢查資料授權、品牌素材留存方式與財務分析可追溯性，不把 Google 展示案例當成獨立成效驗證。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>1 則</span></div><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://www.oracle.com/news/announcement/oracle-ai-agent-studio-for-industry-applications-helps-accelerate-business-outcomes-2026-10-21/" target="_blank" rel="noopener noreferrer">Oracle AI Agent Studio for Industry Applications</a></h3><p>Oracle 於 10/21 宣布產業版 AI Agent Studio，提供低程式碼／無程式碼環境建立、測試、協調與監控產業代理，支援跨應用流程、MCP 連接和企業權限設定。不過 Oracle 註明此服務預計 12 個月內先在美國推出，其他 OCI Enterprise AI 區域日後擴展；目前不應視為可立即採用。若列入產品評估，先確認正式推出時間、支援的 Oracle 應用與區域，再以測試租戶驗證代理是否遵循既有角色與資料權限。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>1 則</span></div><article class="card" id="item-05"><div class="rank">05</div><div class="card-body"><h3><a href="https://www-redesign.heygen.com/blog/heygen-voice-turbo" target="_blank" rel="noopener noreferrer">HeyGen Voice Turbo 免費 API 試用</a></h3><p>HeyGen 於 10/21 開放 Voice Turbo API 免費使用至 11/30，使用公用聲線或即時克隆聲線，不需信用卡；免費容量採 best effort，沒有延遲或可用性保證，滿載時可能回傳 429，專業聲線克隆也不包含在內。官方提及的排行榜和盲聽比較來自 HeyGen／其引用的 Artificial Analysis 測試，不宜直接當成自己的語音品質結果。可先用同一段繁中稿比較發音、語氣、延遲與尖峰失敗率，再決定是否趁試用期間整合。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>企業代理從選模型延伸到跨系統治理</h3><div class="trend-tools"><a href="#item-01">OpenAI 模型與 Codex 將進入 Google Cloud</a>、<a href="#item-04">Oracle AI Agent Studio for Industry Applications</a></div><p class="trend-key">OpenAI 擴大模型與 Codex 的雲端採購入口，Oracle 則把代理建置放進產業應用流程，兩者都在把模型能力接到企業既有資料、權限與採購制度。</p><p class="trend-check"><span>驗證重點</span>分別確認正式可用日期、支援區域、資料邊界、角色權限與計價方式。</p></article><article class="trend"><h3>影音生成開始以單次產出整合畫面、聲音與旁白</h3><div class="trend-tools"><a href="#item-02">HeyGen Video：單一提示詞生成影音場景</a>、<a href="#item-05">HeyGen Voice Turbo 免費 API 試用</a></div><p class="trend-key">HeyGen Video 將畫面和場景音訊一起生成，Voice Turbo 則提供獨立語音合成 API；前者追求影音場景整體性，後者仍可作為可替換的旁白元件。</p><p class="trend-check"><span>驗證重點</span>以相同繁中腳本比較語音辨識度、聲畫同步、內容一致性、延遲和每次可用成本。</p></article><article class="trend"><h3>商用 AI 逐步靠近小型團隊原有的資料與工作入口</h3><div class="trend-tools"><a href="#item-03">Gemini 小型商家工具與商業首頁</a>、<a href="#item-01">OpenAI 模型與 Codex 將進入 Google Cloud</a></div><p class="trend-key">Gemini 著重把商家資料與行銷工具接進日常助理，Google Cloud 則準備把 OpenAI 模型放入企業採購與開發環境，兩者分別降低小型營運與企業建置的接入門檻。</p><p class="trend-check"><span>驗證重點</span>確認帳戶資格、連接器權限、資料能否撤回，以及用量費用是否符合原先的雲端承諾。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener noreferrer">OpenAI：OpenAI models are coming to Google Cloud（2026-10-21）</a></li><li><a href="https://www.heygen.com/blog/introducing-heygen-video" target="_blank" rel="noopener noreferrer">HeyGen：Announcing HeyGen Video: One prompt, the whole scene（2026-10-21）</a></li><li><a href="https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/" target="_blank" rel="noopener noreferrer">Google Blog：New Gemini tools for small business owners（2026-10-20）</a></li><li><a href="https://www.oracle.com/news/announcement/oracle-ai-agent-studio-for-industry-applications-helps-accelerate-business-outcomes-2026-10-21/" target="_blank" rel="noopener noreferrer">Oracle：Oracle AI Agent Studio for Industry Applications（2026-10-21）</a></li><li><a href="https://www-redesign.heygen.com/blog/heygen-voice-turbo" target="_blank" rel="noopener noreferrer">HeyGen：HeyGen Voice Turbo: The #1-ranked voice model, now free in your API（2026-10-21）</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>
