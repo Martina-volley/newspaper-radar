@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-10-29（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-10-29（Asia/Taipei） <strong>✦</strong> 6 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>2 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/" target="_blank" rel="noopener noreferrer">GitHub Copilot Fusion 正式推出</a></h3><p>GitHub 於 10/28 將 Copilot Fusion 轉為正式版，使用者選擇工作強度後，由系統依任務路由並編排模型，可採單模型、先草擬再升級檢查，或由另一模型檢視後修訂等方式。Fusion 已在 VS Code、Copilot app、CLI 和 JetBrains 提供；每個模型仍按各自標準費率計費，付費方案目前有期限優惠。官方公布的速度與成本數據來自指定評測；可用固定程式任務實測品質、延遲、模型選擇透明度與總帳單。</p></div></article><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/" target="_blank" rel="noopener noreferrer">GitHub Agentic Workflows 正式推出</a></h3><p>GitHub Next 的開源 Agentic Workflows 於 10/28 正式提供，開發者以 Markdown 描述 issue 分流、CI 故障分析、文件更新或測試撰寫等工作，再由工具轉成 GitHub Actions。可使用 Copilot 或自選程式代理，並沿用現有 runner 與政策；代理預設唯讀，在沙箱及防火牆內執行，提出的變更還會經安全輸出與威脅掃描。免費、Team 和 Enterprise 均可使用；正式導入前，應驗證工作流程權限、token 預算及自動提出變更的審核方式。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>3 則</span></div><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://claude.com/resources/articles/introducing-artifacts-for-legal-work" target="_blank" rel="noopener noreferrer">Claude for Legal 法律工作 Artifacts</a></h3><p>Anthropic 於 10/28 為 Claude for Legal 推出可改用自有資料與連接器的互動式法律工具範本，涵蓋合約檢視、法規追蹤及法律需求收件；輸出會附來源連結，並可在企業內分享。這些範本適合產生可供律師審閱的初稿或工作面板，不代表法律結論可免人工確認。試用時應檢查引用是否能回到原文、跨團隊分享是否遵守倫理牆與資料權限。</p></div></article><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets" target="_blank" rel="noopener noreferrer">Claude Enterprise 智慧報告、問卷與共用預算</a></h3><p>Anthropic 於 10/28 將三項企業管理功能轉為正式版：智慧報告整理團隊工作、用量與成本；內嵌問卷收集使用者回饋；共用預算讓群組共享每月額度，並保留個人上限。智慧報告會抽樣分析對話並列出工作流程和摩擦點，官方明確表示不應用來評估個人績效或作人事決定；功能也會受 HIPAA、客戶管理金鑰等設定影響。管理員可先核對抽樣與保留設定，再確認報告用途、預算警示和加額審批流程。</p></div></article><article class="card" id="item-05"><div class="rank">05</div><div class="card-body"><h3><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">ChatGPT 連接 iCloud Mail 與 Calendar</a></h3><p>OpenAI 於 10/27 宣布，ChatGPT 可連接 iCloud Mail 與 Calendar，協助搜尋郵件、整理收件匣、查看行程及更新日曆事件；官方列為網頁、桌面與 iOS 全方案可用。兩項服務需分別連接，設定時使用 Apple app 專用密碼。使用前可先確認連接帳號、可執行的郵件或行事曆動作，以及撤銷連線的方法，再以低風險資料測試。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>1 則</span></div><article class="card" id="item-06"><div class="rank">06</div><div class="card-body"><h3><a href="https://openai.com/index/openai-servicenow-partnership-expansion/" target="_blank" rel="noopener noreferrer">OpenAI 與 ServiceNow 擴大工作流程整合</a></h3><p>OpenAI 與 ServiceNow 於 10/28 擴大合作，ServiceNow MCP 外掛已可在 OpenAI Marketplace 取得；使用者可在 ChatGPT 中查找相似 IT 事件、評估變更風險並更新 ServiceNow 記錄，權限依客戶的 ServiceNow 設定執行。安全、語音與 Codex 整合仍分階段規劃，部分預計至 2027 年才推出。企業評估時可先確認外掛目前授權的動作，再於測試環境檢查記錄更新、核准與稽核軌跡。</p></div></article></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>模型選擇與代理工作流程開始由平台統籌</h3><div class="trend-tools"><a href="#item-01">GitHub Copilot Fusion</a>、<a href="#item-02">GitHub Agentic Workflows</a></div><p class="trend-key">Fusion 依任務安排模型，Agentic Workflows 則把代理任務編入 Actions；兩者把開發者的工作由逐步操作推向可持續編排。</p><p class="trend-check"><span>驗證重點</span>量測每類任務的成功率、耗用成本、人工覆核量與錯誤回復方式。</p></article><article class="trend"><h3>AI 助理逐步接上專業資料與業務系統</h3><div class="trend-tools"><a href="#item-03">Claude for Legal</a>、<a href="#item-05">ChatGPT iCloud 連接器</a>、<a href="#item-06">OpenAI／ServiceNow</a></div><p class="trend-key">法律工具、個人郵件日曆與 IT 服務紀錄都開始進入對話式工作流程，能否安全採取下一步取決於資料權限與使用者核准。</p><p class="trend-check"><span>驗證重點</span>以測試帳號檢查來源引用、最小權限、可執行動作、分享邊界及撤銷連線。</p></article><article class="trend"><h3>企業開始把 AI 成效與預算放在同一個管理循環</h3><div class="trend-tools"><a href="#item-04">Claude Enterprise 智慧報告與共用預算</a>、<a href="#item-02">GitHub Agentic Workflows</a></div><p class="trend-key">管理者可用使用情況與預算規劃擴大採用，而代理自動化也需同步設定額度、執行權限及審核責任。</p><p class="trend-check"><span>驗證重點</span>確認報告資料用途、token 預算、支出警示與人員覆核節點。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Route and orchestrate models with GitHub Copilot Fusion（2026-10-28）</a></li><li><a href="https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/" target="_blank" rel="noopener noreferrer">GitHub Changelog：GitHub Agentic Workflows generally available（2026-10-28）</a></li><li><a href="https://claude.com/resources/articles/introducing-artifacts-for-legal-work" target="_blank" rel="noopener noreferrer">Anthropic：Introducing artifacts for legal work（2026-10-28）</a></li><li><a href="https://claude.com/resources/articles/smart-reports-surveys-pooled-budgets" target="_blank" rel="noopener noreferrer">Anthropic：Smart reports, surveys, and pooled group budgets for Claude Enterprise（2026-10-28）</a></li><li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">OpenAI Help Center：ChatGPT release notes（2026-10-27）</a></li><li><a href="https://help.openai.com/en/articles/11487775-connected-apps-in-chatgpt" target="_blank" rel="noopener noreferrer">OpenAI Help Center：Connected apps in ChatGPT</a></li><li><a href="https://openai.com/index/openai-servicenow-partnership-expansion/" target="_blank" rel="noopener noreferrer">OpenAI：OpenAI and ServiceNow expand partnership across enterprise workflows（2026-10-28）</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>
