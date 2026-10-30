@@ -1,9 +1,10 @@
 # SI 的 AI 工具選報｜2026 年 10 月
 
-共 18 期；HTML 為閱讀版，Markdown 為文字版。10 月 1 日及 5 日只有文字版。
+共 19 期；HTML 為閱讀版，Markdown 為文字版。10 月 1 日及 5 日只有文字版。
 
 | 日期 | 閱讀版 | 文字版 |
 |---|---|---|
+| 2026-10-30 | [HTML](ai-tools-daily-top10-2026-10-30.html) | [Markdown](ai-tools-daily-top10-2026-10-30.md) |
 | 2026-10-29 | [HTML](ai-tools-daily-top10-2026-10-29.html) | [Markdown](ai-tools-daily-top10-2026-10-29.md) |
 | 2026-10-28 | [HTML](ai-tools-daily-top10-2026-10-28.html) | [Markdown](ai-tools-daily-top10-2026-10-28.md) |
 | 2026-10-27 | [HTML](ai-tools-daily-top10-2026-10-27.html) | [Markdown](ai-tools-daily-top10-2026-10-27.md) |
