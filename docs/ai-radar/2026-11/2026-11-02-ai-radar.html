@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="GPT-6 Rosalind Research 向核准研究機構開放；Google 完成軌道 TPU 初步推論，網站訓練偏好與雲端費用控制也有新進展。"><title>你的AI觀察雷達｜2026.11.02</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 02 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">生醫專業模型限量上線，太空運算跨出原型第一步</p><p>GPT-6 Rosalind Research 向核准研究機構開放；Google 完成軌道 TPU 初步推論，網站訓練偏好與雲端費用控制也有新進展。</p><div class="hero-meta"><span>2026 年 11 月 2 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 2 日台灣時間 09:43。週一版涵蓋 10 月 30 日至 11 月 2 日晨間的一手公告；10 月 31 日與 11 月 1 日未找到更值得取代下列選題的重大模型發布。廠商評估未經本報獨立重測，場域案例為假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>GPT-6 Rosalind 上線：生物研究能力沿用 Astra 權重，靠受控部署開放</h3>
+<p>研究團隊希望 AI 能串起文獻、基因資料與實驗工具，卻不能把一次模型建議當成實驗結論。OpenAI 的 10 月 30 日 API 更新列出 <strong>GPT-6 Rosalind Research</strong>。它面向生命科學的多步研究，僅向通過 Rosalind Research 審核的組織及授權人員提供。Work 與 Codex 中已有有限使用，API 另需獨立核准；一般 Chat 分頁及面向外部客戶的商業應用不在目前開放範圍。這是<strong>已推出、但嚴格限用</strong>的模型，不能理解為所有訂閱戶都能切換。</p>
+<p>技術上值得注意的是，安全文件明說 Rosalind-6 與 GPT-6 Astra <strong>使用相同權重，沒有另加訓練資料或後訓練</strong>。因此它的生物研究定位，重點在使用條件、工具工作流程與安全控制，不宜寫成全新訓練的生醫基礎模型。OpenAI 在四項「高能力」生化評估中，經拒答調整後有三項超過指示門檻；四項「關鍵能力」評估均未達門檻。這是其自訂測試框架中的結果，並非對真實藥物發現速度或實驗成功率的證明。與舊版 Rosalind-5.5 比較也有升有降，不能用單一分數宣稱全面進步。</p>
+<p>開放方式反映風險：申請者須說明正當研究用途、治理與權限控制；模型輸出用於實驗、論文或重大決策前，仍需合格研究人員覆核。企業若要採購，先確認 Research 核准與資料處理條款，再用自家已知答案的資料測假說品質、引用可追溯性、錯誤建議率及人工驗證成本。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://developers.openai.com/api/docs/changelog">來源：OpenAI API 更新｜10 月 30 日</a> · <a target="_blank" rel="noopener noreferrer" href="https://deploymentsafety.openai.com/gpt-rosalind-6">Rosalind-6 安全文件</a> · <a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research">OpenAI 使用與開放範圍</a></p>
+</section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>軌道 TPU 收到第一個回應，離太空資料中心仍有工程距離</h3>
+<p>Google 10 月 30 日公布，Project Suncatcher 於 10 月 1 日發射的原型衛星完成初步開機與機器學習測試，並從軌道上的資料中心等級 TPU 收到 Gemma 4 回覆。這證明一次<strong>原型推論與通訊</strong>成功；長時間可靠運算、散熱、輻射耐受及衛星間連線尚未驗證。Google 下一步要做環境測試，雙衛星互連列為 2027 年目標。今天不能把一首生成短詩寫成太空資料中心已能營運。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/">來源：Google Project Suncatcher 進度｜10 月 30 日</a></p>
+<h3>網站可用共同訊號表達 AI 訓練偏好，落地時間還沒到</h3>
+<p>OpenAI 10 月 30 日宣布將遵循 <code>robots.txt</code> 裡供多家 AI 業者讀取的共同訓練偏好訊號，目標是減少網站逐家管理爬蟲的工作。它說<strong>未來幾個月</strong>才會實作並公布細節，現有爬蟲控制仍持續適用。這是標準參與與實作承諾，尚非新的訊號已被 OpenAI 系統執行。內容業者目前應保留既有設定，等技術文件與遵循情況可查後再調整。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/helping-websites-express-ai-training-preferences/">來源：OpenAI 網站訓練偏好公告｜10 月 30 日</a></p>
+<h3>雲端費用上限正式提供，但預留容量不會被它停掉</h3>
+<p>Google Cloud 10 月 30 日宣布 spend caps 正式提供：管理者可透過 API 設定合適服務與專案的支出上限，AI 服務可依分鐘級估算用量觸發限制，並支援每月自動重設。對持續呼叫模型的代理，這提供一層財務防線；但官方明列 <strong>Provisioned Throughput 預留容量不受停用影響</strong>，而觸發門檻的金額也屬即時估算。正式上線不等於保證所有成本都鎖死，須按服務類型試算。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://cloud.google.com/blog/topics/cost-management/google-cloud-spend-caps-now-generally-available">來源：Google Cloud 費用上限公告｜10 月 30 日</a></p>
+</section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>生醫研發：讓模型整理證據，研究員決定下一個實驗</h3>
+<p><strong>假設試點：</strong>藥物研發團隊為某個疾病靶點彙整論文、內部組學資料與過往失敗實驗。核准使用 Rosalind Research 後，讓模型列出每項假說的證據、反證及需要補做的實驗；資料前提是樣本來源、版本與授權可追溯，敏感資料進入模型前符合機構條款。研究員先以已知靶點設盲測題，量引用錯誤率、可重現分析比例、無效假說比例和人工覆核時間。最終實驗設計、倫理審查及發表仍由人負責；這不是已部署的客戶案例。</p>
+<h3>製造業代理：試點先設計會停下來的成本與權限邊界</h3>
+<p><strong>假設試點：</strong>設備商以代理整理機台故障紀錄和維修手冊，先放在獨立雲端專案，限制只能讀取去識別化資料、不可直接改控制參數。IT 管理者設定預算警示與可用服務的費用上限，保留預留容量與其他服務的獨立帳單檢查；現場工程師審核每張維修建議。驗證指標包括有效建議率、誤報工時、每張工單實際成本、上限觸發後是否仍有意外支出，以及停用時能否順利轉回人工流程。</p>
+</section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>專業模型的收入門檻，從「能買到」延伸到「能通過審核」</h3>
+<p><strong>本報分析：</strong>Rosalind-6 的限制性開放，讓供應商提供的不只是推論能力，也包括研究用途審查、權限配置與可追溯工作流程。客戶的付款理由是更快形成可檢驗的研究假說；真正影響採購的成本還有資料整理、專家覆核、合規和可能失敗的實驗。API 僅供另獲批准的內部研究，現階段不宜據此設想面向一般消費者的生醫代理服務。</p>
+<h3>算力、資料使用權與支出控制，正在變成同一筆採購問題</h3>
+<p><strong>本報分析：</strong>Google 的軌道測試證明遠端運算有第一個技術里程碑，但商業價格與可靠性還遠未成形；近期更可執行的是控制企業代理的雲端費用。網站訓練偏好共同訊號若落地，也可能改變內容授權談判的起點，現在仍需等待實作與遵循證據。採購方宜分開記錄模型使用費、資料授權、儲存與人工覆核，並測試費用上限在突增流量時實際能攔住哪些項目。</p>
+</section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 11 月 2 日台灣時間 09:43。Rosalind-6 於 10 月 30 日列入 API 更新，有限對象可用；架構、能力評估與限制按 OpenAI 文件，未由本報重測。Google Suncatcher 為原型測試進度，雙衛星互連尚屬未來目標。訓練偏好訊號為未來實作承諾。Google Cloud 費用上限已正式提供，但適用範圍有例外。場域段落為假設試點，商業段落為本報分析。</p>
+<ul class="sources">
+<li><a target="_blank" rel="noopener noreferrer" href="https://developers.openai.com/api/docs/changelog">OpenAI：API 更新紀錄</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://deploymentsafety.openai.com/gpt-rosalind-6">OpenAI：GPT-Rosalind-6 安全補充文件</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://help.openai.com/en/articles/20001193-gpt-rosalind-for-life-sciences-research">OpenAI：Rosalind 申請與使用範圍</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/">Google：Project Suncatcher 原型測試</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/helping-websites-express-ai-training-preferences/">OpenAI：網站 AI 訓練偏好訊號</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://cloud.google.com/blog/topics/cost-management/google-cloud-spend-caps-now-generally-available">Google Cloud：支出上限正式提供</a></li>
+</ul>
+</section></main></div><footer><div class="wrap">你的AI觀察雷達 · 以一手公開資料整理，場域情境與商業推論均已標示。</div></footer></body></html>
