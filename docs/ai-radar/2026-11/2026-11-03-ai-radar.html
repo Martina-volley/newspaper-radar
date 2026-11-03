@@ -1,0 +1,123 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-03</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 03 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">AI 實用性改用完整任務衡量，算力擴張開始面對電網責任</p><p>OpenAI 公布 LifeVal 日常任務評估與資料中心用電彈性計畫；Google 的非洲 AI 培訓平台正式上線。</p><div class="hero-meta"><span>2026 年 11 月 3 日</span><span>五分鐘掌握</span><span>官方資訊整理</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 3 日台灣時間 09:48。主窗為前 24 小時，採 11 月 2 日一手公告。今天未見足以取代下列選題的重大新模型發布；本期聚焦評估方法、算力與人才。廠商數據未由本報獨立重測；場域案例為假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2>
+<h3>LifeVal：模型分數開始對準「日常事情有沒有辦完」</h3>
+<p>一個代理能答對題目，不代表它能替人處理生活中的麻煩。OpenAI 11 月 2 日公布 <strong>LifeVal</strong>，以找托育、管理財務、辦理政府表單等日常任務評估 AI 協助程度。這是<strong>新公布的評估框架</strong>，不是新模型或已推出的個人代理產品。OpenAI 說，它先參考美國與跨國時間使用研究，再以具人口代表性的 3,995 人問卷，了解哪些任務最需要協助，據此建立測試。</p>
+<p>技術上的轉向是評分單位：傳統問答常看單一答案是否正確；生活任務還涉及限制條件、資料查找、步驟順序和可執行性。例如找托育，候選名單若不符合地點、預算或年齡條件，漂亮的文字仍無法幫家長做決定。OpenAI 表示最新模型在多項 LifeVal 任務表現很高；這是<strong>發布方的測試結果</strong>。目前不宜把個別示例直接外推為真實世界的代理完成率，也不能據此比較未在相同條件下受測的其他模型。</p>
+<p>這類測試還有一個容易被忽略的變因：同一件事可能隨城市、家庭狀況、政策更新而改變答案。若題目只檢查最後文字，模型漏問關鍵條件也可能看起來像成功。因此評估時應公開資料更新日期、允許使用的工具、任務是否需要外部確認，以及失敗時如何計分。這些條件若不同，跨版本分數的差距就不能直接解讀為使用者省下的時間。</p>
+<p>企業若想借用這種評估思路，應先把自身流程拆成可核對的終點：資料是否正確、限制是否被遵守、是否產生可提交的結果，以及人工補救要花多久。LifeVal 的價值在於提醒評估設計貼近人的完整任務；它尚不能替代特定產品在實際服務中的盲測。模型焦點今天是<strong>量測方法的發布</strong>，不是能力突然跨過新門檻。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/lifeval/">來源：OpenAI LifeVal｜11 月 2 日</a></p>
+</section>
+<section id="must-read"><h2><span class="num">02</span>不能錯過</h2>
+<h3>AI 資料中心要能在電網吃緊時讓出用電</h3>
+<p>OpenAI 11 月 2 日宣布 <strong>Grid Protectors Program</strong>，要與公用事業、監管機構協商，讓未來運算園區在電網壓力大時降低需求。公司稱與 Georgia Power 的安排包含<strong>最多 1,000 MW 的可調整需求</strong>。這是上限與協議內容，不是每次尖峰都已實際釋出同等電力；停用速度、持續時間與對模型服務的影響，仍要看後續運作數據。公司引用公用事業對 2029 年起每年約 9.5 億美元客戶節省的預測，涵蓋大型用電協議組合及成長，不能全歸功於這個計畫。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/grid-protectors-program/">來源：OpenAI Grid Protectors｜11 月 2 日</a></p>
+<h3>AI 培訓平台正式上線，三百萬人仍是 2030 年目標</h3>
+<p>Google 11 月 2 日推出 <strong>Skilling Africa with Google</strong> 學習入口，整合數位、雲端與 AI 課程，並針對低流量與離線學習設計。平台<strong>已上線</strong>；「2030 年讓 300 萬人取得技能」是計畫目標，不是已完成的培訓成果。對供應商，值得觀察的不只是註冊數，更是課程完成、技能測驗及學員能否在當地設備和網路條件下實作。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://blog.google/intl/en-africa/unlocking-africas-ai-potential-introducing-skilling-africa-with-google/">來源：Google 非洲培訓平台公告｜11 月 2 日</a> · <a target="_blank" rel="noopener noreferrer" href="https://skillingafrica.withgoogle.com/">學習平台</a></p>
+</section>
+<section id="applications"><h2><span class="num">03</span>場域怎麼用</h2>
+<h3>生活服務代理：先測「完成」，再談「自動化」</h3>
+<p><strong>假設試點：</strong>一家保險服務商讓代理協助客戶整理理賠資料。它先根據保單條款列出缺件、對應收據，產生可由客戶確認的申請草稿；提交與個資授權仍由本人完成。資料前提是條款版本、身份與費用證明能對上。團隊用匿名化歷史案件測缺件漏報率、錯誤金額、重新提交次數與客服補救時間。LifeVal 提醒的是完整任務評估，並不表示 OpenAI 已提供這套理賠系統。</p>
+<h3>工業算力：把可中斷工作與產線即時工作分開</h3>
+<p><strong>假設試點：</strong>製造商在自有資料中心訓練瑕疵辨識模型，另以低延遲服務支援產線檢測。遇到電網需求回應通知時，能源管理員可先延後批次訓練、檢查點存檔並計算恢復時間；產線推論保留既定服務水準。前提是量測各負載功率、資料狀態與停啟風險。驗證指標包括可釋出電力、重啟失敗率、交期影響與節費；不能把 OpenAI 的園區安排當成工廠已可直接採用的制度。</p>
+</section>
+<section id="business"><h2><span class="num">04</span>商業訊號亮點</h2>
+<h3>評估服務的付款理由，從榜單分數移到補救成本</h3>
+<p><strong>本報分析：</strong>企業採購代理時，最花錢的常是錯誤提交、人工回頭查與客訴。LifeVal 提供以完整任務衡量的方向，可能帶動測試資料設計、流程模擬、人工覆核與品質監測服務。客戶願意付費的條件，是在自己的案件中看見更少重工、更短處理時間；供應商需揭露任務定義、失敗案例與每件成功案件的總成本，不能只報模型平均分數。</p>
+<p>可行的採購方式是先選一項高頻、低風險流程，保留人工處理組作對照，再逐週比較正確完成率與人工介入時間。這樣才能把「模型懂問題」與「企業真的少付成本」接起來；若只是把工作轉給另一批審核人員，節省的費用可能並不存在。</p>
+<h3>算力擴張的交易條件，開始包括電網彈性與人才</h3>
+<p><strong>本報分析：</strong>Grid Protectors 把可中斷負載與地方用電成本放進資料中心合作；Google 的培訓入口則補上當地使用與維運人才。兩者都仍有待驗證的成果。對雲端與企業採購，未來合約可能要問：高峰可降多少負載、降多久、由誰補償服務中斷，以及培訓後誰能實際部署和維護系統。節能承諾與培訓人數若缺少公開的量測方法，還不能當成已實現的商業效益。</p>
+</section>
+<section id="sources"><h2>查核範圍與來源</h2>
+<p>查核至 2026 年 11 月 3 日台灣時間 09:48。LifeVal 是 11 月 2 日公布的評估框架，數據與方法依 OpenAI 公告，未獨立重測。Grid Protectors 是已宣布的計畫與協議，電力與節費數字分別為上限及未來預測。Google 學習平台已上線，三百萬人為 2030 年目標。場域段落均為假設試點，商業段落為本報分析。來源頁面索引已搜尋查核；部分新公告的全文頁面在本次讀取時回傳快取錯誤，細節僅採可由官方搜尋摘要確認者，保留後續覆核。</p>
+<ul class="sources">
+<li><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/lifeval/">OpenAI：LifeVal</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/grid-protectors-program/">OpenAI：Grid Protectors Program</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://blog.google/intl/en-africa/unlocking-africas-ai-potential-introducing-skilling-africa-with-google/">Google：Skilling Africa 公告</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://skillingafrica.withgoogle.com/">Google：Skilling Africa 學習平台</a></li>
+</ul>
+</section></main></div><footer><div class="wrap">你的AI觀察雷達 · 以一手公開資料整理，場域情境與商業推論均已標示。</div></footer></body></html>
