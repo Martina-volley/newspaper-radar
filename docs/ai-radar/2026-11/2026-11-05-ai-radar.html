@@ -1,0 +1,127 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-05</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 05 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">影像模型更易編修，專用文件模型挑戰通用大模型</p><p>Images 2.6 與 Field Extractor 發布；Claude 參與生物結構研究，健康 AI 評估方法走向多面檢查。</p><div class="hero-meta"><span>2026 年 11 月 5 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 5 日台灣時間 09:49。主窗為前 24 小時，聚焦 11 月 4 日的一手發布。廠商測試與研究時程未由本報獨立重測；場域案例是明確標示的假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2>
+<h3>Images 2.6 上線：影像編修開始有速度、控制與輸出格式選擇</h3>
+<p>做一張商品主圖，常見麻煩是改了背景，商品標籤卻跟著變形。OpenAI 11 月 4 日推出 <strong>Images 2.6</strong>，在 ChatGPT、Codex 與 API 提供影像生成與編修；API 有偏重細節的 <strong>Sunburst</strong> 和偏重快速迭代的 <strong>Flare</strong>。官方主張新版改善角色、商品與品牌細節在多次編修後的一致性，並稱生成速度較前代快約 50%。這是供應商整體宣稱，不能當成每種尺寸、品質和提示都快一半。</p>
+<p>開發者多了 <code>complexity</code> 設定，可在低、中、高三檔間調整模型生成前的規劃程度，與影像渲染品質 <code>quality</code> 分開控制；較高複雜度可能增加延遲及非預期改動。兩個 2.6 模型透過 Image API 支援標註引導編修、SVG 和動態 GIF；GIF 生成與既有影像編修的支援範圍仍須按 API 文件區分。這讓團隊能按任務挑模型與設定，卻也增加測試組合，不能只憑一張展示圖採購。</p>
+<p>安全文件提供一個必要的尺度：在 3,077 筆刻意挑戰防護的提示中，Flare 2.6 經評估後仍未攔下的違規影像占 2.14%，對應 2.5 版本為 1.49%；官方說整體差距未達統計顯著。這是離線測試，不代表實際使用中的違規率。企業若要用於公開素材，應以自家標準圖測文字、Logo、尺寸、反覆編修的偏移與人工退件率。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/introducing-images-2-6/">來源：OpenAI Images 2.6 發布｜11 月 4 日</a> · <a target="_blank" rel="noopener noreferrer" href="https://developers.openai.com/api/docs/guides/image-generation">API 影像指南</a> · <a target="_blank" rel="noopener noreferrer" href="https://deploymentsafety.openai.com/chatgpt-images-2-6">安全文件</a></p>
+<h3>20 億參數文件擷取模型：小模型勝出的條件寫在題目裡</h3>
+<p>Dharma-AI 11 月 4 日介紹 <strong>Field Extractor</strong>，從文件影像直接產出指定欄位的 JSON；使用者可先給欄位格式，也可讓模型自行辨識表格與標籤。它以 20 億參數的 DharmaOCR-LITE v1.1 為底，另用 43,384 筆範例訓練 LoRA 適配層。對發票而言，關鍵是供應商、到期日、總額及每筆品項要進到正確欄位，缺值則回 <code>null</code>，而非單純把整頁辨識成文字。</p>
+<p>廠商在 546 份文件、三種要求方式組成的 1,638 個測例上，公布自家分數 <strong>0.834</strong>，受測最接近的通用模型 Claude Opus 5 為 <strong>0.816</strong>。評分結合欄位位置、文字相似度與 JSON 有效性；通用模型採低推理設定，自家成本以單張 L40S 的 GPU 時間估算，未含完整部署與人工覆核。這是<strong>自建基準上的比較</strong>，不能推成所有語言、文件版型都勝出；目前文章提供試用入口，商用權利與正式導入條件仍需另行確認。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/Dharma-AI/dharma-field-extractor">來源：Dharma-AI Field Extractor 原文｜11 月 4 日</a></p>
+</section>
+<section id="must-read"><h2><span class="num">02</span>不能錯過</h2>
+<h3>Claude 參與找出原核生物 vault 結構，功能仍未解開</h3>
+<p>Anthropic 11 月 4 日報告，其研究團隊在噬菌體蛋白中找出並以冷凍電顯解析一種 vault 類顆粒的三維結構；它由 96 份蛋白組成。團隊稱 Claude 協助查序列、設計 DNA、調整分離流程與處理顯微資料，使一段原本約三天的純化流程縮到約 90 分鐘；研究人員仍選定候選物、判斷實驗及檢查結果。文章也記載一次模型建議使工作延誤兩週。<strong>結構觀察已由團隊公布，生物功能尚未知</strong>；預印本當時已提交但連結尚未上線，其他實驗室仍待重現。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.anthropic.com/research/investigating-vault-particles-with-claude">來源：Anthropic vault 研究紀錄｜11 月 4 日</a></p>
+<h3>健康 AI 的評估，需同時問準確、安全與有用</h3>
+<p>Google 11 月 4 日公開健康 AI 評估方法，將<strong>準確性、安全性、實用性</strong>三者一起檢查，結合封閉式題目、自動評分與臨床專家審閱，涵蓋常見和高風險情境。這是方法文件與 Google 自述的內部使用方式，不能理解成某款產品取得臨床認證。醫療團隊還要用自身病人群、語言和轉介流程測試，尤其追蹤錯誤建議是否會延誤就醫。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://blog.google/innovation-and-ai/technology/health/evaluating-health-ai-at-scale/">來源：Google 健康 AI 評估框架｜11 月 4 日</a></p>
+</section>
+<section id="applications"><h2><span class="num">03</span>場域怎麼用</h2>
+<h3>製造採購：讓文件欄位進系統之前多一道對照</h3>
+<p><strong>假設試點：</strong>電子零件廠每天收到不同格式的供應商發票與出貨單。團隊先定義供應商、料號、數量、到貨日及稅額欄位，讓 Field Extractor 產出 JSON，再與採購單和收貨紀錄比對；缺值、總額不符或低信心項目交由採購人員處理。前提是掃描品質、幣別、欄位定義與個資保存期限清楚。以欄位正確率、漏行率、人工修正時間及錯付金額衡量，不能把廠商題集分數當作本廠驗收結果。</p>
+<h3>工業產品圖：編修效率要連同標示錯誤一起算</h3>
+<p><strong>假設試點：</strong>設備商用 Images 2.6 製作型錄中同一機台的多角度示意圖。設計師提供授權照片與品牌規範，模型產生背景及版面變體；工程師核對安全標籤、接口位置和型號，發行人員審核後才對外使用。比較每張可用圖的修改輪數、工時、錯誤標示率與輸出成本。涉及規格或安全警示的圖仍需以實物與核准圖面為準。</p>
+</section>
+<section id="business"><h2><span class="num">04</span>商業訊號亮點</h2>
+<h3>模型費用只是開頭，付費理由是少修幾次</h3>
+<p><strong>本報分析：</strong>Images 2.6 將速度和編修控制分開，買方可按產品照、活動圖或動態素材選不同設定；Dharma 則讓高量文件擷取有專用模型的選項。真正影響採購的成本是退件、人工校正、資料映射、授權和錯誤流入下游系統。供應商若能提供逐次編修紀錄、欄位對照與失敗樣本，較容易用「每件合格成果的總成本」說服客戶，而非只展示生成速度或單次推論價格。</p>
+<h3>科研與健康場景，驗證服務可能比展示更值錢</h3>
+<p><strong>本報分析：</strong>Anthropic 的案例顯示模型能進入實驗流程，但還需要人員決定實驗、記錄錯誤及讓外部研究者重現。Google 的框架則把健康問答分解為準確、安全、有用三項責任。若形成商業服務，付款方更可能要求資料版本、專家審閱、異常處理與可追溯報告。上述公告都沒有證明臨床成效或穩定的商業收入，應從小規模、可回溯的流程驗證。</p>
+</section>
+<section id="sources"><h2>查核範圍與來源</h2>
+<p>查核至 2026 年 11 月 5 日台灣時間 09:49。四項選題均為 11 月 4 日一手發布；已開啟 OpenAI API 指南與安全文件、Dharma-AI 技術文章、Anthropic 研究紀錄及 Google 方法公告。Images 2.6 已推出，產品速度與編修改善按 OpenAI 宣稱；Dharma 分數和成本按自家測試；Anthropic 結構與時程按研究團隊報告，預印本及外部重現待追；Google 為評估方法。場域為假設試點，商業段落為本報分析。</p>
+<ul class="sources">
+<li><a target="_blank" rel="noopener noreferrer" href="https://openai.com/index/introducing-images-2-6/">OpenAI：Images 2.6 公告</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://developers.openai.com/api/docs/guides/image-generation">OpenAI：Image API 指南</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://deploymentsafety.openai.com/chatgpt-images-2-6">OpenAI：Images 2.6 安全文件</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/Dharma-AI/dharma-field-extractor">Dharma-AI：Field Extractor</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://www.anthropic.com/research/investigating-vault-particles-with-claude">Anthropic：vault 類顆粒研究</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://blog.google/innovation-and-ai/technology/health/evaluating-health-ai-at-scale/">Google：健康 AI 評估框架</a></li>
+</ul>
+</section></main></div><footer><div class="wrap">你的AI觀察雷達 · 以一手公開資料整理，場域情境與商業推論均已標示。</div></footer></body></html>
