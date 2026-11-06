@@ -1,0 +1,120 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-06</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 06 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">開放世界模型接上模擬迴圈，裝置端語音與機器人工具更新</p><p>NVIDIA 詳解四款 Cosmos 3 分支；Phonon 說清裝置端部署與授權，LeRobot 0.7 整合資料、模型及遠端推論。</p><div class="hero-meta"><span>2026 年 11 月 6 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 6 日台灣時間 09:45。主窗為前 24 小時，三項主要來源皆於 11 月 5 日發文；Phonon 模型本身已在約兩週前開放。效能與規模數字依發布方資料，未由本報重測。場域案例是明確標示的假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2>
+<h3>Cosmos 3 把可控制的生成畫面接進模擬迴圈</h3>
+<p>機器人訓練需要的不只是一段逼真的影片。它走一步，環境就要依動作回應；鏡頭、雷達與地圖也不能各說各話。NVIDIA 11 月 5 日詳解四款 <strong>Cosmos3-Nano</strong> 開放權重分支：Transfer-Auto 產生多視角駕駛影像與 LiDAR；Sim-Auto 讓控制訊號連續驅動感測畫面；Sim-Transfer 依物理模擬器提供的深度、分割等資訊生成 RGB 影像；Sim-Bimanual 則預測雙臂機器人動作後的視覺結果。這是四種不同輸入與用途，不能把展示影片視為同一種通用能力。</p>
+<p>技術上，模型從壓縮後的影片表示逐段生成，利用過去畫面與當前控制預測下一段；因果注意力阻止它偷看未來答案。NVIDIA 的訓練流程先讓模型適應完整錄影，再學按時間預測、蒸餾以減少生成步數，最後用自身生成的歷史繼續訓練，處理誤差逐段累積的問題。<strong>畫面生成仍要靠外部模擬器維持物理狀態</strong>；Sim-Auto 的閉環還需要場景控制渲染器。開放權重與後訓練配方已提供，授權條件為 OpenMDW1.1，但硬體、資料準備及場景驗證成本不能略過。</p>
+<p>發布方也明說，模型能否忠實支援策略訓練與評估仍待量測。對工業讀者，關鍵指標是同一控制下的感測一致性、長時間物件漂移、與真實攝影機及 LiDAR 的偏差，以及換用本廠機器人後的誤差。要先保留未參與訓練的路況與動作序列，否則生成影片即使看起來順暢，也可能只是重現熟悉場景。與上週 Genie 4 的限量研究預覽相比，這次具體新增的是可下載的專用權重與調適配方；兩者的視覺效果或物理精度不能直接拿展示互比。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation">來源：NVIDIA／Hugging Face Cosmos 3 技術發布｜11 月 5 日</a></p>
+</section>
+<section id="must-read"><h2><span class="num">02</span>不能錯過</h2>
+<h3>Phonon 把語音留在裝置上，商用授權依模型而異</h3>
+<p>Gradium 11 月 5 日補充說明先前已開放的 <strong>Phonon</strong> 文字轉語音模型。31m 英語版約 65 MB，採 Apache 2.0，可用於商業產品；40m 支援英、法、德、西、葡五語，約 75 MB，權重採非商用授權，商業使用須另談條件。模型沿用 Pocket TTS 技術，以 flow matching 生成音訊表示；<code>ptts</code> 支援 CPU、GPU 與部分 NPU，另有 Transformers 實作。團隊稱在 Hugging Face 語音榜德語、西語可懂度居首，CPU 串流首段音訊延遲也領先；這是特定語言與測試設定的結果，不能推成中文語音或所有手機都同樣快。裝置端部署的實際價值還要看功耗、記憶體與離線語料；若採自訂聲音，還需取得原聲者同意並管理聲紋檔案。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/phonon-tts">來源：Gradium／Hugging Face Phonon 技術文章｜11 月 5 日</a></p>
+<h3>LeRobot 0.7 讓資料、模型與遠端推論接上同一套流程</h3>
+<p>Hugging Face 11 月 5 日介紹 <strong>LeRobot v0.7.0</strong>：可串流大型機器人資料集訓練，加入多款世界動作模型與視覺語言動作模型；互動執行時可改子任務、詢問視覺狀態，或交給能產生文字的策略及外部規劃器選下一步。遠端推論讓機器人本地保留感測、馬達與錄影，GPU 伺服器回傳動作片段。資料串流、分散式訓練與遠端推論分別解決儲存、訓練記憶體及現場算力問題，不能視為同一項速度提升。更新也替成功率附上 95% 信賴區間，例如 10 次成功 9 次的區間仍很寬。這是開發框架的新能力，不代表任一產線機器人已可安全自動操作；網路延遲、斷線與急停仍需現場測試。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/lerobot/lerobot-release-v070">來源：Hugging Face LeRobot v0.7.0 發布｜11 月 5 日</a></p>
+</section>
+<section id="applications"><h2><span class="num">03</span>場域怎麼用</h2>
+<h3>倉儲機器人：生成場景先找盲點，再用實機驗收</h3>
+<p><strong>假設試點：</strong>倉庫想測搬運車在貨架遮擋、反光地板及臨時障礙下是否會誤判。工程團隊先將實際攝影機位置、LiDAR 校正、地圖與行車控制對齊，用 Cosmos 3 產生不同光照與交通情境；LeRobot 串流資料並在隔離模擬環境重跑策略。測試記錄感測偏差、碰撞率、長序列漂移與人工接管次數。只有通過既有安全模擬器及受控實機測試，設備負責人才批准路線更動。生成場景在此是補充測例，並非安全認證。</p>
+<h3>離線語音設備：先確認語言、授權和耗電</h3>
+<p><strong>假設試點：</strong>維修人員在網路不穩的廠區使用手持裝置讀出工單步驟。Phonon 可讓文字在裝置上轉語音，減少連線依賴；但現有開放版本未包含中文，不能直接寫成中文維修助手已可用。若測英語場景，應用真實料號與安全警語量可懂度、首段出聲時間、電池消耗和誤讀率；內容由工安與設備人員核准，商業導入先核對模型授權。</p>
+</section>
+<section id="business"><h2><span class="num">04</span>商業訊號亮點</h2>
+<h3>世界模型的收入，可能落在「可驗證的場景覆蓋」</h3>
+<p><strong>本報分析：</strong>開放權重降低試用門檻，卻把資料對齊、感測器校正、算力與現場驗證留給使用者。模擬平台或整合商若能提供可追溯的場景版本、真實資料對照及失敗案例，才有機會按測試覆蓋與工程服務收費。採購時宜計入每個有效測例的生成、審核及實機重測成本，並要求供應商說明哪些邊界情境仍需人工設計；目前沒有足夠資料證明生成場景能降低事故或直接縮短量產時程。</p>
+<h3>裝置端語音與機器人框架，都在重新分配系統成本</h3>
+<p><strong>本報分析：</strong>Phonon 的離線推論可減少雲端傳輸與逐分鐘用量，但記憶體、功耗、更新與商用授權仍要付費。LeRobot 的遠端推論則把昂貴 GPU 集中到伺服器，交換條件是現場網路、權限與停機設計。兩者的付款理由分別是離線可用性與設備端硬體簡化；應以任務完成率和總持有成本驗證，不能只看模型大小或單次推論價格。</p>
+</section>
+<section id="sources"><h2>查核範圍與來源</h2>
+<p>查核至 2026 年 11 月 6 日台灣時間 09:45。NVIDIA Cosmos 3 技術文章、Gradium Phonon 技術回顧、Hugging Face LeRobot 0.7 發布均標示 11 月 5 日，並已開啟一手原文。Phonon 開放權重是約兩週前的事件，今天的新資料是實作、效能與授權說明。模型能力及測試數字按發布方資料，未獨立重測；場域是試點假設，商業段落為本報分析。</p>
+<ul class="sources">
+<li><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation">NVIDIA／Hugging Face：Cosmos 3 開放模型</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/phonon-tts">Gradium／Hugging Face：Phonon TTS</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/blog/lerobot/lerobot-release-v070">Hugging Face：LeRobot v0.7.0</a></li>
+</ul>
+</section></main></div><footer><div class="wrap">你的AI觀察雷達 · 以一手公開資料整理，場域情境與商業推論均已標示。</div></footer></body></html>
