@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SI 的 AI 工具選報｜2026-11-09（Asia/Taipei）</title>
+<style>
+:root { font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif; color: #f2edf9; background: #080b19; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.78; background: radial-gradient(ellipse at 80% 2%, #4d164a 0, transparent 32%), radial-gradient(ellipse at 8% 37%, #181a49 0, transparent 30%), #080b19; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .55; background-image: radial-gradient(#ffffffc2 .7px, transparent 1px), radial-gradient(#ff69d3a8 1px, transparent 1.5px), radial-gradient(#9ad7ff80 .7px, transparent 1px); background-size: 97px 97px, 173px 173px, 59px 59px; background-position: 8px 12px, 40px 66px, 22px 4px; }
+a { color: #ff9cdb; text-underline-offset: .2em; }
+a:hover { color: #ffd1ee; }
+a:focus-visible { outline: 2px solid #ffb1e5; outline-offset: 4px; border-radius: 3px; }
+header { position: relative; z-index: 1; overflow: hidden; border-bottom: 1px solid #57657a77; min-height: 390px; background: linear-gradient(90deg, #080b19 0%, #080b19f0 45%, #080b1977 77%, #080b1955 100%), url("assets/m31-galex-nasa.jpg") right center / auto 180% no-repeat, #080b19; }
+.hero { position: relative; z-index: 1; max-width: 1060px; min-height: 390px; margin: auto; padding: 3.4rem 1.25rem; display: flex; align-items: center; }
+.eyebrow { display: inline-block; padding: .25rem .65rem; margin: 0 0 1.25rem; border: 1px solid #ff8ed488; color: #ffbde7; background: #fa4db51c; font: 700 .76rem/1.4 ui-monospace, Consolas, monospace; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.7rem); line-height: 1.13; letter-spacing: -.035em; text-wrap: balance; text-shadow: 0 0 42px #ff61cc44; }
+.hero-subtitle { color: #d9c9ea; margin: 1.2rem 0 0; font-size: 1.05rem; }
+.hero-subtitle strong { color: #ff9fdb; }
+.photo-credit { position: absolute; right: 1.25rem; bottom: .8rem; z-index: 2; margin: 0; color: #c8d0dd; font: 600 .68rem/1.5 ui-monospace, Consolas, monospace; text-align: right; }
+.photo-credit a { color: #d9deea; }
+main { position: relative; z-index: 1; max-width: 820px; margin: auto; padding: 1.5rem 1.25rem 4rem; }
+nav { display: flex; gap: .65rem; flex-wrap: wrap; margin: 0 0 2.3rem; }
+nav a { display: inline-block; color: #e8d8f1; background: #201b38dd; border: 1px solid #6e517e; padding: .4rem .9rem; border-radius: 4px; text-decoration: none; font-size: .88rem; font-weight: 700; }
+nav a:hover { color: #0c0c20; background: #ff9cdb; }
+section { margin: 2.9rem 0; scroll-margin-top: 1rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #a85a9d88; margin-bottom: 1rem; }
+h2 { font-size: 1.55rem; letter-spacing: .04em; margin: 0 0 .6rem; }
+h2::before { content: "✦"; color: #ff6bc4; margin-right: .55rem; font-size: 1.15rem; }
+.section-heading span { color: #c6a7c8; white-space: nowrap; font: 700 .8rem ui-monospace, Consolas, monospace; }
+.card { display: grid; grid-template-columns: 3.3rem minmax(0, 1fr); gap: 1.1rem; position: relative; overflow: hidden; scroll-margin-top: 1rem; background: linear-gradient(120deg, #17192fbf, #21172dbd); border: 1px solid #665075; border-radius: 10px; padding: 1.35rem 1.5rem; margin: .8rem 0; box-shadow: 0 10px 28px #0003; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(#ff79ce, #7648d4); }
+.card:hover { border-color: #d273bb; box-shadow: 0 0 28px #ef61bb22; }
+.rank { color: #ff81cd; font: 800 1.35rem/1.4 ui-monospace, Consolas, monospace; }
+.card h3, .trend h3 { font-size: 1.17rem; line-height: 1.45; margin: 0 0 .4rem; }
+.card h3 a { color: #fff2fd; text-decoration-color: #ff78cb; text-decoration-thickness: 2px; }
+.card p, .trend p { margin: 0; max-width: 36em; overflow-wrap: anywhere; color: #dfd7e9; }
+.trend { background: linear-gradient(100deg, #2d183eeb, #141d35d9); border: 1px solid #68547a; border-left: 3px solid #fa6ec4; padding: 1.2rem 1.35rem; margin: .8rem 0; border-radius: 4px 10px 10px 4px; }
+.trend h3 { color: #d7c8e2; font-size: .94rem; font-weight: 600; margin-bottom: .65rem; }
+.trend-tools { color: #a68ab1; font-size: .86rem; line-height: 2.4; margin-bottom: .5rem; }
+.trend-tools a { display: inline-block; color: #ffd5ef; background: #a0448a33; border: 1px solid #c56da488; border-radius: 999px; padding: .08rem .65rem; line-height: 1.6; text-decoration: none; white-space: nowrap; }
+.trend-tools a:hover { background: #b7579c66; }
+.trend .trend-key { color: #fff4fc; font-size: 1.1rem; font-weight: 700; line-height: 1.55; max-width: 33em; }
+.trend .trend-check { margin-top: .85rem; padding-top: .65rem; border-top: 1px solid #85648366; color: #c9bed3; font-size: .89rem; font-weight: 400; }
+.trend-check span { display: inline-block; color: #e3a6d2; margin-right: .65rem; }
+.sources { padding-left: 1.3rem; columns: 2; column-gap: 3rem; }
+.sources li { margin: .35rem 0; overflow-wrap: anywhere; break-inside: avoid; }
+footer { color: #a999ba; font-size: .88rem; border-top: 1px solid #6e517e88; padding-top: 1.2rem; margin-top: 3rem; }
+@media (max-width: 760px) { header { background-position: center, calc(100% + 90px) center; background-size: cover, auto 150%; } .hero { min-height: 300px; } .card { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 1.1rem; } .rank { font-size: .86rem; letter-spacing: .12em; } .sources { columns: 1; } }
+@media (max-width: 580px) { .hero { padding: 2.6rem 1.25rem; } h1 { font-size: clamp(2.35rem, 11vw, 3.4rem); } nav a { font-size: .8rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<header><div class="hero"><div class="hero-copy"><p class="eyebrow">SI / AI TOOL BRIEF</p><h1>SI 的 AI 工具選報</h1><p class="hero-subtitle">2026-11-09（Asia/Taipei） <strong>✦</strong> 4 則值得追蹤的 AI 工具與模型</p></div><p class="photo-credit"><a href="https://science.nasa.gov/photojournal/andromeda-galaxy/" target="_blank" rel="noopener noreferrer">M31 紫外線觀測影像：NASA/JPL-Caltech・GALEX</a></p></div></header>
+<main>
+<nav aria-label="跳到章節"><a href="#焦點">焦點</a><a href="#選讀">選讀</a><a href="#快覽">快覽</a><a href="#trends">趨勢</a><a href="#sources">來源</a></nav>
+<section aria-labelledby="焦點"><div class="section-heading"><h2 id="焦點">焦點</h2><span>1 則</span></div><article class="card" id="item-01"><div class="rank">01</div><div class="card-body"><h3><a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/" target="_blank" rel="noopener noreferrer">OpenAI BioBasicsBench：評估 AI 代理解讀實驗室原始資料</a></h3><p>OpenAI 於 11/6 發布 BioBasicsBench，以 100 項日常濕實驗室任務測試代理能否判讀凝膠、顯微影像、儀器輸出與實驗紀錄，也要辨認控制組錯誤及證據不足。官方報告在 xhigh 推理設定下，GPT‑6 Astra 平均得分 66.7%，GPT‑5.6 Sol 為 43.8%；這是 OpenAI 與生技公司 Ligo 建置並公布的評測，平均得分不等於任務成功率，也尚非獨立重現。研究團隊可先用自己的匿名化樣本測試影像判讀、控制組檢查和拒絕過度推論的能力，再決定是否適合輔助研究。</p></div></article></section><section aria-labelledby="選讀"><div class="section-heading"><h2 id="選讀">選讀</h2><span>3 則</span></div><article class="card" id="item-02"><div class="rank">02</div><div class="card-body"><h3><a href="https://support.claude.com/en/articles/18251257-track-spend-by-cost-code-with-project-tags" target="_blank" rel="noopener noreferrer">Claude 專案標籤：按成本代碼檢視企業支出（Beta）</a></h3><p>Anthropic 於 11/6 為符合資格的 Enterprise 組織推出專案標籤 Beta，可用成本中心、WBS 或客戶案件代碼標記專案，再從管理介面或 API 查看大部分專案支出。標籤只計入專案內的使用；標記生效約需兩小時，也不會回補生效前的支出，API、Claude for Office 等部分產品不在範圍內。HIPAA、CMEK、ZDR、最少資料保留及美國以外資料儲存的組織不符合資格。財務或管理團隊可先用低風險專案對帳，確認標籤覆蓋範圍、延遲與帳單金額的差異。</p></div></article><article class="card" id="item-03"><div class="rank">03</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2/" target="_blank" rel="noopener noreferrer">GitHub Copilot：VS Code 代理支援排程自動化與遠端預覽</a></h3><p>GitHub 於 11/6 彙整本週 Copilot 更新：VS Code 本機自動化新增 cron 排程與工作區自訂代理；Agents 視窗也可預覽遠端應用並使用互動畫布，目前仍為預覽功能。排程讓代理能按時啟動工作，遠端預覽則可在本機編輯器檢查另一台機器上的結果；實際適用性取決於工作區設定、遠端瀏覽器支援和預覽版穩定度。可先用唯讀、可回復的例行任務驗證觸發時間、工具權限、失敗通知及中止方式，再讓代理修改檔案。</p></div></article><article class="card" id="item-04"><div class="rank">04</div><div class="card-body"><h3><a href="https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage/" target="_blank" rel="noopener noreferrer">GitHub Copilot 成效儀表板新增 Chat 與 VS Code Agents 使用量</a></h3><p>GitHub 於 11/6 將 Copilot Chat 與 VS Code Agents 視窗納入企業及組織的 28 日使用報告與代理互動圖表。這補上原本看不到 Chat 的使用情況，但互動統計不會改變既有採用階段：Chat 和 VS Code Agents 不計入階段判定；使用者須在 28 日內至少兩天使用某功能才算該功能有互動，同一人可被多個功能分別計數。管理者可先確認使用度量政策、檢視權限與報表期間，再把互動數和代理任務完成品質分開解讀。</p></div></article></section><section aria-labelledby="快覽"><div class="section-heading"><h2 id="快覽">快覽</h2><span>0 則</span></div></section>
+<section id="trends"><div class="section-heading"><h2>趨勢</h2><span>把今天的工具連起來看</span></div><article class="trend"><h3>AI 工作導入開始拆分衡量品質、採用與成本</h3><div class="trend-tools"><a href="#item-01">BioBasicsBench</a> · <a href="#item-02">Claude 專案成本標籤</a> · <a href="#item-03">Copilot VS Code 自動化</a> · <a href="#item-04">Copilot 使用儀表板</a></div><p class="trend-key">BioBasicsBench評估代理能否正確判讀工作證據，Copilot讓排程和互動情況可見，Claude則把專案支出歸因；三者分別衡量品質、使用與成本，不能用單一指標代替成效。</p><p class="trend-check"><span>驗證重點</span>用自有任務檢查代理答案及失敗率；核對排程權限與中止流程；確認費用標籤覆蓋和報表定義後，再比較各項指標。</p></article></section>
+<section id="sources"><div class="section-heading"><h2>來源</h2></div><ol class="sources"><li><a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/" target="_blank" rel="noopener noreferrer">OpenAI：Measuring how AI agents handle everyday wet-lab science（2026-11-06）</a></li><li><a href="https://support.claude.com/en/articles/18251257-track-spend-by-cost-code-with-project-tags" target="_blank" rel="noopener noreferrer">Claude Help Center：Track spend by cost code with project tags</a></li><li><a href="https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2/" target="_blank" rel="noopener noreferrer">GitHub Changelog：GitHub Copilot weekly releases — November 2（2026-11-06）</a></li><li><a href="https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage/" target="_blank" rel="noopener noreferrer">GitHub Changelog：Copilot impact dashboard adds chat and VS Code agent usage（2026-11-06）</a></li></ol></section>
+<footer>根據公開公告與專案文件整理。點選工具名稱可查看原始來源。</footer>
+</main>
+</body>
+</html>
