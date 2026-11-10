@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-10</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 10 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">TPU 走向機密推論與長脈絡；即時語音代理考驗連續互動</p><p>Google 發表 8tx 與 8i Max 系統；MOSS-Live 讓語音對話和背景工具並行，Meta 擴大全球青少年帳號的 AI 年齡推估保護。</p><div class="hero-meta"><span>2026 年 11 月 10 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 10 日台灣時間 09:51。主要觀察窗為前 24 小時；MOSS-Live 於 11 月 7 日發表，屬 72 小時回看。本文直接核對發布方原文與專案頁；效能數字均為發布方資料，未由本報重測。場域案例是明確標示的假設試點。閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Google 新增兩種 TPU 系統：機密推論與長脈絡各有一套配置</h3><p>企業開始讓代理人讀取大量文件、在資料庫與工具間反覆操作，算力瓶頸便從「模型能跑多快」延伸到資料處理時的保護，以及長脈絡佔用的記憶體。Google 11 月 9 日<strong>宣布</strong>第八代 TPU 家族的兩種新系統：<strong>8tx</strong> 面向機密推論與小規模訓練；<strong>8i Max</strong> 面向大脈絡與較高機櫃運算密度。Google 特別區分「晶片」和「系統」：這次重點是以現有晶片為基礎，調整封裝、記憶體、網路與安全配置，不能解讀為兩顆全新晶片製程。</p><p>8tx 沿用 8t 的晶片，搭配第五代 AMD EPYC 主機與低延遲網路。Google 稱它能在運算時保護資料與模型權重，並稱相較 8t 延遲最多降低兩倍、效能代價接近零。這些是廠商描述；企業還需要查明可信執行邊界、金鑰管理、支援的模型與區域，以及在自己工作負載上的吞吐和延遲。8i Max 則把兩顆 8i 晶片放在同一封裝，Google 宣稱相對於 8i，運算量、片上 SRAM 和高頻寬記憶體頻寬均加倍。頻寬加倍不保證整體任務耗時減半；跨晶片傳輸、KV cache（模型保留前文的暫存資料）和批次大小，都可能改變實際結果。</p><p>發布狀態也要分清：Google 文章宣布硬體配置，未在該文給出 8tx、8i Max 的一般可用日期或價格；同篇所述 <strong>Cloud Pathways 與 GKE dynamic slicing 已一般可用</strong>，TPU agent suite 則仍在預覽。採購團隊宜把現有可試的調度軟體與尚待確認交付條件的新系統分開評估。</p><p><a href="https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max" target="_blank" rel="noopener noreferrer">來源：Google Cloud TPU 8tx／8i Max 官方公告｜11 月 9 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>MOSS-Live 讓語音對話與背景任務同時進行</h3><p>OpenMOSS 團隊 11 月 7 日發表 <strong>MOSS-Live</strong>。它把前景的聆聽、說話與輪流發言，和背景的推理、工具呼叫分開，再用共享的情境與任務狀態協調。使用者打斷助理、改口或在查詢尚未完成時問新問題，前景仍可回應，背景稍後帶回結果；系統也宣稱可同時看即時鏡頭或畫面。這個架構針對的是連續互動，不等於單一語音模型本身完成所有工作。</p><p>團隊報告在 FDB v3 的工具使用成功率為 51.00%，與比較組最高者並列；在 τ-Voice 多輪任務成功率為 57.93%，位居比較組第二。不同基準測的是工具選擇、多輪完成與談話節奏，不應把它們相加成「整體正確率」。目前可見線上試用與即時 API 文件；公開 GitHub 專案主要提供說明和展示，不能據此宣稱模型權重或完整實作已開源。真實使用還需測中文口音、嘈雜環境、背景任務過期後是否取消，以及音訊與畫面資料的保存條件。</p><p><a href="https://huggingface.co/blog/OpenMOSS-Team/moss-live" target="_blank" rel="noopener noreferrer">來源：OpenMOSS／Hugging Face 發布｜11 月 7 日</a> · <a href="https://github.com/OpenMOSS/MOSS-Live" target="_blank" rel="noopener noreferrer">專案頁</a></p><h3>Meta 擴大 AI 年齡推估，讓更多青少年帳號進入保護設定</h3><p>Meta 11 月 9 日公告，把 Instagram 的 AI 年齡推估技術擴至全球，用於辨識可能填了成人生日的青少年，並將其放入 Teen Account 保護設定。這是<strong>產品範圍擴大</strong>，不是宣布新的通用模型。Meta 表示 Facebook 仍在持續推出相似技術，Threads 的全球推出則是今年稍後的計畫；三個平台不能一概寫成今日已全面上線。澳洲另開始使用 Apple 提供的年齡區間訊號作為輔助。</p><p>關鍵問題是誤判如何處理：把成年人錯判為青少年，與漏掉應受保護的未成年人，代價不同。Meta 公告沒有提供這次全球擴張的誤判率、申訴成功率或各地資料；因此可以確認部署範圍的變化，尚無法獨立評估保護效果。這也是 AI 產品治理從模型預測延伸到帳號設定、家長說明與更正流程的案例。</p><p><a href="https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/" target="_blank" rel="noopener noreferrer">來源：Meta 官方公告｜11 月 9 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>受管制製造業：先找出資料在哪個運算階段暴露</h3><p><strong>假設試點：</strong>設備商想用廠內維修紀錄微調模型，再讓代理人查找故障原因。資訊主管先把圖面、工單、料號與模型權重的流向畫清楚，分出儲存、傳輸及運算中三種狀態；8tx 類型的機密運算可作為候選控制，仍須由資安團隊驗證硬體隔離、金鑰、日誌與供應商操作權限。量測每次查詢成本、首字延遲、故障分類準確度與資料外洩測試結果。設備工程師核准維修結論與現場動作，模型只提供可追溯的建議。</p><h3>現場語音助手：能聽懂「等等」才談得上免手操作</h3><p><strong>假設試點：</strong>技師戴手套檢查機台時，以語音詢問步驟並讓背景任務查歷史故障。MOSS-Live 類架構可在查詢期間繼續聆聽，但導入前須備好設備說明、版本化工單和可取消的工具呼叫。用真實噪音與中文術語測打斷辨識、錯誤指令率、查詢結果過期率和回應延遲；高風險操作必須由技師覆核。試點只能證明該場域是否可用，不能用展示影片替代安全驗收。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>算力採購開始按資料敏感度與記憶體負載拆單</h3><p><strong>本報分析：</strong>企業願意為機密推論付款，是因為資料與權重在運算中也需要保護；願意為大脈絡系統付款，則是為了降低長任務的等待與跨機傳輸成本。兩種需求的採購指標不同：前者重點是可稽核的隔離與合規，後者重點是每個完成任務的延遲、記憶體利用率與總成本。供應商若把硬體、調度與監測一起出售，整合服務可能比單一晶片規格更有價值；但新系統的價格和交付時間尚未公開，現階段無法推算節省幅度。</p><h3>連續互動與年齡保護，收入都取決於後續處理能力</h3><p><strong>本報分析：</strong>語音代理的客戶買的是不中斷的服務流程，額外成本會落在背景工具、即時串流、任務取消與人工接管。年齡推估的產品價值則與受保護帳號是否正確、申訴能否有效更正有關；誤判會增加客服與信任成本。兩者都提醒產品團隊：模型輸出只是第一步，真正值得付費或承擔責任的是完整流程的完成率與可修正性。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 11 月 10 日台灣時間 09:51。Google 與 Meta 原文標示 11 月 9 日，OpenMOSS 原文標示 11 月 7 日。已直接開啟以下一手來源；Google、OpenMOSS 的效能數據及 Meta 的部署說明均按發布方資料，未獨立重測。場域案例為假設試點，商業段落為本報分析。</p><ul class="sources"><li><a href="https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max" target="_blank" rel="noopener noreferrer">Google Cloud：TPU 8tx 與 8i Max</a></li><li><a href="https://huggingface.co/blog/OpenMOSS-Team/moss-live" target="_blank" rel="noopener noreferrer">OpenMOSS：MOSS-Live 技術發布</a></li><li><a href="https://github.com/OpenMOSS/MOSS-Live" target="_blank" rel="noopener noreferrer">OpenMOSS：MOSS-Live GitHub 專案</a></li><li><a href="https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/" target="_blank" rel="noopener noreferrer">Meta：全球青少年帳號保護擴張</a></li></ul></section></main></div><footer><div class="wrap">你的AI觀察雷達 · 依一手來源整理 · 台灣時間 2026 年 11 月 10 日</div></footer></body></html>
