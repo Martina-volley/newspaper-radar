@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-11</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 11 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">強模型擴大開放；多模態評測與資料治理成為選型關鍵</p><p>Gemini 4 Carbon 擴大開放、Claude Fable 5.2 上線；新評測檢驗視覺文件任務，Copilot 的資料保存條款影響企業導入。</p><div class="hero-meta"><span>2026 年 11 月 11 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 11 日台灣時間 09:53。主窗為前 24 小時；Anthropic 與 GitHub 的 11 月 9 日公告屬 72 小時回看。本文已直接開啟發布方原文；效能與價格為廠商公布，未由本報重測。場域案例為假設試點，閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Gemini 4 Carbon 擴大開放：長任務能力與完成成本一起看</h3><p>Google 11 月 10 日宣布，原先只提供部分資安防禦者的 <strong>Gemini 4 Carbon</strong>，現在透過 Google AI Studio 付費 API 與 Gemini for business 提供給開發者和企業；Google AI Ultra 用戶則在 Antigravity、Gemini 應用與搜尋 AI Mode 陸續取得使用權。這是<strong>開放範圍擴大</strong>，不是昨天才首次發表模型。Google 將一般軟體與知識工作仍定位給 Argon，Carbon 則用於複雜除錯、跨步驟代理與開放式研究；後者為了反覆查證，可能消耗更多 token。</p><p>Google 稱 Carbon 在 CursorBench 4.0、WANDR、AutomationBench 位居第一，且每項任務成本低於下一名外部模型的一半。這是發布方彙整的基準結果，任務、工具配置與比較對象各不相同，不能推成所有企業工作都「兩倍便宜」。公開 API 入門價為每百萬輸入／輸出 token 2／10 美元；公告註明 11 月 30 日入門期後改為 4／20 美元。若企業用它跑長時間代理，應以<strong>完成一件可驗收任務的總花費</strong>比較，而非只看每百萬 token 單價。Antigravity 的 <code>/swarm</code> 多代理功能仍是預覽，不宜當成一般可用能力編入上線承諾。</p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener noreferrer">來源：Google 官方公告｜11 月 10 日</a></p><h3>Claude Fable 5.2 上線，Mythos 5.2 仍採資格申請</h3><p>Anthropic 11 月 9 日發布 <strong>Claude Fable 5.2 與 Mythos 5.2</strong>。兩者使用相同底層模型，Fable 加入較強的資安與生物安全防護，現已在 Claude 平台及雲端通路提供；Mythos 則主要透過資安與生命科學驗證計畫申請。這個差別很重要：看到 Mythos 的研究成果，不能以為一般帳戶也能直接呼叫。Anthropic 宣稱新版輸出速度最多比 5.1 快 30%，標準 API 價為每百萬輸入／輸出 token 8／40 美元；可選的 fast mode 為 16／80 美元。</p><p>在 Anthropic 公布的 FrontierCode 2.0 測試中，Fable 5.2 最高 effort 得 49.1%，對照 Opus 5.5 的 45.5%。這是特定任務與計算額度下的結果，不能直接換算為企業程式合併率。Anthropic 自己也建議多數日常工作先用 Opus 5.5，遇到高難度任務再升級。技術團隊真正需要驗證的是：升級後少了多少人工返工、增加多少推理與審查費用，以及輸出能否通過既有測試。</p><p><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">來源：Anthropic 模型公告｜11 月 9 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>新評測把「看懂圖表與工程文件」納入代理測試</h3><p>Google 與 Artificial Analysis 11 月 10 日推出 <strong>Multimodal Knowledge Agent（MKA）</strong> 評測，使用 200 個涵蓋十個領域的多步驟任務，輸入包含圖面、表格等視覺文件；評分約 75% 看事實準確、25% 看視覺設計。各模型共用工具、沙盒與步數預算，評分器會打開交付檔案，檢查頁面與試算表公式。Google 稱 Carbon 品質居第二，平均任務成本約為第一名的六分之一。這比只考文字問答更貼近辦公室工作，但仍是評測集結果；企業自己的文件品質、規則與錯誤代價未必相同。</p><p>其中 200 題的正式測試集不公開，另有十題公開範例可供檢視格式。對採購者而言，這種設計可降低模型事先記住答案的風險，卻也意味著外部團隊較難逐題重現官方排名。實務評估最好另外準備帶有舊版、缺頁與矛盾欄位的內部文件，觀察模型是否會主動指出證據不足。</p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/" target="_blank" rel="noopener noreferrer">來源：Google／Artificial Analysis 評測公告｜11 月 10 日</a></p><h3>Copilot 已提供 Fable 5.2，資料保存成為採用門檻</h3><p>GitHub 11 月 9 日公告 Fable 5.2 在 Copilot 一般可用，支援多種編輯器與 coding agent，但逐步推出；Business、Enterprise 管理員須自行開啟，預設為關閉。GitHub 特別說明，此模型預設會保存提示與輸出供 Anthropic 安全分類器使用，不用於模型訓練；部分合資格企業可申請限期零資料保存。對處理原始碼、客戶資料或機密設計的團隊，模型清單上「可選」並不等於政策上「可用」，先核對資料保存條款與管理員設定。</p><p><a href="https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/" target="_blank" rel="noopener noreferrer">來源：GitHub 官方更新｜11 月 9 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>工廠維修圖面：先讓模型提出證據，再交給工程師決定</h3><p><strong>假設試點：</strong>設備廠要比對電路圖、故障工單與零件表，找出停機原因。先整理圖面版本、設備編號、維修紀錄與可追溯料號，再讓多模態代理標出所引用的頁碼和元件。以「找到正確故障元件比例」「錯誤引用率」「工程師覆核時間」與每案成本評估；若圖面掃描不清或版本不一致，先退回人工。模型可縮短查資料時間，停機、換件與安全隔離仍由授權工程師決定。MKA 的排名只是選型線索，不是現場驗收結果。</p><h3>軟體維護：把高價模型留給難題</h3><p><strong>假設試點：</strong>製造業資訊部門要升級多年未動的排程系統。先用較低成本模型盤點相依套件與測試，再把跨服務錯誤追蹤、架構審查交給 Carbon 或 Fable；所有修改進入隔離分支，經自動測試、資安掃描及工程師審核才合併。比較每件已合併變更的 token、運算時間、回退率與人工工時，而非比較單次回答是否漂亮。若涉及生產資料，還須先完成模型通路的資料保存審查。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>「高價模型按需升級」可能比全員預設更有市場</h3><p><strong>本報分析：</strong>Google 與 Anthropic 都把最強模型定位在少數高難度工作，形成「一般模型處理大宗任務、強模型處理瓶頸」的採購邏輯。供應商可出售路由、品質驗證與成本監測服務，按完成並通過驗收的案件計價；客戶則要防止代理反覆嘗試造成帳單失控。Carbon 的入門價月底到期，評估時須列入後續價格。Anthropic 的 fast mode 另加價，也要先證明縮短等待真的能換回業務收益。</p><h3>資料治理成為模型通路的一部分</h3><p><strong>本報分析：</strong>GitHub 的 Fable 5.2 預設關閉與資料保存說明，顯示企業導入不再只比較模型分數；管理權、保存期限與例外申請會直接影響可觸及的客群。能提供清楚治理條款、可稽核紀錄與合規部署的通路，可能在受管制產業取得溢價；但這是商業推論，仍需觀察實際採用與續約。採購方應把資料條款列入試用的第一道門檻。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>以上為今日可查證的重要變化。</p><p>查核至 2026 年 11 月 11 日台灣時間 09:53。Google 兩篇公告標示 11 月 10 日；Anthropic 與 GitHub 標示 11 月 9 日。已直接開啟以下一手來源。模型表現、成本與部署資料按發布方資訊敘述，未獨立重測；場域案例與商業推論均已標示。</p><ul class="sources"><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener noreferrer">Google：Gemini 4 Carbon 開放公告</a></li><li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Anthropic：Claude Fable 5.2 與 Mythos 5.2</a></li><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/" target="_blank" rel="noopener noreferrer">Google：MKA 多模態代理評測</a></li><li><a href="https://github.blog/changelog/2026-11-09-claude-fable-5-2-in-github-copilot/" target="_blank" rel="noopener noreferrer">GitHub：Fable 5.2 在 Copilot 上線</a></li></ul></section></main></div><footer><div class="wrap">你的AI觀察雷達 · 2026-11-11 · 資料與分析已分別標示</div></footer></body></html>
