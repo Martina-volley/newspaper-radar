@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-13</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 13 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">快速模型承擔代理任務；執行環境與成本成為關鍵</p><p>Google 推出 Gemini 4 Hydrogen；AWS 更新 AgentCore 執行環境，SGLang-Neuron 為 Trainium 增加部署路徑。</p><div class="hero-meta"><span>2026 年 11 月 13 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 13 日台灣時間 15:16。主窗為前 24 小時；以下公告均標示 11 月 12 日。已直接開啟發布方原文，效能數據為廠商宣稱，未由本報重測。場域案例為假設試點，閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Gemini 4 Hydrogen 上線：快速模型開始承擔代理工作</h3><p>Google 11 月 12 日發布 <strong>Gemini 4 Hydrogen</strong>，將它定位為日常程式開發與代理流程的快速執行模型。它已進入 Google AI Studio、Gemini API、Gemini for business、Gemini 應用及搜尋；Antigravity 則提供給付費 Pro 與 Ultra 用戶。Carbon 與 Argon 對應較深的長任務推理，Hydrogen 處理撰寫、測試與反覆執行。這是新的模型選擇，也讓「同一項任務分派給不同模型」更容易進入產品流程。</p><p>Google 宣稱 Hydrogen 在預設 high 思考等級的 Artificial Analysis Intelligence Index 得 51 分，Argon 得 50 分；升到 xhigh 為 54 分。分數只屬該評測設定，不能據此判定 Hydrogen 全面勝過 Argon。Google 另稱相較 Gemini 3.8 Flash，預設設定完成任務快 2.5 倍，Terminal-Bench 4.1 得分為 57% 對 18.2%；企業仍需用自己的程式庫、工具與重試規則量測。Hydrogen 的定價為每百萬輸入／輸出 token 1.50／7.50 美元，標示適用整個一百萬 token 脈絡窗；長脈絡可用，不代表每個長任務都有相同延遲或品質。</p><p>同篇公布 Antigravity 的 <strong>Orchestrator</strong>，可在同一工作階段切換 Carbon 與 Hydrogen。Google 稱在 Terminal-Bench 4.0，它接近 Carbon 的任務成功率，平均少耗 24% 配額、快 19%。這是特定平台和測試工作流的結果，開發團隊應查明切換點、錯誤回退與每件已通過測試的變更成本；不能把基準節省幅度直接套到所有企業代理。</p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener noreferrer">來源：Google Gemini 4 Hydrogen 公告｜11 月 12 日</a></p><h3>AgentCore 更新執行環境：代理隔離、啟動與閒置費用一起調整</h3><p>AWS 11 月 12 日宣布新一代 <strong>Amazon Bedrock AgentCore runtime</strong>。每個代理工作階段仍在獨立的 Firecracker 微型虛擬機內執行，帶有自己的身分、政策與稽核軌跡；新版最高支援 8 vCPU、32 GB 記憶體和 10 GB 容器映像。AWS 稱啟動可低於兩秒，最多快十五倍，並能在閒置時縮到零；這些是官方提供的能力與效能描述，實際延遲仍取決於映像、工具和工作負載。</p><p>新功能還讓工作階段掛載檔案系統，將任務檔案與執行環境納入同一套存取控制。這對會讀取圖面、程式碼或客戶資料的長任務特別重要，但隔離不等於自動取得正確權限：團隊仍要設定最小權限、資料保存及人工核准。AWS 稱多輪任務的記憶體消耗最多可降 68%；常駐代理另有最低基線計費，採購時不能只看「閒置歸零」一句。</p><p><a href="https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/" target="_blank" rel="noopener noreferrer">來源：AWS AgentCore runtime 官方公告｜11 月 12 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>SGLang-Neuron 公開提供，Trainium 多一條模型部署路徑</h3><p>AWS 與 RadixArk 11 月 12 日宣布 <strong>SGLang-Neuron</strong> 可公開使用，透過 AWS Deep Learning Container 在 Trainium 上執行 SGLang 模型服務及強化學習 rollout。它採外掛架構：SGLang 核心保留 API、請求排程與前綴快取，外掛負責 Trainium 特定模型、注意力運算和執行圖。對原本使用 SGLang 的團隊，介面延續可降低移轉工作；但仍須逐一確認支援模型、算子、精度和實際吞吐，不能把「同介面」等同「零改動」。官方快速入門使用 Trainium3 與指定容器，沒有提供可直接推估所有模型成本的通用數字。</p><p><a href="https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/" target="_blank" rel="noopener noreferrer">來源：AWS／RadixArk 技術公告｜11 月 12 日</a></p><h3>AWS 提醒企業：代理成本要算到「成功完成一件事」</h3><p>AWS 同日發布代理成本評估方法，指出 tokenizer 差異、輸出冗長、工具迴圈和推理額度都會讓標價與實際帳單脫節。文章以<strong>假設算例</strong>說明：單價較低的模型若多次修正工具呼叫，完成一件事反而可能更貴；該數字不能當成真實客戶節省率。較有用的做法是記錄每件任務的重試、快取、人工接管與成功率，再與原本人工流程比較。這份指南屬方法建議，尚非一項新模型或普遍可驗證的投資報酬結論。</p><p>實作時，應先定義「成功完成」的標準，例如客服案件是否真的結案、報表數字是否通過覆核，而非只看模型是否產出文字。不同模型使用相同資料與評分規則，才能公平比較。若失敗案件最後還需人工補救，這段工時也應算進每件成功任務的成本；否則節省幅度容易被高估。</p><p><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">來源：AWS 代理成本與成效方法｜11 月 12 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>製造業程式維護：快速模型改程式，強模型審難題</h3><p><strong>假設試點：</strong>工廠資訊部門要修改排程系統，卻擔心舊程式牽動產線。先備齊版本化程式庫、測試、設備介面與回退程序；讓 Hydrogen 類快速模型處理明確的小修改及測試，將跨系統故障交給較強模型，所有變更放在隔離環境。量測每件通過測試且被工程師接受的變更成本、回退率及人工覆核時間。模型可提出修正，合併與上線仍由負責工程師核准。</p><h3>工程文件代理：把工作階段與資料權限綁在一起</h3><p><strong>假設試點：</strong>設備商的代理要讀圖面、維修手冊和工單，生成故障排查建議。先確認每位使用者能讀哪些版本的文件，再讓每個工作階段用獨立身分取資料並保留稽核紀錄。測錯誤引用、越權讀取、啟動延遲、閒置成本與建議採納率；圖面不完整時要轉交現場工程師。隔離執行可降低跨工作階段暴露風險，並不能替代文件品質與現場安全檢查。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>模型路由和代理執行環境開始合併出售價值</h3><p><strong>本報分析：</strong>企業要付費的不是單一基準分數，而是代理能在合理成本下完成並留下可追溯結果。快速模型、強模型與隔離工作階段若能一起管理，平台商可收取路由、執行、觀測與治理費用；客戶則要把模型 token、閒置資源、失敗重試與人工審核放進同一張成本表。Google 與 AWS 各提供了部分能力，跨平台整合效果仍需實際測試。</p><h3>硬體可選性增加，遷移成本仍是採購核心</h3><p><strong>本報分析：</strong>SGLang-Neuron 讓既有 SGLang 使用者多一個 Trainium 部署選項，可能促使推論供應商以價格與吞吐爭取工作負載。但模型支援、效能調校和維運人力會吃掉部分硬體價差。採購不宜只比較晶片每小時價格；應用固定模型、固定品質門檻，對照每千件成功請求的總成本與穩定性，再決定是否轉移。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 11 月 13 日台灣時間 15:16。以下四篇一手來源均標示 11 月 12 日，已直接開啟。效能與採用說法按發布方原文，未獨立重測；場域情境與商業推論已標示。</p><ul class="sources"><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener noreferrer">Google：Gemini 4 Hydrogen</a></li><li><a href="https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/" target="_blank" rel="noopener noreferrer">AWS：新一代 AgentCore runtime</a></li><li><a href="https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/" target="_blank" rel="noopener noreferrer">AWS：SGLang-Neuron 在 Trainium 上部署</a></li><li><a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer">AWS：代理任務成本與成效</a></li></ul></section></main></div><footer><div class="wrap">你的AI觀察雷達 · 2026-11-13 · 資料與分析已分別標示</div></footer></body></html>
