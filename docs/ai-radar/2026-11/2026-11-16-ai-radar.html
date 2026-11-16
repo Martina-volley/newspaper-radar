@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-16</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 16 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">多代理研究走向可驗證；AI 錢包開始分工</p><p>Google 公開 /teamwork 研究流程；GitHub 開放 AI Scan 管理 API，Google 與 OpenAI 各推出不同的 AI 錢包應用。</p><div class="hero-meta"><span>2026 年 11 月 16 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 16 日台灣時間 09:53。週一回看 11 月 13 日至 16 日早上的一手公告；以下重點均由發布方原文確認。研究數據與產品能力各有適用範圍，場域案例為假設試點，閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Google 的多代理研究：關鍵從「會推理」走向「可驗證」</h3><p>Google Research 11 月 13 日公開 Antigravity <strong>/teamwork</strong> 的研究成果。這是由多個代理分工探索、批評與查核的工作流程，搭配 Gemini 4 Argon 等模型；它不是一款當天新發布的基礎模型。Google 說明兩項設計：讓不同代理平行提出候選解，再交給 Lean 4 證明器、原有測試或模擬器等外部工具驗證；長任務則切成有限脈絡的步驟，由新代理接手，避免歷程過長而遺漏細節。部分 /teamwork 模式已在 Antigravity 提供，完整功能仍有後續開放計畫，不能把研究展示全數視為一般用戶可直接使用。</p><p>最具代表性的例子是 Courtade–Kumar 資訊理論猜想。Google 與大學團隊合作，先由模型找出較廣泛猜想的反例，再由研究者提出縮減問題的方法；之後模型協助建立分析界限與區間算術憑證，最後以 Lean 4 形式化整份證明。Google 稱形式化程式約五千萬行。這個數字代表驗證工作規模，並非模型品質分數；人類仍須確認電腦所證的定理與原問題一致。另一個化學結構基準中，Google 稱三十個代理加上光譜模擬器，對複雜分子的第一候選精確匹配率達 95%；那是特定基準與廠商宣稱，尚不能推論到所有實驗室樣本。</p><p>真正值得追蹤的是「候選答案—獨立查核—人員定義問題」能否變成可重現的流程。評估時應要求公開任務、驗證器、計算成本、失敗例與人工介入量，而非僅比較代理數量。這些成果也提醒企業：形式驗證能檢查邏輯步驟，卻不能自行判定商業需求或物理假設是否正確。</p><p>其中「獨立查核」尤其重要。若產生答案的代理也能修改測試，通過測試便失去說服力；若由不共享原始推理的代理與固定工具覆核，才較容易發現看似合理的錯誤。Google 同篇展示系統工程與論文審查案例，但各項數字來自不同任務、不同基準，不能合併成單一成功率。</p><p><a href="https://www.research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/" target="_blank" rel="noopener noreferrer">來源：Google Research／Antigravity /teamwork｜11 月 13 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>GitHub 的 AI 程式掃描，新增組織層級管理介面</h3><p>GitHub 11 月 13 日讓管理員透過 REST API 啟用或停用儲存庫的 <strong>AI Scan</strong>，目前是公開預覽。新增的 <code>repository_scan</code> 設定可在組織或單一儲存庫層級調整，也能與拉取請求掃描設定一併管理。對有數百個程式庫的企業，價值在於能用既有配置流程維持一致政策，並明確處理例外。重要限制是：<strong>啟用不會自動執行掃描</strong>；有寫入權限的人仍須按需發起，且每次會消耗 GitHub Code Security AI credits。企業政策若不允許，子層級也無法開啟。這是管理能力的更新，不是漏洞發現率已提升的證據。</p><p><a href="https://github.blog/changelog/2026-11-13-manage-ai-scan-for-repositories-using-the-rest-api/" target="_blank" rel="noopener noreferrer">來源：GitHub Changelog／11 月 13 日</a></p><h3>兩種「錢包＋AI」路線，同週浮現</h3><p>Google 11 月 13 日宣布美國 Gemini 用戶可逐步連結 Google Wallet，讓助理根據消費紀錄回答預算、訂閱等問題；用戶也可選擇透過 Plaid 連結銀行與信用卡。Google 明確表示 Gemini 只能讀取資訊，不能代為移動、管理或投資資金。同日 OpenAI 更新說明：<strong>ChatGPT Wallet</strong> 正逐步提供給符合條件的美國成年 Pro 用戶，讓 dot 在購物結帳前交由本人檢查商家、品項、總額與卡片，再用生物辨識授權。OpenAI 表示卡號會以替代憑證處理；完成授權仍須確認商家的訂單通知。兩者都涉及付款資料，卻處在不同流程：前者先做財務分析，後者聚焦代理購買時的人員授權。</p><p><a href="https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/" target="_blank" rel="noopener noreferrer">來源：Google Wallet in Gemini／11 月 13 日</a> · <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">來源：OpenAI ChatGPT release notes／11 月 13 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>化工實驗室：先讓代理排除錯誤結構</h3><p><strong>假設試點：</strong>分析員收到一份難判讀的核磁共振光譜，須在數個相近分子結構間判斷。先備妥可合法使用的光譜、候選結構、參考樣本與模擬工具；讓代理提出候選，再用光譜模擬器比對，將不吻合的結果及理由交給化學師。追蹤第一候選正確率、錯誤排除率、每案時間與人工覆核工時；新化合物須另外測，不能沿用 Google 基準的 95%。最終結構判定與實驗安全仍由具資格的人員負責。</p><h3>工廠資訊部門：讓 AI 掃描融入程式變更閘門</h3><p><strong>假設試點：</strong>工廠的排程系統有許多程式庫，資安團隊想讓高風險庫先接受 AI 掃描。先盤點庫的擁有人、程式碼可見範圍、掃描權限與點數額度；用 GitHub 新 API 套用設定，再由工程師於既定變更流程發起掃描。量測覆蓋率、真正有效的發現比例、誤報覆核工時及每次有效發現成本。掃描結果應由資安與系統負責人判斷，產線部署仍走原有核准程序。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>可驗證的代理工作，可能形成新的服務定價單位</h3><p><strong>本報分析：</strong>如果客戶要的是「經查核可用的結構判讀或程式修正」，供應商可把生成、驗證器、紀錄與人工覆核包成服務，按通過驗收的任務收費。這比只按模型 token 計價更貼近採購者的成果，但驗證器運算、失敗重試和專家時間也會進入成本。Google 的研究成果顯示路徑，尚未證明跨產業皆能達到相同效益；試點應先定義驗收標準與錯誤責任。</p><p>若驗收標準本身有爭議，例如「分子結構足以進入下一輪實驗」或「程式修補不影響產線」，合約還需寫明誰提供測試資料、誰有否決權，以及誤判造成的返工如何計算。這會決定服務商能否真正按成果收費。</p><h3>AI 進入支付流程，資料授權與交易責任變成產品的一部分</h3><p><strong>本報分析：</strong>錢包連結能讓助理讀懂個人消費，購買授權則把它推近交易。商家、支付業者與助理平台都可能爭取入口與服務費，但客戶願意付費的前提是清楚知道資料讀取範圍、授權時點與出錯後由誰處理。Google 與 OpenAI 目前公布的美國用戶範圍及功能不同，不能推論已在台灣上線，也不能把「核准付款」等同「訂單成立」。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 11 月 16 日台灣時間 09:53；週末窗口內查得的四篇一手來源均標示 11 月 13 日，已直接開啟。廠商性能及產品說法依原文記載，本報未獨立重測或實際試用。場域與商業分析已分別標示。</p><ul class="sources"><li><a href="https://www.research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/" target="_blank" rel="noopener noreferrer">Google Research：Antigravity /teamwork</a></li><li><a href="https://github.blog/changelog/2026-11-13-manage-ai-scan-for-repositories-using-the-rest-api/" target="_blank" rel="noopener noreferrer">GitHub：AI Scan 管理 API</a></li><li><a href="https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/" target="_blank" rel="noopener noreferrer">Google：Gemini 連結 Wallet</a></li><li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener noreferrer">OpenAI：ChatGPT release notes</a></li></ul></section></main></div><footer><div class="wrap">你的AI觀察雷達 · 2026-11-16 · 資料與分析已分別標示</div></footer></body></html>
