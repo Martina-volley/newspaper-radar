@@ -1,9 +1,10 @@
 # SI 的 AI 工具選報｜2026 年 11 月
 
-共 12 期；HTML 為閱讀版，Markdown 為文字版。
+共 13 期；HTML 為閱讀版，Markdown 為文字版。
 
 | 日期 | 閱讀版 | 文字版 |
 |---|---|---|
+| 2026-11-18 | [HTML](ai-tools-daily-top10-2026-11-18.html) | [Markdown](ai-tools-daily-top10-2026-11-18.md) |
 | 2026-11-17 | [HTML](ai-tools-daily-top10-2026-11-17.html) | [Markdown](ai-tools-daily-top10-2026-11-17.md) |
 | 2026-11-16 | [HTML](ai-tools-daily-top10-2026-11-16.html) | [Markdown](ai-tools-daily-top10-2026-11-16.md) |
 | 2026-11-13 | [HTML](ai-tools-daily-top10-2026-11-13.html) | [Markdown](ai-tools-daily-top10-2026-11-13.md) |

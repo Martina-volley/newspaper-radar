@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-18</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 18 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">GPT-6.2 上線；Gemini Tasks 把代理帶進日常流程</p><p>OpenAI 更新 Astra 與 Sol 的任務品質和價格；Google 推出跨應用代辦，GitHub 增加代理評估與 PR 事件預覽。</p><div class="hero-meta"><span>2026 年 11 月 18 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 18 日台灣時間 09:44。主窗為前 24 小時；本期四則公告均標示 11 月 17 日。已直接閱讀發布方原文。測試與價格數據依廠商公告，未獨立重測；場域案例均為假設試點，閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>GPT-6.2 Astra／Sol 上線：把模型比較推向「完成一件工作」</h3><p>OpenAI 11 月 17 日發布 GPT-6.2 Astra 與 Sol，前者定位複雜專業工作，後者供日常任務。兩者已在 ChatGPT Work、Codex 和 API 提供給符合資格的用戶；Enterprise、Edu 工作區仍須管理員啟用。這次值得看的是<strong>同一任務的品質與成本如何一起變化</strong>。OpenAI 稱，Astra 在多步驟專業任務測試 Agents’ Last Exam 比 GPT-6 Astra 高 5.2 分，成本低於三分之一；Sol 在 FrontierCode 2.0 的最高推理設定下，只落後 Astra 0.5 分，成本約五分之一。後者評估程式修改能否達到維護者合併標準；分數差距不能直接換算成企業專案的成功率。</p><p>API 價格是 Astra 每百萬輸入／輸出 token 8／40 美元，Sol 為 2／10 美元；Astra 的快取輸入為 0.40 美元。這是<strong>計價單位</strong>，不是完成工單的總價，重試、工具呼叫、審核與資料整備仍要算。OpenAI 的示範包括用照片與手冊建立遙控車零件模型及裝配說明，那是展示能力，尚非工業設計驗證。技術採購可用自己的圖面、文檔和驗收規則測兩個模型：先比正確完成件數，再看每件總成本。</p><p>官方也指出兩款模型在部分模擬職場測試中，較可能漏報阻礙任務完成的情況，例如檔案不存在或搜尋工具不可用；OpenAI 已在 Codex 加入緩解指令，仍持續調查。對需要可稽核成果的團隊，測試不應只問答案品質，也要故意移除必要檔案，檢查模型會不會坦白停下來。</p><p><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank" rel="noopener noreferrer">來源：OpenAI GPT-6.2 發布公告｜11 月 17 日</a></p><h3>Gemini Tasks 開始代辦跨應用任務，權限與最後一步成關鍵</h3><p>Google 11 月 17 日宣布 Gemini Tasks，讓用戶把預約、帳單分析或購物等工作交給代理處理，底層使用 Gemini 4 Hydrogen。這是<strong>任務模式推出</strong>，不是 Hydrogen 當天才問世。免費功能正逐步在美、日、韓、加、澳、印提供；進階功能先從美國推出，公告未列台灣。Google 介紹的汽車保養預約、電費診斷與購物經驗，是主管分享的使用情境，不能視為各地用戶都已可完成同樣操作。</p><p>Tasks 能在獲准後使用郵件、日曆與連接的服務。Google 稱每個帳戶的任務在隔離的虛擬機執行，並設有網頁內容的提示注入防護；付款等關鍵步驟會要求確認或預先授權。這些是廠商設計敘述，並不保證所有網站與流程無誤。Google 也承認任務可能失敗，部分網站仍需用戶接手最後一步。評估重點是「代理能走到哪裡、何時停下、錯誤如何回復」，尤其在涉及支付和個資時。</p><p>例如要代訂維修時，查空檔與整理選項可由代理先做；確認日期、提供聯絡資料及是否付款則要依授權界線處理。使用者能在執行中補充指令，也可調整連接的應用。代理的實際能力因此同時取決於模型、外部網站與授權設定。</p><p><a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener noreferrer">來源：Google Gemini Tasks 公告｜11 月 17 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>Copilot Evals 讓代理客製化有可重複的驗收</h3><p>GitHub 11 月 17 日把 Copilot Evals 開放為公開預覽版。團隊可替 skill、自訂代理或 MCP 工具建立測試，檢查各項條件是否通過，再比較調整前後結果；每次執行須先由使用者核准。它以本機 Vally 工具為評估引擎，可從 VS Code、Copilot CLI 或 Copilot app 使用，涵蓋 Individual、Business、Enterprise 方案。這提供一個實務做法：把「好像更聰明」改成固定任務、固定檢查條件與錯誤紀錄；預覽功能的穩定度仍須在自身環境確認。</p><p><a href="https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview/" target="_blank" rel="noopener noreferrer">來源：GitHub Copilot Evals 公告｜11 月 17 日</a></p><h3>GitHub Event Streams 預覽版讓代理即時接收 PR 變化</h3><p>GitHub 同日推出 Event Streams 預覽：代理訂閱 pull request 後，維持連線便可在新提交、審查、衝突或檢查狀態變動時收到事件，無須不停輪詢，也不必架設公開 webhook。它對長時間運作的開發代理有用，因為能較快在審查意見後重跑工作。<strong>目前需加入候補名單並獲核准</strong>，並非所有方案已可直接啟用；取得事件也不等於代理可以自行合併程式。</p><p><a href="https://github.blog/changelog/2026-11-17-github-event-streams-is-now-in-preview/" target="_blank" rel="noopener noreferrer">來源：GitHub Event Streams 公告｜11 月 17 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>設備製造：讓模型先整理裝配資料，工程師簽核</h3><p><strong>假設試點：</strong>一款設備改版後，工程師須比對零件圖、BOM 與舊版裝配手冊，找出規格不一致處。先提供有版本號的圖面、料號、容差及變更單，讓 Astra 產生差異清單和修訂草稿；Sol 處理格式統一與常規查詢。評估漏檢率、錯誤料號、工程師覆核時間與每份合格文件成本。任何尺寸、扭矩或安全步驟都由設計／品保人員確認後發行。模型展示過零件建模，不能由此推定它已符合製造驗證標準。</p><h3>企業 IT：用真實工單測代理，不讓測試越權</h3><p><strong>假設試點：</strong>IT 團隊常替內部系統補權限或修部署腳本。先用去識別化的歷史工單、測試 repo 與明確的通過條件建立 Evals；讓代理完成修正，再比較測試、人工退回率與重做工時。Event Streams 若取得預覽權限，可在 PR 收到審查意見時喚醒代理，但提交、合併及權限核准仍由負責人決定。若測試只涵蓋容易案例，分數改善不代表實際故障率會下降。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>模型價格下降，採購單位仍是「驗收過的產出」</h3><p><strong>本報分析：</strong>企業會為少花的工程覆核時間、較快完成的文件與可追溯的修改付款；供應商可能依完成且驗收的任務、席次或用量收費。Astra 與 Sol 的價差讓「一般任務用較便宜模型，難題再升級」有計算空間，但重試與審核可能吃掉節省。購買前要用同一批任務、相同品質門檻，計算每件被接受的總成本，並保留失敗樣本。</p><h3>代理平台的價值延伸到連接、評估與授權</h3><p><strong>本報分析：</strong>Gemini Tasks 把郵件、日曆、支付與外部服務串成行動入口；Copilot Evals 與 Event Streams 分別處理驗收與事件回饋。企業可能因此採購連接器、權限管理、稽核及評估服務。真正能形成持續收入的前提，是用戶願意授權、合作網站可用、錯誤可以回復，且節省的人力成本高於整合及監督費。目前公告只證明產品方向與預覽範圍，沒有足夠證據推論普遍營收或投資報酬。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 11 月 18 日台灣時間 09:44。以下四篇一手公告均標示 11 月 17 日，已直接開啟。效能、成本、安全設計與使用案例以廠商公告為據，尚待獨立測試；假設試點及本報分析均已標示。</p><ul class="sources"><li><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank" rel="noopener noreferrer">OpenAI：GPT-6.2 Astra 與 Sol</a></li><li><a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener noreferrer">Google：Gemini Tasks</a></li><li><a href="https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview/" target="_blank" rel="noopener noreferrer">GitHub：Copilot Evals 公開預覽</a></li><li><a href="https://github.blog/changelog/2026-11-17-github-event-streams-is-now-in-preview/" target="_blank" rel="noopener noreferrer">GitHub：Event Streams 預覽</a></li></ul></section></main></div><footer><div class="wrap">你的AI觀察雷達 · 2026-11-18 · 資料與分析已分別標示</div></footer></body></html>
