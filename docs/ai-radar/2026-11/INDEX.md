@@ -1,9 +1,10 @@
 # 你的AI觀察雷達｜2026 年 11 月
 
-共 13 期。依日期由新到舊排列；HTML 為閱讀版，Markdown 為文字版。
+共 14 期。依日期由新到舊排列；HTML 為閱讀版，Markdown 為文字版。
 
 | 日期 | 閱讀版 | 文字版 |
 |---|---|---|
+| 2026-11-19 | [HTML](2026-11-19-ai-radar.html) | [Markdown](2026-11-19-ai-radar.md) |
 | 2026-11-18 | [HTML](2026-11-18-ai-radar.html) | [Markdown](2026-11-18-ai-radar.md) |
 | 2026-11-17 | [HTML](2026-11-17-ai-radar.html) | [Markdown](2026-11-17-ai-radar.md) |
 | 2026-11-16 | [HTML](2026-11-16-ai-radar.html) | [Markdown](2026-11-16-ai-radar.md) |

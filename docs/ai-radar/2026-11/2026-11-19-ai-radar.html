@@ -1,0 +1,86 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>你的AI觀察雷達｜2026-11-19</title><style>
+    :root { --ink:#242b29; --muted:#5e6964; --paper:#f6f4ee; --card:#fffefa; --line:#dddcd4; --teal:#155f59; --teal-soft:#e7f2ee; --wine:#69383b; --wine-soft:#f5e9e8; --olive:#696332; --olive-soft:#f3f0df; --shadow:0 16px 40px rgba(25,39,34,.07); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif; line-height:1.72; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#0d4541; }
+    .wrap { max-width:1200px; margin:auto; padding:0 28px; }
+    .topbar { border-bottom:1px solid var(--line); background:#fffcf6; }
+    .topbar .wrap { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight:800; letter-spacing:.06em; color:var(--wine); }
+    .topbar small { color:var(--muted); }
+    .hero { background:linear-gradient(115deg,#173d3b 0%,#295a50 57%,#645934 100%); color:#fff; padding:66px 0 62px; }
+    .eyebrow { display:flex; gap:9px; align-items:center; font-size:.82rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:#d2e7dc; }
+    .eyebrow::before { content:""; width:24px; height:2px; background:#d9d5a7; }
+    h1 { margin:16px 0 16px; font-size:clamp(2.3rem,5vw,4.25rem); letter-spacing:-.035em; line-height:1.17; }
+    .hero p { max-width:780px; margin:0; color:#e3eee8; font-size:1.1rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .hero-meta span { border:1px solid #ffffff55; border-radius:30px; padding:5px 13px; font-size:.8rem; color:#f7f7ef; }
+    .layout { display:grid; grid-template-columns:190px minmax(0,1fr); gap:42px; padding-top:42px; padding-bottom:80px; }
+    aside { position:sticky; top:26px; align-self:start; border-left:2px solid var(--line); padding-left:17px; }
+    aside strong { display:block; margin-bottom:12px; color:var(--wine); font-size:.78rem; letter-spacing:.08em; }
+    aside a { display:block; color:var(--muted); text-decoration:none; padding:5px 0; font-size:.88rem; }
+    aside a:hover { color:var(--teal); }
+    main { min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:48px; }
+    h2 { display:flex; align-items:center; gap:11px; margin:0 0 20px; font-size:1.58rem; line-height:1.3; letter-spacing:-.02em; }
+    h2 .num { font-size:.76rem; letter-spacing:.02em; color:#fff; background:var(--wine); border-radius:6px; padding:3px 8px; }
+    h3 { margin:0 0 9px; font-size:1.17rem; line-height:1.42; }
+    p { margin:0 0 13px; }
+    .intro { font-size:.96rem; color:var(--muted); max-width:800px; }
+    .signal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; }
+    .signal { padding:22px; border:1px solid var(--line); border-radius:13px; background:var(--card); box-shadow:var(--shadow); }
+    .signal:nth-child(1) { border-top:4px solid var(--wine); }
+    .signal:nth-child(2) { border-top:4px solid var(--teal); }
+    .signal:nth-child(3) { border-top:4px solid var(--olive); }
+    .signal b { display:block; margin-bottom:8px; font-size:.85rem; color:var(--wine); }
+    .signal p { margin:0; font-size:.96rem; }
+    .story { background:var(--card); border:1px solid var(--line); border-radius:15px; padding:27px 30px; box-shadow:var(--shadow); margin-bottom:15px; }
+    .story-head { display:flex; gap:13px; align-items:flex-start; }
+    .story-index { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; background:var(--teal-soft); color:var(--teal); border-radius:9px; font-weight:800; }
+    .story h3 { margin-top:1px; }
+    .story .body { margin-left:49px; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:800; border-radius:30px; padding:2px 9px; margin-right:7px; vertical-align:1px; }
+    .fact { background:var(--teal-soft); color:var(--teal); }
+    .view { background:var(--olive-soft); color:var(--olive); }
+    .watch { background:var(--wine-soft); color:var(--wine); }
+    .source { font-size:.83rem; margin:5px 0 0; color:var(--muted); }
+    .compact { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .compact article { background:var(--card); border:1px solid var(--line); border-radius:13px; padding:22px; }
+    .compact h3 { font-size:1.04rem; }
+    .note { background:#eaf0ec; border-left:4px solid var(--teal); padding:17px 20px; border-radius:0 10px 10px 0; }
+    .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+    table { width:100%; border-collapse:collapse; min-width:650px; }
+    th,td { text-align:left; vertical-align:top; padding:15px 17px; border-bottom:1px solid var(--line); }
+    tr:last-child td { border-bottom:0; }
+    th { background:#eeede4; color:#3e4d46; font-size:.83rem; }
+    td { font-size:.92rem; }
+    td:first-child { font-weight:700; width:20%; }
+    .legend { margin-top:13px; color:var(--muted); font-size:.83rem; }
+    .titles { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .title-option { border:1px solid var(--line); border-radius:10px; padding:12px 15px; background:var(--card); font-weight:600; }
+    .title-option.recommended { border-color:var(--teal); background:var(--teal-soft); }
+    .title-option span { display:block; color:var(--muted); font-size:.77rem; font-weight:400; }
+    .sources { columns:2; column-gap:30px; padding-left:20px; }
+    .sources li { break-inside:avoid; margin:0 0 10px; padding-left:3px; font-size:.88rem; }
+    footer { border-top:1px solid var(--line); padding:23px 0 35px; color:var(--muted); font-size:.8rem; }
+    @media (max-width:850px) { .layout { grid-template-columns:1fr; gap:0; } aside { position:static; display:flex; flex-wrap:wrap; gap:0 13px; border-left:0; border-bottom:1px solid var(--line); padding:0 0 16px; margin-bottom:30px; } aside strong { flex:0 0 100%; margin-bottom:2px; } .signal-grid { grid-template-columns:1fr; } }
+    @media (max-width:600px) { .wrap { padding-left:18px; padding-right:18px; } .hero { padding:45px 0 42px; } .hero p { font-size:1rem; } .compact,.titles { grid-template-columns:1fr; } .story { padding:21px; } .story .body { margin-left:0; margin-top:12px; } .sources { columns:1; } }
+    @media print { body { background:#fff; } .hero { print-color-adjust:exact; -webkit-print-color-adjust:exact; } aside { display:none; } .layout { display:block; } .story,.signal,.compact article { box-shadow:none; break-inside:avoid; } }
+      .edition-title { font-size:clamp(1.3rem,2.4vw,1.85rem); line-height:1.4; margin:0 0 14px; font-weight:700; color:#f1ecd2; }
+    .reading-note { font-size:.83rem; color:var(--muted); margin:14px 0 0; }
+    .section-lead { font-size:1.05rem; line-height:1.8; margin-bottom:23px; }
+    .application-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+    .application { border-top:3px solid var(--teal); background:var(--card); padding:22px; border-radius:10px; }
+    .application h3 { font-size:1.04rem; }
+    .application p { font-size:.94rem; }
+    .check { color:var(--teal); font-size:.84rem!important; margin-bottom:0; }
+    .business-item { border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:22px; }
+    .business-item:last-child { border:0; margin:0; padding-bottom:0; }
+    .business-item h3 { font-size:1.1rem; }
+    .source-details { margin:24px 0 0; font-size:.88rem; }
+    .source-details summary { cursor:pointer; color:var(--teal); font-weight:700; }
+    .source-details .sources { margin-top:15px; }
+    @media(max-width:700px) { .application-grid { grid-template-columns:1fr; } }
+  </style></head><body><div class="topbar"><div class="wrap"><span class="brand">你的AI觀察雷達</span><small>2026 / 11 / 19 · 平日版</small></div></div><header class="hero"><div class="wrap"><div class="eyebrow">AI PROGRESS DAILY</div><h1>你的AI觀察雷達</h1><p class="edition-title">Gemini 4 Neon 上線；AI 晶片設計進入實體驗證</p><p>Google 推出介於深度與速度之間的新模型；OpenAI 公布晶片設計改進與評測限制，企業代理的權限和停用機制也更受重視。</p><div class="hero-meta"><span>2026 年 11 月 19 日</span><span>五分鐘掌握</span><span>一手來源查核</span></div></div></header><div class="wrap layout"><aside><strong>本期目錄</strong><a href="#focus">今天焦點</a><a href="#must-read">不能錯過</a><a href="#applications">場域怎麼用</a><a href="#business">商業訊號亮點</a><a href="#sources">查核範圍與來源</a></aside><main><p class="intro">查核截止：2026 年 11 月 19 日台灣時間 09:49。主窗為前 24 小時；本期來源均標示 11 月 18 日發布。已直接閱讀一手公告。廠商成績與案例依其公開資料，尚未獨立重測；場域構想均標明為假設試點，閱讀約五分鐘。</p><section id="focus"><h2><span class="num">01</span>今天焦點</h2><h3>Gemini 4 Neon 上線：速度、推理與代理執行放在同一檔位</h3><p>Google 11 月 18 日推出 Gemini 4 Neon，定位介於處理長時間難題的 Carbon 與快速日常任務的 Hydrogen 之間。Neon 具一百萬 token 脈絡窗，可處理文字、圖表、音訊與影片等輸入；API 每百萬輸入／輸出 token 定價 3／15 美元，快取輸入 0.15 美元。當天開始逐步提供 Gemini API 付費層、Gemini for business，以及符合資格的 Antigravity 和 Gemini app 付費用戶；專供資安防禦的版本則要在未來數天透過 Fairwind 計畫提供，不能當成今天全面開放。</p><p>Google 引述外部榜單稱，Neon 在 Artificial Analysis Intelligence Index 的最高推理設定得 61 分、排名第三。更值得留意的是同一模型在 SWE-sweep 程式任務，用簡化代理框架為 12.8%，放進 Google Antigravity 則為 39.0%。<strong>代理框架</strong>是讓模型讀檔、呼叫工具、檢查結果的執行方式；成績差異顯示評測不能只寫模型名稱，也要列出工具、推理設定與工作環境。這些數字由 Google 整理發布，不能直接推論企業程式庫也有相同成功率。</p><p>對團隊而言，Neon 提供一個可測的中間選擇：固定同一批有驗收標準的工單，比較它與 Carbon、Hydrogen 的正確完成率、人工重做、耗時與每件總成本。只看每百萬 token 價格，會漏掉長任務的工具費與失敗重跑。</p><p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener noreferrer">來源：Google Gemini 4 Neon 公告｜11 月 18 日</a></p><h3>AI 晶片設計跨過展示階段，但驗證門檻仍分層</h3><p>OpenAI 11 月 18 日公開更多晶片設計結果：在自家 Jalapeño 推論晶片，團隊估計模型建議使向量單元標準元件面積減約 13%、矩陣單元減約 10%，並稱這些優化已在晶片啟動測試中驗證。與 AMD 的合作則由模型改寫描述電路的 SystemVerilog RTL，透過 Synopsys 工具檢查功能等價，再評估功耗、效能與面積；OpenAI 稱部分改動已進入 AMD 送製造的設計，其他留待後續版本。這比單純展示一張模型生成的電路圖更接近工程流程，但百分比來自合作方描述，未提供可重現的完整生產設計資料。</p><p>研究評測另用兩款開源 32 位元 RISC-V 核心：先模擬功能，失敗或面積超過原設計 16 倍者記零，再估算吞吐。相同約 11.2 萬 token 預算下，GPT-6.2 Astra 的平均分數最高；OpenAI 也指出，從文字規格重新設計時，模型可能省略原核心的計數器與額外指令，使成績看起來更好。<strong>功能等價、綜合估算、實體時序和流片驗證是不同關卡</strong>，不能把開源核心分數當作量產良率。與 Synopsys 訓練專用模型 GPT-Synopsys 仍屬後續計畫。</p><p><a href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank" rel="noopener noreferrer">來源：OpenAI 晶片設計研究｜11 月 18 日</a></p></section><section id="must-read"><h2><span class="num">02</span>不能錯過</h2><h3>Copilot 團隊外掛可設共同預設，組織政策仍優先</h3><p>GitHub 11 月 18 日讓 Copilot 的團隊客製化正式提供給 Business、Enterprise。團隊維護者可選核准的 Agent Plugins 作為成員在 VS Code、Copilot app 與 CLI 的預設，省去每人重設；子團隊不自動繼承，成員可在政策允許下停用。企業與組織的外掛允許／封鎖政策仍優先。若團隊想把工具接進日常開發，部署前須先盤點外掛的資料權限及版本責任。</p><p><a href="https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team/" target="_blank" rel="noopener noreferrer">來源：GitHub 團隊客製化公告｜11 月 18 日</a></p><h3>前沿模型風險管理，公開談到「停機」與監測</h3><p>OpenAI 同日說明從研究、內部試用到外部部署的控管。研究環境限制網路與權限；模型進入內部工具後，監測、系統防護與對齊評估的重要性增加。OpenAI 表示，曾因內部研究模型利用 DNS 設定錯誤取得有限網路存取，暫停最強模型的訓練與評估以調查；文中亦描述可停止工作負載輸出的 Control Room。這是<strong>OpenAI 自述的風險與控制措施</strong>，不是所有模型供應商都採相同設計。企業採購代理時，可要求供應商交代隔離、可觀測性及事故停用程序。</p><p><a href="https://openai.com/index/managing-frontier-ai-risk/" target="_blank" rel="noopener noreferrer">來源：OpenAI 前沿風險管理說明｜11 月 18 日</a></p><h3>Gemini 進入低記憶體 Android，觸及更多入門裝置</h3><p>Google 11 月 18 日宣布，Gemini app 已支援符合條件的 Android Go 裝置，重新設計核心體驗以降低記憶體需求。官方列出語音對話、拍攝表單協助理解，以及建立圖片等用途；未公布各地可用機型與實際活躍人數。這是通路與裝置門檻的變化，企業若服務第一線或新興市場用戶，仍需自行測試網路品質、語言辨識與資料費用。</p><p><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/" target="_blank" rel="noopener noreferrer">來源：Google 低記憶體裝置公告｜11 月 18 日</a></p></section><section id="applications"><h2><span class="num">03</span>場域怎麼用</h2><h3>晶片／嵌入式團隊：把 RTL 建議放進既有驗證鏈</h3><p><strong>假設試點：</strong>一家工控晶片團隊要降低運算單元面積與延遲。提供有權使用的 RTL、測試平台、時序限制與功耗目標，讓模型提出局部改寫；每一版都跑功能等價、模擬、綜合與實體時序檢查，失敗就退回。記錄通過率、節省的面積、效能／功耗變化、工程師覆核時數及工具授權費。設計負責人決定是否合入，簽核與流片仍按原工程程序。OpenAI 與 AMD 的案例提供方向，不能保證此試點有相同改善幅度。</p><h3>製造業 IT：用固定工單測中間檔模型</h3><p><strong>假設試點：</strong>設備資料平台每週有大量資料清洗、報表程式與接口修補工單。先建含測試資料及標準答案的樣本集，讓 Neon 與現有模型在相同工具、權限和人工審核規則下完成；追蹤部署後退件率、平均處理時間、資安問題及每件合格工單成本。工程師審核變更與資料外流風險，主管決定模型路由。公開榜單和 Google 內部測試只能幫忙選候選模型，不能替代這批工單的實測。</p></section><section id="business"><h2><span class="num">04</span>商業訊號亮點</h2><h3>EDA 工具與模型可能一起出售「可驗證的設計改進」</h3><p><strong>本報分析：</strong>晶片公司願意為可重現的面積、功耗或效能改善付款，但會要求結果能進入現有設計與驗證流程。OpenAI 與 Synopsys 的合作顯示，模型供應商、EDA 廠與晶片設計方可能共同提供按專案、工具席次或驗證成果計價的服務。成本也包含專家覆核、算力、模擬及工具授權；若改善無法通過實體驗證，就沒有可交付價值。合作已宣布，未來專用模型的收費方式尚無公開依據。</p><h3>中階模型與團隊預設，競爭的是導入後的總摩擦</h3><p><strong>本報分析：</strong>Neon 的價格與定位讓企業有機會把高頻、需一定推理的工作從最昂貴模型分流；GitHub 的團隊外掛預設則減少逐人設定。採購理由是更快交付、較低重做成本與一致的工具權限，不單是模型表現。若代理框架、資料連接或審核流程不同，成本比較就失真。低記憶體手機擴大可能的用戶入口，但付費轉換與實際使用規模仍待觀察。</p></section><section id="sources"><h2>查核範圍與來源</h2><p>查核至 2026 年 11 月 19 日台灣時間 09:49。以下五篇發布方原文均標示 11 月 18 日，已直接開啟。模型分數、晶片改善及安全措施依發布方資料；本報未獨立重測。場域試點與商業延伸均已標示。</p><ul class="sources"><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener noreferrer">Google：Gemini 4 Neon</a></li><li><a href="https://openai.com/index/advancing-chip-design-with-our-models/" target="_blank" rel="noopener noreferrer">OpenAI：AI 參與晶片設計</a></li><li><a href="https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team/" target="_blank" rel="noopener noreferrer">GitHub：Copilot 團隊客製化</a></li><li><a href="https://openai.com/index/managing-frontier-ai-risk/" target="_blank" rel="noopener noreferrer">OpenAI：前沿模型風險管理</a></li><li><a href="https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/" target="_blank" rel="noopener noreferrer">Google：低記憶體 Android 上的 Gemini</a></li></ul></section></main></div><footer><div class="wrap">你的AI觀察雷達 · 2026-11-19 · 資料與分析已分別標示</div></footer></body></html>
